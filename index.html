@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scotland Road Trip Guide | Custom Interactive Planner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        scottish: {
+                            blue: '#005EB8',
+                            dark: '#1A365D',
+                            light: '#EBF4FF',
+                            accent: '#00A3E0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .hero-bg {
+            /* Updated to your new Unsplash Highland photo, featuring a dark bottom gradient backplate overlay for flawless text contrast */
+            background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1612422499157-addd7df3526e?fm=jpg&q=60&w=3000&auto=format&fit=crop') no-repeat center center;
+            background-size: cover;
+        }
+        /* Topographical map pattern overlay */
+        .topo-bg {
+            background-color: #f8fafc;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M0 30c20-10 40-10 60 0s40 20 60 10 30-20 30-20M0 60c30-5 50 15 80 5s40-25 70-15M0 90c20 10 40-5 70-5s50 20 80 10M0 120c40-15 70 5 100-5s30-15 50-15' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="topo-bg text-gray-800 font-sans">
+
+    <header class="hero-bg text-white py-32 px-6 shadow-xl relative">
+        <div class="max-w-6xl mx-auto text-center relative z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)]">
+            <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">The Ultimate Scotland Road Trip Guide</h1>
+            <p class="text-xl max-w-2xl mx-auto opacity-95 font-semibold">
+                A highly optimized, 13-day master driving blueprint tracking from the historic Lowlands through the wild Highlands and up the rugged North Coast.
+            </p>
+        </div>
+    </header>
+
+    <section class="max-w-7xl mx-auto px-4 pt-12 grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+        
+        <div class="lg:col-span-2 space-y-6">
+            <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60">
+                <div class="flex items-center gap-3 mb-4">
+                    <i data-lucide="pen-tool" class="text-scottish-blue w-6 h-6"></i>
+                    <h2 class="text-2xl font-black text-scottish-dark">A Note From the Creator</h2>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    This itinerary isn't just a list of coordinates; it’s a collection of our absolute favorite memories, gathered over the past few years, with 11 Scotland visits (and more coming soon).
+                </p>
+                <p class="text-gray-600 leading-relaxed">
+                    While there is still so much more to see, we wanted to build a foundational route that captures the magic of what keeps drawing us back. This trip strikes a careful balance: it’s structured enough to ensure you don't miss the icons, but "light" enough to let you step off the gas, breathe in the highlands, and pull over whenever a random, beautiful viewpoint catches your eye.
+                </p>
+            </div>
+
+            <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60">
+                <div class="flex items-center gap-3 mb-6">
+                    <i data-lucide="help-circle" class="text-scottish-blue w-6 h-6"></i>
+                    <h2 class="text-2xl font-black text-scottish-dark">How to Use This Guide</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2"><i data-lucide="users" class="w-4 h-4 text-scottish-accent"></i> The Travel Profile</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">We originally mapped this out for two adults with no mobility issues. However, consider this a rock-solid baseline. It serves as an excellent starting point whether you are traveling solo, in a large group, or need to adapt the pacing for specific accessibility requirements.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2"><i data-lucide="calendar" class="w-4 h-4 text-scottish-accent"></i> Intentionally Free Slots</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">You’ll notice our city days are left broad and uncrowded. One of the greatest joys of Scottish towns is simply walking, people-watching, and getting a little lost. We didn't want to over-schedule your time with our exact tastes at the expense of your own random, unforgettable discoveries.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2"><i data-lucide="coffee" class="w-4 h-4 text-scottish-accent"></i> Food & Stays</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">Apart from a few "you have to try this" local spots, we have left dining choices up to you, as everyone's budget, accommodation location, and dietary habits differ. For lodging, we highly recommend looking into local B&Bs and self-catering options as they are significantly more cost-effective and offer a far more private, authentic experience.</p>
+                    </div>
+                    <div>
+                        <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2"><i data-lucide="heart" class="w-4 h-4 text-scottish-accent"></i> Zero Affiliates, Total Honesty</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed">We receive absolutely zero commission from any of the venues, rental companies, or stays mentioned in this guide. If a business is named here, it's solely because we used them, loved them, and want you to have the same great experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:col-span-1">
+            <div class="bg-gradient-to-br from-scottish-dark to-scottish-blue text-white rounded-2xl p-6 md:p-8 shadow-md sticky top-6 space-y-8">
+                
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="smartphone" class="text-yellow-300 w-6 h-6"></i>
+                        <h3 class="text-xl font-bold">Take It With You On the Road</h3>
+                    </div>
+                    <p class="text-xs text-blue-100 mb-4 leading-relaxed">
+                        The full itinerary below is 100% free to use here. Grab our premium bundle to access this guide while traveling without worrying about cell coverage or data roaming.
+                    </p>
+                    
+                    <div class="bg-white/10 rounded-xl p-4 border border-white/10">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-xs uppercase tracking-wider text-blue-200 font-bold">Premium Offline Bundle</span>
+                            <span class="text-lg font-black text-yellow-300">€15</span>
+                        </div>
+                        <div class="space-y-2.5 text-xs">
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="file-text" class="w-4 h-4 text-blue-300 flex-shrink-0 mt-0.5"></i>
+                                <span><strong>Print-Optimized PDF:</strong> Structured for clear printing on A4 paper to keep in your dashboard.</span>
+                            </div>
+                            <div class="flex items-start gap-2">
+                                <i data-lucide="smartphone" class="w-4 h-4 text-blue-300 flex-shrink-0 mt-0.5"></i>
+                                <span><strong>Mobile-Optimized PDF:</strong> Designed for smartphone screens with clickable links.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button onclick="redirectToPayment('bundle')" class="w-full mt-3 bg-white text-scottish-dark font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:bg-blue-50 transition flex items-center justify-center gap-2">
+                        <i data-lucide="credit-card" class="w-4 h-4 text-scottish-blue"></i>
+                        Pay with Card via Stripe
+                    </button>
+                </div>
+
+                <div class="border-t border-white/20"></div>
+
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i data-lucide="sparkles" class="text-yellow-300 w-6 h-6"></i>
+                        <h3 class="text-xl font-bold">Want Something Tailored Just for You?</h3>
+                    </div>
+                    <p class="text-xs text-blue-100 mb-4 leading-relaxed">
+                        If you want to take this exact route but tweak it to fit your specific timeline, group dynamic, or bucket list, we offer personalized custom itinerary curation.
+                    </p>
+                    
+                    <div class="space-y-3">
+                        <div class="bg-white/10 rounded-xl p-3 border border-white/10 cursor-pointer hover:bg-white/15 transition" onclick="redirectToPayment('adjuster')">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="font-bold text-xs text-white">Route Adjuster</h4>
+                                <span class="text-[10px] bg-yellow-400 text-scottish-dark font-extrabold px-1.5 py-0.5 rounded">€125 - €200</span>
+                            </div>
+                            <p class="text-[11px] text-blue-100/90 leading-tight">We modify daily stops, pacing, and driving times to match your specific trip length.</p>
+                        </div>
+                        
+                        <div class="bg-white/10 rounded-xl p-3 border border-white/10 cursor-pointer hover:bg-white/15 transition" onclick="redirectToPayment('bespoke')">
+                            <div class="flex justify-between items-start mb-1">
+                                <h4 class="font-bold text-xs text-white">Bespoke Explorer</h4>
+                                <span class="text-[10px] bg-yellow-400 text-scottish-dark font-extrabold px-1.5 py-0.5 rounded">€299+</span>
+                            </div>
+                            <p class="text-[11px] text-blue-100/90 leading-tight">Secure your custom slot with an initial deposit. We build your entire route from the ground up.</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 text-center">
+                        <p class="text-[10px] text-blue-200/80 flex items-center justify-center gap-1">
+                            <i data-lucide="lock" class="w-3 h-3 text-yellow-300"></i> Secure card processing encrypted by Stripe
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10">
+        
+        <div class="lg:col-span-1 space-y-4">
+            <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-slate-200/60 sticky top-6">
+                <h3 class="text-xs font-bold text-gray-400 uppercase tracking-wider px-3 mb-3">Itinerary Timeline</h3>
+                <nav class="space-y-1" id="tabMenu"></nav>
+            </div>
+        </div>
+
+        <div class="lg:col-span-3" id="tabPanels"></div>
+    </main>
+
+    <section class="max-w-7xl mx-auto px-4 pb-12 relative z-10">
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60">
+            <div class="flex items-center gap-3 mb-4">
+                <i data-lucide="shield-alert" class="text-amber-500 w-6 h-6"></i>
+                <h2 class="text-2xl font-black text-scottish-dark">Critical Road Tips & Etiquette</h2>
+            </div>
+            <p class="text-gray-600 leading-relaxed mb-4">
+                Driving in Scotland, especially the single-track roads of the Highlands, is an incredible experience, BUT it requires a specific set of rules. Before you even book your vehicle, please familiarize yourself with official local road laws.
+            </p>
+            <div class="bg-amber-50/90 border-l-4 border-amber-500 p-4 rounded-r-xl flex gap-3 items-center mb-6">
+                <i data-lucide="book-open" class="text-amber-600 flex-shrink-0"></i>
+                <p class="text-sm text-amber-900 font-medium">
+                    <strong>Essential Reading:</strong> Review the official guidelines on 
+                    <a href="https://www.gov.uk/browse/driving/highway-code" target="_blank" class="text-scottish-blue underline font-bold">The Highway Code (UK Gov)</a> 
+                    and learn how to properly use passing places on single-track routes via 
+                    <a href="https://www.traffic.scotland.org" target="_blank" class="text-scottish-blue underline font-bold">Traffic Scotland</a>.
+                </p>
+            </div>
+
+            <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                <i data-lucide="car" class="text-scottish-blue w-5 h-5"></i>
+                Our Tried-and-Tested Car Rental Strategy
+            </h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
+                <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
+                    <span class="block font-bold text-scottish-dark mb-1">The Provider</span>
+                    We highly recommend renting through <a href="https://www.celticlegend.co.uk" target="_blank" class="text-scottish-blue font-semibold underline">Celtic Legend</a>.
+                </div>
+                <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
+                    <span class="block font-bold text-scottish-dark mb-1">The Cover</span>
+                    Always opt for the total insurance waiver.
+                </div>
+                <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
+                    <span class="block font-bold text-scottish-dark mb-1">The Tech</span>
+                    Don't waste money renting a standalone GPS unit. Instead, download <a href="https://www.sygic.com" target="_blank" class="text-scottish-blue font-semibold underline">Sygic</a> onto your smartphone for reliable, offline navigation.
+                </div>
+                <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
+                    <span class="block font-bold text-scottish-dark mb-1">The Extra</span>
+                    If they offer a dashcam option, take it. It's excellent for safety insurance, and you'll end up with incredible footage of your drive.
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- ========================================== -->
+    <!--          NEW: CONTACT & CREDIBILITY        -->
+    <!-- ========================================== -->
+    <section class="max-w-7xl mx-auto px-4 pb-12 relative z-10">
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                
+                <!-- Left & Middle Columns: Credibility & Copy -->
+                <div class="md:col-span-2 space-y-4">
+                    <div class="flex items-center gap-3">
+                        <i data-lucide="message-square" class="text-scottish-blue w-6 h-6"></i>
+                        <h2 class="text-2xl font-black text-scottish-dark">Have Questions? Let's Chat</h2>
+                    </div>
+                    <p class="text-gray-600 leading-relaxed">
+                        Whether you want to map out an ambitious North Coast 500 loop, figure out the best single-track routes for a specific vehicle layout, or need to adapt our master timeline for a custom family dynamic, we are here to help. 
+                    </p>
+                    <div class="flex flex-wrap gap-6 text-sm text-gray-500 font-medium pt-2">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="mail" class="w-4 h-4 text-scottish-accent"></i>
+                            <span>scotlandbounduk@gmail.com</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="clock" class="w-4 h-4 text-scottish-accent"></i>
+                            <span>Responses within 24–48 hours</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Prominent Action Button -->
+                <div class="md:col-span-1 flex justify-end">
+                    <button onclick="redirectToPayment('adjuster')" class="w-full md:w-auto bg-scottish-blue hover:bg-scottish-dark text-white font-bold py-4 px-8 rounded-xl text-sm shadow-md transition duration-200 flex items-center justify-center gap-2 group">
+                        <i data-lucide="send" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+                        Send Us an Inquiry
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-scottish-dark text-white border-t border-blue-900 py-12 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h4 class="text-lg font-bold mb-3 flex items-center gap-2 text-blue-300">
+                        <i data-lucide="shield-alert" class="w-5 h-5 text-amber-400"></i>
+                        Highland Single-Track Driving Protocol
+                    </h4>
+                    <p class="text-sm text-blue-100/80 leading-relaxed">
+                        Much of the deep Western Highlands and Northern NC500 stretches utilize single-track roads. Always check ahead for passing places, let faster vehicles behind you pass by pulling into laybys on your left, and maintain high spatial awareness over blind crests.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-3 flex items-center gap-2 text-blue-300">
+                        <i data-lucide="bug" class="w-5 h-5 text-amber-400"></i>
+                        Midge Awareness Advice
+                    </h4>
+                    <p class="text-sm text-blue-100/80 leading-relaxed">
+                        Highland midges are common in valleys like Glen Etive and Glencoe if the wind drops completely still. Keep doors shut when leaving the car and apply protective repellant before stepping out.
+                    </p>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-6 text-center text-xs text-blue-200/60">
+                © 2026 Scotland Travel Master Planner Dashboard. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+       // Secure Checkout & Contact Router Engine with Webmail Fallback
+        function redirectToPayment(productType) {
+            const paymentLinks = {
+                'bundle': 'https://buy.stripe.com/cNi5kwf8O5DZ2bP0TXcMM03'
+            };
+
+            const recipient = "scotlandbounduk@gmail.com";
+
+            if (productType === 'bundle') {
+                window.location.href = paymentLinks['bundle'];
+                return;
+            } 
+
+            // Setup Email Content
+            let subject = "";
+            let body = "";
+
+            if (productType === 'adjuster') {
+                subject = "Inquiry: Route Adjuster Custom Itinerary";
+                body = "Hi Scotland Bound,\n\nI am interested in the Route Adjuster service (€125 - €200).\n\nHere are some initial details about my upcoming trip:\n- Estimated Travel Dates:\n- Group Size (Adults/Children):\n- Main locations or pace preference:\n\nLooking forward to hearing from you!";
+            } else if (productType === 'bespoke') {
+                subject = "Inquiry: Bespoke Explorer Custom Itinerary";
+                body = "Hi Scotland Bound,\n\nI am interested in booking a Bespoke Explorer custom itinerary package (€299+).\n\nHere are my rough trip details:\n- Proposed Dates / Duration:\n- Ideal starting & ending points:\n- Our travel style & absolute must-see highlights:\n\nPlease let me know how we can get started!";
+            }
+
+            // Fallback Plan: Copy email to clipboard immediately in case mailto fails
+            navigator.clipboard.writeText(recipient).then(() => {
+                showToast("Email copied to clipboard! Opening your mail app...");
+            }).catch(() => {
+                showToast("Please email us at: " + recipient);
+            });
+
+            // Attempt to fire the mail client
+            window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+
+        // Helper function to show a beautiful, non-intrusive alert toast
+        function showToast(message) {
+            // Remove existing toast if clicked rapidly
+            const existingToast = document.getElementById('email-toast');
+            if (existingToast) existingToast.remove();
+
+            const toast = document.createElement('div');
+            toast.id = 'email-toast';
+            toast.className = "fixed bottom-5 right-5 bg-scottish-dark text-white text-xs font-semibold px-4 py-3 rounded-xl shadow-2xl z-50 border border-blue-900 transition-all duration-300 transform translate-y-0 flex items-center gap-2";
+            toast.innerHTML = `<i data-lucide='copy' class='w-4 h-4 text-yellow-300'></i> <span>${message}</span>`;
+            document.body.appendChild(toast);
+            
+            lucide.createIcons();
+
+            // Fade out and remove after 5 seconds
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => toast.remove(), 300);
+            }, 5000);
+        }
+
+        const itineraryData = [
+           {
+                day: 1,
+                label: "Day 1: Stirling",
+                title: "Arrival at EDI Airport and on to Stirling",
+                intro: "Welcome to Scotland! Today is all about getting your bearings, picking up your wheels, and enjoying a couple of iconic, easy-to-reach stops as you make your way to your first overnight base in historic Stirling. Baseline calculations assume a 1:00pm landing scenario.",
+                stops: [
+                    { time: "1:00pm", icon: "plane", name: "Edinburgh Airport", details: "Once you land, collect your baggage and exit the terminal. Budget at least 45 minutes from offboarding your plane to actually getting your bags." },
+                    { time: "1:45pm", icon: "navigation", name: "Directions for Car Rental Pickup", details: "Exit the terminal, walk along the glass-covered walkway, and cross over to the bus stances opposite the tram terminal. Go to Bus Stop 8 to catch the free, continuous Arnold Clark / PremiAir shuttle loop.", map: "https://maps.app.goo.gl/uC1iSMKrAptGbtjn9" },
+                    { time: "2:15pm", icon: "key", name: "Car Pickup – Celtic Legend / Arnold Clark counter", details: "Head inside the office and hand over your booking reference to the staff. Hand over your physical driver's license (no photos) and passport. Check confirmation emails for any modern procedure changes.", web: "https://www.celticlegend.co.uk/car-rental/" },
+                    
+                    // Add your image paths directly below:
+                    { time: "3:00pm", icon: "eye", name: "The Kelpies", details: "These are two massive 100-foot-tall horse sculpture monuments named Duke and Baron. Ample paid parking is available right on-site. Visitor center and snack stands nearby. Allocate 1 hour.", web: "https://thehelix.co.uk", photo: "images/my-kelpies-photo.jpg" },
+                    { time: "4:15pm", icon: "settings", name: "The Falkirk Wheel", details: "A massive, rotating boat lift connecting two canals. Free to watch from the ground (30 mins). Optional 1-hour boat tour tickets are £17.95 for adults. Final tour typically at 4:30pm; online pre-booking highly recommended.", web: "https://scottishcanals.co.uk", photo: "https://scontent.fmla1-1.fna.fbcdn.net/v/t39.30808-6/507178154_10161412461913603_1124574432557581718_n.jpg?stp=dst-jpg_tt6&cstp=mx1373x3051&ctp=s1373x3051&_nc_cat=109&ccb=1-7&_nc_sid=f727a1&_nc_ohc=SXbY_lmrOn4Q7kNvwE38niC&_nc_oc=AdqUnjaTliXNNs1LgFE9y_5-PHtSsMNIONrYjcR_W_E9uYK5x4lqodNMfeU2ommU1-w&_nc_zt=23&_nc_ht=scontent.fmla1-1.fna&_nc_gid=mW2JLjtQ50GzEMymGLXozg&_nc_ss=7e2a8&oh=00_AQCWuiDqOiUYdLe9ihvVVt--uDG3etP_2kG3ZdhWO3hnxw&oe=6A4983A0" },
+                    { time: "5:15pm", icon: "home", name: "King Robert Hotel (Overnight Base)", details: "A relaxed, family-run hotel located right on the historic battlefield site. Features on-site parking, an informal bistro, and a lounge bar. Drop bags and freshen up.", web: "https://kingroberthotel.co.uk" },
+                    { time: "5:45pm", icon: "flag", name: "The Battle of Bannockburn Visitor Centre", details: "Located immediately adjacent to the hotel. The indoor immersive center closes at 5:00pm, but the outdoor park and equestrian statue of Robert the Bruce remain fully accessible for an evening stroll.", web: "https://nts.org.uk", photo: "images/my-bannockburn.jpg" }
+                ]
+            },
+            {
+                day: 2,
+                label: "Day 2: Stirling to Oban",
+                title: "Stirling to Oban via Loch Lomond",
+                intro: "Gear up for a 9:00am departure, leaving Stirling behind to point the car west. Today's route transitions directly from the historic battlefields of the Lowlands straight into the dramatic landscapes of the Highlands.",
+                stops: [
+                    { time: "9:10am", icon: "shopping-cart", name: "Co-op Food - Cambusbarron - The Brae", details: "A convenient neighborhood supermarket located just a short drive from the hotel. This is an ideal, quick pitstop to stock up on road trip essentials like water, snacks, and travel supplies before hitting the longer scenic drives heading west." },
+                    { time: "10:00am", icon: "fish", name: "Sea Life – Loch Lomond Aquarium", details: "Combines a family-friendly aquarium experience (tropical ocean tunnel, giant sea turtle, rooftop café) with the outdoor Loch Lomond Shores shopping and leisure complex. Allow 2 hours. Ample free parking.", web: "https://visitsealife.com/loch-lomond" },
+                    { time: "12:45pm", icon: "droplets", name: "Falls of Falloch", details: "A beautiful, 30-foot waterfall set in a scenic, atmospheric glen right off the main A82 road. Features a unique steel viewpoint structure called 'Woven Sound'. Flat 5-minute walk from the free car park layout.", web: "https://lochlomond-trossachs.org" },
+                    { time: "2:00pm", icon: "church", name: "St Conan’s Kirk", details: "Unique church featuring an unusual blend of architectural styles, including Saxon towers, Gothic flying butteresses, and Norman arches with views over Loch Awe. Tiny adjacent shop offers homemade soup. Free layby parking along the A85.", web: "https://stconanskirk.org.uk" },
+                    { time: "3:30pm", icon: "eye", name: "McCaig’s Tower (Optional)", details: "Prominent stone monument modeled after the Roman Colosseum overlooking Oban. Spectacular vantage point of the harbor and open sea. Free car park at base; final road up is quite steep.", web: "https://oban.org.uk" },
+                    { time: "4:15pm", icon: "home", name: "Corriemar Guest House – Oban Check-In", details: "Seafront Victorian villa located on the Corran Esplanade offering comfortable rooms with views overlooking the bay. Check in and drop bags.", web: "https://corriemarhouse.co.uk" },
+                    { time: "Evening", icon: "utensils", name: "Piazza Restaurant & Esplanade Walk", details: "Located on the North Pier serving pizza, pasta, and seafood with floor-to-ceiling harbor views. Scenic 10-minute flat walk from the guest house, allowing you to safely leave the car parked at your accommodation for the entire evening.", web: "https://piazzaoban.co.uk" }
+                ]
+            },
+            {
+                day: 3,
+                label: "Day 3: Oban to Fort William",
+                title: "Oban to Fort William via Glencoe",
+                intro: "A 9:15am departure from Oban heads straight toward the towering valleys of Glencoe. Today is all about soaking in the views from a mountain chairlift, hitting classic roadside photography stops, and checking into your multi-night cottage base.",
+                stops: [
+                    { time: "9:25am", icon: "shield", name: "Dunstaffnage Castle and Chapel", details: "One of Scotland's oldest surviving stone castles. Walk the massive curtain walls and a short trail through the trees to a hidden 13th-century chapel ruin. Open 9:30am–4:30pm. Online: £7.50 Adult / Gate: £8.50. Free car park.", web: "https://historicenvironment.scot" },
+                    { time: "11:00am", icon: "mountain", name: "Glencoe Mountain Resort", details: "Board the scenic open-air chairlift for a 12-minute journey up to 2,200 feet, offering views of Buachaille Etive Mòr. Budget 1.5 hours to use the lift and walk the accessible plateau paths. Tickets: £20 Adult / £15 Child.", web: "https://glencoemountain.co.uk" },
+                    { time: "1:00pm", icon: "camera", name: "Glen Etive Waterfall", details: "Short drive down the legendary Glen Etive (featured in Skyfall). Mountain waterfall tumbling through a rocky gorge. Coordinates: 56.625542, -4.905458. Layby parking near river bend.", warning: "Highland midges can be incredibly active and dense here during the summer months; keep car doors closed and apply repellent." },
+                    { time: "1:35pm", icon: "camera", name: "Glencoe Waterfall", details: "Famous roadside viewpoint along the A82 highway where three separate torrents cascade down rocky hillsides. 15 minutes is plenty. Coordinates: 56.662888, -4.964993. Wide dedicated tarmac layby parking area.", warning: "Midges are common at this location as well. Be prepared if the air is completely still." },
+                    { time: "2:30pm", icon: "shopping-bag", name: "Fort William High Street & Grocery Run", details: "Pedestrianized social hub. Crucial stop to stock up on groceries at Tesco Express for your cottage stay. Middle Street / Viewforth Car Parks offer close access (£1.00 for 1 hr). Long-stay option: An Aird No. 2 Car Park is £4.00 for up to 10 hours." },
+                    { time: "4:45pm", icon: "home", name: "Rosewood Cottage Check-In", details: "Head up the hill from town to Argyll Road to check into your cottage for a multi-night stay. Unpack and enjoy elevated views out over Loch Linnhe." }
+                ]
+            },
+            {
+                day: 4,
+                label: "Day 4: Fort William",
+                title: "Steam Trains and Loch Linnhe Cruises",
+                intro: "An 8:30am departure sets up an early visit to Neptune’s Staircase before checking in for the legendary Jacobite Steam Train and wrapping up the afternoon with a loch cruise.",
+                stops: [
+                    { time: "8:40am", icon: "layers", name: "Neptune’s Staircase", details: "Longest staircase lock flight in Britain, lifting boats 64 feet over a quarter-mile. Part of the Caledonian Canal. Early morning visit significantly ups your chances of seeing hydraulic gates transit active vessel traffic. Allocate 45 mins. Free car park off the B8004." },
+                    { time: "9:45am", icon: "train", name: "Jacobite Steam Train Station Check-In", details: "Mandatory arrival buffer before the 10:15am sharp departure. Historic steam journey across the iconic 21-arch curved concrete Glenfinnan Viaduct. Features a Mallaig fishing port layover from 12:25pm to 2:10pm. Return pulls into Fort William at 4:00pm. Sells out months in advance. Park at long-stay An Aird No. 2 Car Park.", web: "https://westcoastrailways.co.uk/jacobite/steam-train-trip" },
+                    { time: "4:30pm", icon: "ship", name: "Cruise Loch Linnhe", details: "Head straight to Town Pier for the 5:00pm sunset sailing. A 90-minute tour past salmon farms, forested islands, and rugged coastlines. Keep an eye out for seals and porpoises lounging on rocky skerries. Tickets approx £28.", web: "https://cruiselochlinnhe.co.uk" },
+                    { time: "Evening", icon: "utensils", name: "Winding down for Dinner", details: "Effortless dining choices: wander down the pedestrian High Street to find an independent pub, or head straight back up to the cottage to throw together a feast using your supplies." }
+                ]
+            },
+            {
+                day: 5,
+                label: "Day 5: Fort William to Skye",
+                title: "The Great Glen to Isle of Skye",
+                intro: "A 9:15am departure tracking north through the Great Glen before cutting west toward Skye. Features artisanal chocolate tasting, historic castles, and dramatic coastal approach viewpoints.",
+                stops: [
+                    { time: "9:45am", icon: "anchor", name: "Laggan Locks", details: "Beautiful, peaceful junction on the Caledonian Canal flanked by old cottages and pine forests. Free Forestry parking right off the A82. Coordinates: 57.026112, -4.824964." },
+                    { time: "11:00am", icon: "award", name: "Chocolates of Glenshiel", details: "Artisanal chocolate shop on the shores of Loch Duich. Every chocolate is handmade utilizing authentic Scottish ingredients like Single Malt whisky, gin, and heather honey. Grab a hot chocolate or coffee. 30–45 mins.", web: "https://chocolatesofglenshiel.com" },
+                    { time: "12:00pm", icon: "shield-alert", name: "Eilean Donan Castle", details: "Arguably Scotland's most recognizable and photographed coastal castle, connected to the mainland by an iconic arched stone footbridge. Budget 1.5 hours to tour rooms and outer walls. Open daily 9:00am–6:00pm. Tickets approx £12. Pay parking.", web: "https://eileandonancastle.com" },
+                    { time: "1:45pm", icon: "shopping-cart", name: "Co-op Food – Kyle of Lochalsh", details: "Large, comprehensive supermarket located right at the final gateway to Skye before crossing the bridge. Crucial supply run as island choices can be limited. Large free dedicated car park. Coordinates: 57.280661, -5.717293." },
+                    { time: "3:00pm", icon: "map", name: "Kilmuir Park Approach & Photo Stops", details: "Cross the Skye Bridge and enjoy the eastern flank drive. Pull over at safe laybys: Sligachan Old Bridge (Black Cuillin views) and Loch Ainort Viewpoint (Red Cuillin hills dropping directly into calm sea waters)." }
+                ]
+            },
+            {
+                day: 6,
+                label: "Day 6: Exploring Skye",
+                title: "Wild Landscapes of Western Skye",
+                intro: "An 8:30am departure from Kilmuir Park drives deep into western Skye, exploring mountain streams, Atlantic cliff edges, and historic clan architecture.",
+                stops: [
+                    { time: "9:15am", icon: "map-pin", name: "Fairy Pools", details: "Mesmerizing rock pools and waterfalls fed by mountain streams at the foot of the Black Cuillin hills. Straightforward 1.5-mile out-and-back gravel path. Main Forestry parking fee: £6.00. Road in is a winding single-track stretch." },
+                    { time: "12:00pm", icon: "compass", name: "Neist Point Lighthouse", details: "The absolute westernmost tip of Skye, legendary for its dramatic vertical sea cliffs and historic 1909 lighthouse. Path down is fully paved but incredibly steep. Viewpoints right next to car park are equally breathtaking if avoiding the leg-burning climb. Pack a light picnic lunch.", warning: "The final 30-minute drive down Glendale road is a demanding single-track lane with blind summits." },
+                    { time: "2:15pm", icon: "home", name: "Dunvegan Castle & Gardens", details: "Ancestral seat of Clan MacLeod and the oldest continuously inhabited castle in Scotland (800+ years). Inside houses treasures like the Fairy Flag. Open daily 10:00am–5:30pm. Entry approx £16.50 Adult / £11.50 Child. Optional 25-min seal boat trip available.", web: "https://dunvegancastle.com" },
+                    { time: "4:45pm", icon: "check", name: "Return to Kilmuir Park", details: "An easy, smooth 30-minute cross-island drive directly back to your home base to relax and unwind for the evening." }
+                ]
+            },
+            {
+                day: 7,
+                label: "Day 7: Skye to Ullapool",
+                title: "Skye to Ullapool and the Applecross Choice",
+                intro: "A sharp 8:00am departure for a bucket-list driving day traversing coastal trails, lush estate gardens, deep slot gorges, and an optional high-altitude single-track mountain pass loop.",
+                stops: [
+                    { time: "9:00am", icon: "activity", name: "Castle Moil Ruins", details: "Ancient ruined rectangular tower seat of Clan MacKinnon overlooking Kyle Akin straits. Requires a short, tricky 15-minute coastal walk that can cross low-lying gravel beach submerged at high tide. Free open-air landmark. Coordinates: 57.272654, -5.729310." },
+                    { time: "10:00am", icon: "flower", name: "Attadale Gardens", details: "Peaceful 20-acre estate water garden featuring Monet-style bridges and clear views across Loch Carron. Tickets: £10.00 Adult. Free dedicated visitor parking. Coordinates: 57.390322, -5.453038.", web: "https://attadalegardens.com" },
+                    { time: "11:45am", icon: "alert-triangle", name: "Applecross Pass (Bealach na Bà) *OPTIONAL DETOUR*", details: "Climbs 2,053 feet via tight, Alpine-style hairpin switchbacks dropping into Applecross for lunch at the famous Applecross Inn. Parking: 57.432321, -5.811554.", warning: "DRIVER WARNING: Intense single-track roads, blind summits, and sheer mountain drops. Requires total concentration. BYPASS OPTION: Stay on main A896/A832 to completely bypass this loop, saving 1.5+ hours of intense driving." },
+                    { time: "3:00pm", icon: "droplets", name: "Victoria Falls (Loch Maree)", details: "Beautiful cascading waterfall steps inside an ancient native Scots pine woodland. Short, flat 5-minute gravel path to wooden viewing platform. Free entry. Coordinates: 57.681127, -5.535201. (Arrival shifts to 1:00pm if Applecross bypassed).", web: "https://forestryandland.gov.scot/visit/victoria-falls" },
+                    { time: "4:15pm", icon: "link", name: "Corrieshalloch Gorge National Nature Reserve", details: "A 200-foot-deep slot canyon carved by glacial meltwater featuring the 150-foot Falls of Measach and a suspension footbridge. Free entry; £5.00 parking fee at upgraded visitor hub (free for NTS). Coordinates: 57.752310, -5.011963. (Arrival shifts to 2:15pm if Applecross bypassed).", web: "https://nts.org.uk/visit/places/corrieshalloch-gorge" },
+                    { time: "5:30pm", icon: "home", name: "The Royal Hotel & Ullapool Waterfront", details: "Arrive at your waterfront hotel base (Coordinates: 57.897110, -5.153525). Take a stroll along the promenade to spot harbor seals. Dinner options: Hotel Italian eatery, or a flat 2-minute walk to independent local hits like The Seafood Shack, Delicasea, or The Seaforth.", web: "https://royalhotel-ullapool.com" }
+                ]
+            },
+            {
+                day: 8,
+                label: "Day 8: Ullapool to Wick",
+                title: "The Wild and Remote North Coast 500",
+                intro: "An 8:45am departure tackles the most rugged, exposed, and spectacularly remote driving leg along the northern rim of the Scottish mainland.",
+                stops: [
+                    { time: "9:45am", icon: "navigation", name: "Kylesku Bridge", details: "Award-winning curved concrete box-girder bridge sweeping across Loch a' Chàirn Bhàin. Large gravel viewpoint car park on the north side. Coordinates: 58.257538, -5.027073. 20-minute leg stretch." },
+                    { time: "11:15am", icon: "sun", name: "Durness Beach", details: "Sweeping expanses of pristine golden sand flanked by rock stacks on the North Atlantic edge. Free clifftop parking overlooking the bay. Coordinates: 58.567963, -4.739881. Public toilets near tourist info center." },
+                    { time: "11:55am", icon: "eye", name: "Smoo Cave", details: "Colossal sea cave carved deep into limestone cliffs with a booming 65-foot internal waterfall pool. Accessing the main cave chamber boardwalk is free. Pay-and-display car park directly above gorge: 58.563427, -4.721092.", warning: "STEEP STAIRS WARNING: Accessing the interior requires descending a long, steep flight of stairs. Strenuous climb back up. Mobility-restricted individuals can enjoy views from level paths at the top." },
+                    { time: "1:30pm", icon: "coffee", name: "Clachan Cafe (Bettyhill)", details: "Crucial, non-negotiable stop to rest your eyes and re-energize after a highly technical mix of steep gradients, sharp corners, and single-track stretches. Offers barista coffee, homemade soup, and cakes. Coordinates: 58.528430, -4.207050.", web: "https://facebook.com/theclachancafe" },
+                    { time: "3:15pm", icon: "shopping-bag", name: "Tesco Superstore – Thurso", details: "Large store in the northernmost town on the British mainland. Your absolute last chance to complete a full grocery/dinner haul before checking into your remote bungalow base. Coordinates: 58.590408, -3.516949.", web: "https://tesco.com/store-locator/thurso-superstore" },
+                    { time: "Late Afternoon", icon: "home", name: "Whitehouse Park Check-In (Near Wick)", details: "Welcome to your final destination for the day (Postcode: KW1 4NX). Spacious, comfortable bungalow property with a private dedicated driveway. Coordinates: 58.443463, -3.083097." }
+                ]
+            },
+            {
+                day: 9,
+                label: "Day 9: Wick & Thurso",
+                title: "Castles, Cliffs, and the True Northernmost Point",
+                intro: "An 8:45am departure starts an exploration of dramatic cliffside fortresses, landmark tourist endpoints, petting farms, and maritime single malt distilling.",
+                stops: [
+                    { time: "9:00am", icon: "shield", name: "Castle Sinclair Girnigoe", details: "Medieval castle ruins sitting dramatically on a narrow cliff peninsula jutting into Sinclair’s Bay. Requires an exposed 15-minute coastal walk from the car park along the clifftops to the entrance. Free access. Coordinates: 58.475730, -3.057349." },
+                    { time: "10:30am", icon: "map-pin", name: "John o’Groats", details: "Traditional landmark endpoint of Great Britain. Features a small harbor, the famous signpost, and views across the Pentland Firth. Visit 'First and Last in Scotland' shop for gifts. Take the quiet coastal walking trail directly behind the souvenir shop gate. Coordinates: 58.643201, -3.069469.", web: "https://visitjohnogroats.com" },
+                    { time: "11:50am", icon: "heart", name: "Puffin Croft Petting Farm", details: "Small, family-run farm just up the road housing miniature donkeys, micro-pigs, goats, and rabbits. Entry is around £4–£5 per person, bags of feed available. Coordinates: 58.637422, -3.067772.", web: "https://puffincroft.com" },
+                    { time: "12:55pm", icon: "compass", name: "Dunnet Head", details: "The true northernmost point of the British mainland. Features 300-foot vertical cliff faces, an 1831 Stevenson lighthouse, and old WWII radar station structures. Free access; RSPB nature reserve layout. Coordinates: 58.669860, -3.375250.", web: "https://rspb.org.uk/dunnet-head" },
+                    { time: "2:30pm", icon: "glass-water", name: "Old Pulteney Distillery", details: "Established in 1826 in Wick, known as 'The Maritime Malt' due to coastal warehouse aging. Allocation: 1.5 to 2 hours. Parking on Huddart Street. Coordinates: 58.434965, -3.085081.", warning: "DRIVER NOTICE: Notify staff you are driving; they will package your tasting pours into small driver's takeaway bottles to drink safely later at the bungalow.", web: "https://oldpulteney.com" }
+                ]
+            },
+            {
+                day: 10,
+                label: "Day 10: Wick to Inverness",
+                title: "Southbound Coastal Drive to Loch Ness",
+                intro: "A 7:45am departure hits the road early, transitioning from sheer sea cliffs to fairy-tale châteaux and the mysterious deep waters of Loch Ness before settling into Inverness.",
+                stops: [
+                    { time: "9:00am", icon: "help-circle", name: "Whaligoe Steps", details: "Historic staircase of 330 stone steps zig-zagging down a sheer cliff face into a natural harbor. Limited roadside parking spaces near old schoolhouse. Coordinates: 58.346366, -3.163501.", warning: "SAFETY WARNING: Features steep drop-offs and uneven steps that are highly slippery when wet. Strenuous climb back up. Mobility restricted individuals should view geology from top paths." },
+                    { time: "10:45am", icon: "home", name: "Dunrobin Castle & Gardens", details: "Soaring French château style architecture with formal gardens sweeping to the sea edge. Open daily 10:30am–5:00pm. Tickets: £15.50 Adult (includes interior, museum, and gardens). Ample free parking layout at main gates.", web: "https://dunrobincastle.co.uk" },
+                    { time: "1:30pm", icon: "eye", name: "Mermaid of the North", details: "Striking 10-foot-high bronze statue sitting on a rock outcrop in Balintore. Surrounded by ocean or fully exposed depending on tides. Free viewpoint. Public parking near the harbor/beach. Coordinates: 57.759075, -3.903167." },
+                    { time: "3:15pm", icon: "alert-octagon", name: "Urquhart Castle (Loch Ness)", details: "Historic ruins commanding wide views over the deepest waters of Loch Ness. Managed by Historic Environment Scotland. Coordinates: 57.324292, -4.444580.", warning: "CRITICAL NOTICE: Heavily visited site. You MUST pre-book timed entry tickets online before arriving. Walk-up entries are routinely denied without a pre-purchased voucher.", web: "https://historicenvironment.scot/urquhart-castle" },
+                    { time: "5:15pm", icon: "smile", name: "Haste Ye Back Guest House & River Ness Walk", details: "Check into your city-center accommodation (Coordinates: 57.479590, -4.236731). Unload and head out for an evening walk along the Ness Walk promenade, passing the illuminated Victorian suspension bridges and riverfront eateries." }
+                ]
+            },
+            {
+                day: 11,
+                label: "Day 11: Inverness Foot Day",
+                title: "Inverness Complete Car Break & City Loop",
+                intro: "Today is a complete break from the driver's seat. Leave the car parked at Haste Ye Back and explore the capital of the Highlands entirely on foot and via the open-top City Sightseeing Hop-On Hop-Off Bus.",
+                stops: [
+                    { time: "9:30am", icon: "footprints", name: "Walk to City Centre Hub", details: "A pleasant 15-minute walk (1.2 km) southeast from Haste Ye Back across the River Ness straight into the city center bus station to board the tour coach loop." },
+                    { time: "10:15am", icon: "bus", name: "City Sightseeing Bus Departure", details: "Board directly at main starting hub, Stop 1 (Bus Station, Stance 6). Tickets valid for 24 hours. Open-top double-decker loop cuts out town center traffic/parking. Coordinates: 57.480870, -4.225515.", web: "https://city-sightseeing.com/en/93/inverness" },
+                    { time: "10:50am", icon: "flower", name: "Inverness Botanic Gardens", details: "Hop off the coach at Stop 5 (Bught Park). Walk 2 minutes down Bught Lane to find entrance. Features outdoor sensory gardens, a cactus house, and humid tropical glasshouse with an indoor waterfall. Free entry. Coordinates: 57.463185, -4.240454.", web: "https://highlifehighland.com/inverness-botanic-gardens" },
+                    { time: "11:50am", icon: "refresh-cw", name: "Scenic Bus Loop to Castle Hill", details: "Board back onto the bus at Stop 5 to complete the outer scenic loop (via Caledonian Canal locks at Dochgarroch). Hop off early at Stop 2 (Bridge Street) directly at the base of Castle Hill to optimize your walking route layout." },
+                    { time: "12:35pm", icon: "landmark", name: "Inverness Museum & Art Gallery", details: "Located right at the foot of Castle Hill on Castle Wynd (1-min walk from Stop 2). Highlights Jacobite memorabilia, Pictish stones, and contemporary art. Free entry, indoor, features a quiet café. Coordinates: 57.477084, -4.225138.", web: "https://highlifehighland.com/inverness-museum-and-art-gallery" },
+                    { time: "1:30pm", icon: "utensils", name: "The Victorian Market (Lunch Break)", details: "A flat 4-minute walk (300 meters) via Church Street. Ornate 1870 cast-iron roof indoor market. Perfect time to hit the Market Hall food court for local street food, artisan coffee, and independent craft stalls. Coordinates: 57.479235, -4.224529.", web: "https://thevictorianmarket.co.uk" },
+                    { time: "3:00pm", icon: "shopping-bag", name: "Eastgate Shopping Centre", details: "Walk 3 minutes east into the High Street pedestrian zone. Major indoor covered retail hub featuring high-street brands, department stores, and cafes. Spend 1.5 hours at a relaxed pace. Main entrance point: 57.478332, -4.221612.", web: "https://eastgateshopping.co.uk" },
+                    { time: "Late Afternoon", icon: "home", name: "Return Walk to Guest House", details: "A direct 10-minute walk northwest back to Haste Ye Back to unpack shopping bags, relax your feet, and unwind." }
+                ]
+            },
+            {
+                day: 12,
+                label: "Day 12: Edinburgh Return",
+                title: "Cairngorms Safari, Salmon Ladders, and City Return",
+                intro: "An 8:30am departure south along the A9 trades Highland tranquility for the historic capital city of Edinburgh, broken up by rare wildlife viewing and engineering milestones.",
+                stops: [
+                    { time: "9:15am", icon: "squirrel", name: "Highland Wildlife Park", details: "Sprawling 105-hectare reserve in the Cairngorms National Park. Drive-through safari section lets you view bison, elk, and wild horses, followed by accessible walking boardwalks to view polar bears and red pandas. Allocate 2 hours. Coordinates: 57.109737, -3.967677.", web: "https://highlandwildlifepark.org.uk" },
+                    { time: "12:15pm", icon: "droplets", name: "Pitlochry Dam Visitor Centre (Lunch stop)", details: "Fascinating hydro-electric dam milestone along the A9 featuring a famous 310-meter river ladder for migrating Atlantic salmon. Visit free multimedia tracker rooms and enjoy a light lunch on the cafe balcony overlooking the river. Allocate 1.5 hours. Coordinates: 56.697746, -3.733590.", web: "https://pitlochrydam.com" },
+                    { time: "3:15pm", icon: "baggage-claim", name: "Edinburgh Central Luggage Drop", details: "Head straight into central Edinburgh (Old Town or Princes Street base like Destiny Scotland). Temporarily pull up to quickly drop heavy bags and gear with your party to avoid city center parking fees, keeping the car moving immediately toward return loop." },
+                    { time: "3:45pm", icon: "key", name: "Car Return – Seafield Branch", details: "Drive vehicle to the Seafield Road branch on the eastern coast to finalize your rental return. Complete the quick inspection to free yourself from city traffic and navigation. Coordinates: 55.966750, -3.142580." },
+                    { time: "4:15pm", icon: "bus", name: "Transit Back to City Centre", details: "Catch Lothian Buses Lines 12 or 26 directly outside the branch (runs every 15–20 mins straight to Princes Street, contactless tap-to-pay). Alternatively, hail a 10-minute Uber/Taxi." },
+                    { time: "Evening", icon: "map", name: "Historic Streets of Edinburgh", details: "Rejoin your party at your central apartment base and explore completely on foot. Take a slow, atmospheric evening stroll down the historic cobblestones of the Royal Mile, hide away in stone closes, or explore Princes Street Gardens." }
+                ]
+            },
+            {
+                day: 13,
+                label: "Day 13+: Edinburgh Options",
+                title: "Un-scheduled Exploration Options",
+                intro: "Since your time in the capital is completely flexible, you can cherry-pick from these landmarks depending on your daily pacing, family requirements, and the weather. Don't over-schedule—let yourself get a little lost in the atmosphere.",
+                stops: [
+                    { time: "Option", icon: "landmark", name: "Edinburgh Castle", details: "The historic fortress commanding the city skyline from volcanic Castle Rock." },
+                    { time: "Option", icon: "eye", name: "Camera Obscura & World of Illusions", details: "Hands-on optical fun across multiple floors right near the castle gates." },
+                    { time: "Option", icon: "glass-water", name: "The Scotch Whisky Experience", details: "Interactive barrel ride and massive collection displays detailing whisky production regions." },
+                    { time: "Option", icon: "map", name: "The Royal Mile & Closes", details: "Wander down the historic spine of the Old Town to discover hidden vaulted stone alleys." },
+                    { time: "Option", icon: "trees", name: "Ross Fountain & Princes Street Gardens", details: "Beautiful, flat stroller-friendly parklands sitting right beneath the sheer castle cliffs." },
+                    { time: "Option", icon: "compass", name: "Calton Hill & Dean Village", details: "Calton Hill offers fast panoramic monument views; Dean Village offers a quiet, fairy-tale riverside stroll down an old milling community." }
+                ]
+            }
+        ];
+
+        function buildDashboard() {
+            const menuContainer = document.getElementById('tabMenu');
+            const panelsContainer = document.getElementById('tabPanels');
+
+            itineraryData.forEach((dayData, idx) => {
+                // Generate Navigation Sidebar Buttons
+                const btn = document.createElement('button');
+                btn.className = `w-full text-left px-4 py-3 rounded-xl font-medium text-sm transition flex items-center justify-between ${idx === 0 ? 'bg-scottish-blue text-white shadow-md font-bold' : 'text-gray-600 hover:bg-gray-100 hover:text-scottish-dark'}`;
+                btn.innerHTML = `<span>${dayData.label}</span> <i data-lucide="chevron-right" class="w-4 h-4 opacity-70"></i>`;
+                btn.onclick = () => switchTab(idx);
+                menuContainer.appendChild(btn);
+
+                // Generate Main Display Panels
+                const panel = document.createElement('div');
+                panel.className = `tab-content ${idx === 0 ? 'active' : ''} space-y-6`;
+                panel.id = `panel-${idx}`;
+
+                let stopsHTML = '';
+                dayData.stops.forEach(stop => {
+                    let linksHTML = '';
+                    if (stop.map) linksHTML += `<a href="${stop.map}" target="_blank" class="inline-flex items-center gap-1.5 bg-scottish-light text-scottish-dark font-semibold text-xs px-3 py-1.5 rounded-lg border border-blue-200 hover:bg-blue-100 transition"><i data-lucide="map-pin" class="w-3.5 h-3.5"></i> Google Maps</a>`;
+                    if (stop.web) linksHTML += `<a href="${stop.web}" target="_blank" class="inline-flex items-center gap-1.5 bg-gray-100 text-gray-700 font-semibold text-xs px-3 py-1.5 rounded-lg border border-gray-200 hover:bg-gray-200 transition"><i data-lucide="globe" class="w-3.5 h-3.5"></i> Official Site</a>`;
+
+                    let warningHTML = stop.warning ? `<div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-xl text-xs text-amber-800 font-medium flex gap-2 items-start mt-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i><div>${stop.warning}</div></div>` : '';
+
+                    // New: Structural layout splitting text and your personal photos side-by-side on larger screens
+                    // Updated: Thumbnails now have cursor-zoom-in and trigger openImageModal()
+                    let photoHTML = stop.photo ? `
+                        <div class="mt-3 md:mt-0 md:w-48 flex-shrink-0">
+                            <div onclick="openImageModal('${stop.photo}')" class="overflow-hidden rounded-xl border border-slate-200 shadow-sm aspect-[4/3] md:aspect-square cursor-zoom-in group/img relative">
+                                <img src="${stop.photo}" alt="${stop.name}" class="w-full h-full object-cover hover:scale-105 transition duration-300" loading="lazy">
+                                <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition duration-300 flex items-center justify-center">
+                                    <i data-lucide="maximize-2" class="text-white opacity-0 group-hover/img:opacity-100 w-5 h-5 drop-shadow transition duration-300"></i>
+                                </div>
+                            </div>
+                        </div>
+                    ` : '';
+
+                    stopsHTML += `
+                        <div class="relative pl-8 border-l-2 border-slate-100 last:border-0 pb-6 last:pb-0">
+                            <div class="absolute -left-[11px] top-0.5 bg-white border-2 border-scottish-blue w-5 h-5 rounded-full flex items-center justify-center shadow-sm">
+                                <div class="bg-scottish-blue w-1.5 h-1.5 rounded-full"></div>
+                            </div>
+                            
+                            <div class="flex flex-col md:flex-row gap-4 justify-between items-start">
+                                <div class="flex-1 space-y-1">
+                                    <div class="flex flex-wrap items-center gap-2">
+                                        <span class="bg-scottish-light text-scottish-dark font-bold text-xs px-2.5 py-0.5 rounded-md flex items-center gap-1">
+                                            <i data-lucide="clock" class="w-3 h-3"></i> ${stop.time}
+                                        </span>
+                                        <h4 class="text-base font-bold text-gray-900">${stop.name}</h4>
+                                    </div>
+                                    <p class="text-sm text-gray-600 leading-relaxed">${stop.details}</p>
+                                    ${warningHTML}
+                                    ${linksHTML ? `<div class="flex gap-2 pt-1">${linksHTML}</div>` : ''}
+                                </div>
+                                ${photoHTML}
+                            </div>
+                        </div>
+                    `;
+                });
+
+                panel.innerHTML = `
+                    <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60">
+                        <h2 class="text-2xl font-black text-scottish-dark mb-2">${dayData.title}</h2>
+                        <p class="text-sm text-gray-500 italic font-medium mb-6 border-b border-slate-100 pb-4">${dayData.intro}</p>
+                        <div class="space-y-6">${stopsHTML}</div>
+                    </div>
+                `;
+                panelsContainer.appendChild(panel);
+            });
+            lucide.createIcons();
+        }
+
+        function switchTab(index) {
+            const buttons = document.querySelectorAll('#tabMenu button');
+            buttons.forEach((btn, idx) => {
+                if (idx === index) {
+                    btn.className = "w-full text-left px-4 py-3 rounded-xl font-bold text-sm transition flex items-center justify-between bg-scottish-blue text-white shadow-md";
+                } else {
+                    btn.className = "w-full text-left px-4 py-3 rounded-xl font-medium text-sm transition flex items-center justify-between text-gray-600 hover:bg-gray-100 hover:text-scottish-dark";
+                }
+            });
+
+            const panels = document.querySelectorAll('.tab-content');
+            panels.forEach((panel, idx) => {
+                if (idx === index) panel.classList.add('active');
+                else panel.classList.remove('active');
+            });
+            lucide.createIcons();
+        }
+
+        document.addEventListener('DOMContentLoaded', buildDashboard);
+
+        // Lightbox Modal Controller Engines
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalTargetImage');
+            
+            modalImg.src = imageSrc;
+            modal.classList.remove('hidden');
+            
+            // Prevent main page layout from scrolling while viewing photo
+            document.body.style.overflow = 'hidden';
+            lucide.createIcons();
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.add('hidden');
+            
+            // Restore normal page scrolling
+            document.body.style.overflow = '';
+        }
+
+        // Optional: Close modal if user hits the 'Escape' key
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeImageModal();
+        });
+        
+    </script>
+
+        <!-- ========================================== -->
+        <!--       NEW: LIGHTBOX IMAGE MODAL SCREEN     -->
+        <!-- ========================================== -->
+        <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 cursor-zoom-out" onclick="closeImageModal()">
+            <div class="relative max-w-4xl w-full max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
+                <!-- Close Button -->
+                <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition flex items-center gap-1 text-sm font-semibold bg-black/40 px-3 py-1.5 rounded-lg border border-white/20">
+                    <i data-lucide="x" class="w-4 h-4"></i> Close
+                </button>
+                <!-- Dynamic Image -->
+                <img id="modalTargetImage" src="" alt="Enlarged view" class="rounded-xl max-w-full max-h-[85vh] object-contain shadow-2xl border border-white/10">
+            </div>
+        </div>
+
+</body>
+</html>
