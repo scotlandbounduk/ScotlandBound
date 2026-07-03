@@ -17,7 +17,9 @@
     <meta property="og:description" content="Discover the ultimate driving route from the historic Lowlands to the rugged Highlands. Interactive maps, local driving protocols, and pristine route pacing.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1612422499157-addd7df3526e?fm=jpg&q=60&w=1200&auto=format&fit=crop">
 
+    <!-- Cache-Busted Favicon Link -->
     <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -43,6 +45,7 @@
             background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1612422499157-addd7df3526e?fm=jpg&q=60&w=3000&auto=format&fit=crop') no-repeat center center;
             background-size: cover;
         }
+        /* Topographical map pattern overlay */
         .topo-bg {
             background-color: #f8fafc;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M0 30c20-10 40-10 60 0s40 20 60 10 30-20 30-20M0 60c30-5 50 15 80 5s40-25 70-15M0 90c20 10 40-5 70-5s50 20 80 10M0 120c40-15 70 5 100-5s30-15 50-15' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
@@ -83,7 +86,7 @@
                     This itinerary isn't just a list of coordinates; it’s a collection of our absolute favorite memories, gathered over the past few years, with 11 Scotland visits (and more coming soon).
                 </p>
                 <p class="text-gray-600 leading-relaxed">
-                    While there is still so much more to see, we wanted to build a foundational route that captures the magic of what keeps drawing us back. This trip strikes a careful balance: it’s structured enough to ensure you don't miss the icons, but "light" enough to let you step off the gas, breathe in the highlands, and pull over whenever a random, beautiful viewpoint catches your eye.
+                    While there is still so much more to see, we wanted to build a foundational route that captures the magic of what keeps drawing us back. This trip strikes a careful balance: it’s structured enough to ensure you don't miss the icons, but "light" enough to let you step off the gas, breathe in the highlands, and <a href="#itinerary-timeline-anchor" class="text-scottish-blue font-bold underline hover:text-scottish-dark transition">jump straight into our day-by-day mapping schedule</a> whenever a random, beautiful viewpoint catches your eye.
                 </p>
             </div>
 
@@ -111,7 +114,7 @@
                         Honest Links, Zero Hotel Bias
                         </h4>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            We have no partnerships with individual hotels or B&Bs. Our reviews are 100% independent.
+                            We have no partnerships with individual hotels or B&Bs. Our reviews are 100% independent. Read our complete profile criteria down in our <a href="#driving-protocol-anchor" class="text-scottish-blue font-bold underline hover:text-scottish-dark transition">driving and booking protocol matrix</a> below.
                         </p>
                         </div>
                 </div>
@@ -193,7 +196,8 @@
         </div>
     </section>
 
-    <main class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10">
+    <!-- Internal Link Target for Search Scanners -->
+    <main id="itinerary-timeline-anchor" class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10">
         
         <div class="lg:col-span-1 space-y-4">
             <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-slate-200/60 sticky top-6">
@@ -205,7 +209,8 @@
         <div class="lg:col-span-3" id="tabPanels"></div>
     </main>
 
-    <section class="max-w-7xl mx-auto px-4 pb-12 relative z-10">
+    <!-- Internal Link Target for Driving Protocol -->
+    <section id="driving-protocol-anchor" class="max-w-7xl mx-auto px-4 pb-12 relative z-10">
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60">
             <div class="flex items-center gap-3 mb-4">
                 <i data-lucide="shield-alert" class="text-amber-500 w-6 h-6"></i>
@@ -249,7 +254,7 @@
         </div>
     </section>
 
-        <!-- ========================================== -->
+    <!-- ========================================== -->
     <!--          NEW: CONTACT & CREDIBILITY        -->
     <!-- ========================================== -->
     <section class="max-w-7xl mx-auto px-4 pb-12 relative z-10">
@@ -384,8 +389,6 @@
                     { time: "1:00pm", icon: "plane", name: "Edinburgh Airport", details: "Once you land, collect your baggage and exit the terminal. Budget at least 45 minutes from offboarding your plane to actually getting your bags." },
                     { time: "1:45pm", icon: "navigation", name: "Directions for Car Rental Pickup", details: "Exit the terminal, walk along the glass-covered walkway, and cross over to the bus stances opposite the tram terminal. Go to Bus Stop 8 to catch the free, continuous Arnold Clark / PremiAir shuttle loop.", map: "https://maps.app.goo.gl/uC1iSMKrAptGbtjn9" },
                     { time: "2:15pm", icon: "key", name: "Car Pickup – Celtic Legend / Arnold Clark counter", details: "Head inside the office and hand over your booking reference to the staff. Hand over your physical driver's license (no photos) and passport. Check confirmation emails for any modern procedure changes.", web: "https://www.celticlegend.co.uk/car-rental/" },
-                    
-                    // Add your image paths directly below:
                     { time: "3:00pm", icon: "eye", name: "The Kelpies", details: "These are two massive 100-foot-tall horse sculpture monuments named Duke and Baron. Ample paid parking is available right on-site. Visitor center and snack stands nearby. Allocate 1 hour.", web: "https://thehelix.co.uk", photo: "images/Kelpies_3.jpeg" },
                     { time: "4:15pm", icon: "settings", name: "The Falkirk Wheel", details: "A massive, rotating boat lift connecting two canals. Free to watch from the ground (30 mins). Optional 1-hour boat tour tickets are £17.95 for adults. Final tour typically at 4:30pm; online pre-booking highly recommended.", web: "https://scottishcanals.co.uk", photo: "images/Falkirk Wheel.jpeg" },
                     { time: "5:15pm", icon: "home", name: "King Robert Hotel (Overnight Base)", details: "A relaxed, family-run hotel located right on the historic battlefield site. Features on-site parking, an informal bistro, and a lounge bar. Drop bags and freshen up.", web: "https://kingroberthotel.co.uk" },
@@ -466,7 +469,7 @@
                 stops: [
                     { time: "9:00am", icon: "activity", name: "Castle Moil Ruins", details: "Ancient ruined rectangular tower seat of Clan MacKinnon overlooking Kyle Akin straits. Requires a short, tricky 15-minute coastal walk that can cross low-lying gravel beach submerged at high tide. Free open-air landmark. Coordinates: 57.272654, -5.729310.", photo:"images/Castle Moil.jpg" },
                     { time: "10:00am", icon: "flower", name: "Attadale Gardens", details: "Peaceful 20-acre estate water garden featuring Monet-style bridges and clear views across Loch Carron. Tickets: £10.00 Adult. Free dedicated visitor parking. Coordinates: 57.390322, -5.453038.", web: "https://attadalegardens.com", photo:"images/park.jpeg" },
-                    { time: "11:45am", icon: "alert-triangle", name: "Applecross Pass (Bealach na Bà) *OPTIONAL DETOUR*", details: "Climbs 2,053 feet via tight, Alpine-style hairpin switchbacks dropping into Applecross for lunch at the famous Applecross Inn. Parking: 57.432321, -5.811554.", warning: "DRIVER WARNING: Intense single-track roads, blind summits, and sheer mountain drops. Requires total concentration. BYPASS OPTION: Stay on main A896/A832 to completely bypass this loop, saving 1.5+ hours of intense driving.", photo:"images/Applecross.jpg" },
+                    { time: "11:45am", icon: "alert-triangle", name: "Applecross Pass (Bealach na Bà) *OPTIONAL DETOUR*", details: "Climbs 2,053 feet via tight, Alpine-style hairpin switchbacks dropping into Applecross for lunch at the famous Applecross Inn. Parking: 57.432321, -5.811554.", warning: "DRIVER WARNING: Intense single-track roads, blind summits, and sheer mountain drops. Requires total concentration. BYPASS OPTION: Stay on main A896/A832 to completely bypass this loop, saving 1.5+ hours of intense driving.", photo:"images/Appleapple.jpg" },
                     { time: "3:00pm", icon: "droplets", name: "Victoria Falls (Loch Maree)", details: "Beautiful cascading waterfall steps inside an ancient native Scots pine woodland. Short, flat 5-minute gravel path to wooden viewing platform. Free entry. Coordinates: 57.681127, -5.535201. (Arrival shifts to 1:00pm if Applecross bypassed).", web: "https://forestryandland.gov.scot/visit/victoria-falls", photo:"images/VictoriaFalls.jpg" },
                     { time: "4:15pm", icon: "link", name: "Corrieshalloch Gorge National Nature Reserve", details: "A 200-foot-deep slot canyon carved by glacial meltwater featuring the 150-foot Falls of Measach and a suspension footbridge. Free entry; £5.00 parking fee at upgraded visitor hub (free for NTS). Coordinates: 57.752310, -5.011963. (Arrival shifts to 2:15pm if Applecross bypassed).", web: "https://nts.org.uk/visit/places/corrieshalloch-gorge", photo:"images/Gorge.jpeg" },
                     { time: "5:30pm", icon: "home", name: "The Royal Hotel & Ullapool Waterfront", details: "Arrive at your waterfront hotel base (Coordinates: 57.897110, -5.153525). Take a stroll along the promenade to spot harbor seals. Dinner options: Hotel Italian eatery, or a flat 2-minute walk to independent local hits like The Seafood Shack, Delicasea, or The Seaforth.", web: "https://royalhotel-ullapool.com" }
@@ -584,9 +587,6 @@
 
                     let warningHTML = stop.warning ? `<div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-xl text-xs text-amber-800 font-medium flex gap-2 items-start mt-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i><div>${stop.warning}</div></div>` : '';
 
-                    // New: Structural layout splitting text and your personal photos side-by-side on larger screens
-                    // Updated: Thumbnails now have cursor-zoom-in and trigger openImageModal()
-                    // Updated: Added a dynamic fallback for the object positioning style class
                     let imgPositionClass = stop.position ? `object-${stop.position}` : 'object-center';
 
                     let photoHTML = stop.photo ? `
@@ -663,8 +663,6 @@
             
             modalImg.src = imageSrc;
             modal.classList.remove('hidden');
-            
-            // Prevent main page layout from scrolling while viewing photo
             document.body.style.overflow = 'hidden';
             lucide.createIcons();
         }
@@ -672,31 +670,26 @@
         function closeImageModal() {
             const modal = document.getElementById('imageModal');
             modal.classList.add('hidden');
-            
-            // Restore normal page scrolling
             document.body.style.overflow = '';
         }
 
-        // Optional: Close modal if user hits the 'Escape' key
         window.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeImageModal();
         });
         
     </script>
 
-        <!-- ========================================== -->
-        <!--       NEW: LIGHTBOX IMAGE MODAL SCREEN     -->
-        <!-- ========================================== -->
-        <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 cursor-zoom-out" onclick="closeImageModal()">
-            <div class="relative max-w-4xl w-full max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
-                <!-- Close Button -->
-                <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition flex items-center gap-1 text-sm font-semibold bg-black/40 px-3 py-1.5 rounded-lg border border-white/20">
-                    <i data-lucide="x" class="w-4 h-4"></i> Close
-                </button>
-                <!-- Dynamic Image -->
-                <img id="modalTargetImage" src="" alt="Enlarged view" class="rounded-xl max-w-full max-h-[85vh] object-contain shadow-2xl border border-white/10">
-            </div>
+    <!-- ========================================== -->
+    <!--       NEW: LIGHTBOX IMAGE MODAL SCREEN     -->
+    <!-- ========================================== -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 cursor-zoom-out" onclick="closeImageModal()">
+        <div class="relative max-w-4xl w-full max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition flex items-center gap-1 text-sm font-semibold bg-black/40 px-3 py-1.5 rounded-lg border border-white/20">
+                <i data-lucide="x" class="w-4 h-4"></i> Close
+            </button>
+            <img id="modalTargetImage" src="" alt="Enlarged view" class="rounded-xl max-w-full max-h-[85vh] object-contain shadow-2xl border border-white/10">
         </div>
+    </div>
 
 </body>
 </html>
