@@ -4,7 +4,9 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scotland Road Trip Guide | Custom Interactive Planner</title>
+    <title>ScotlandBound</title>
+    //Favicon
+    <link rel="icon" type="image/png" href="https://img.icons8.com/fluency/48/plane.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
@@ -100,7 +102,7 @@
                         Honest Links, Zero Hotel Bias
                         </h4>
                         <p class="text-sm text-gray-600 leading-relaxed">
-                            We have no partnerships with individual hotels or B&Bs. Our reviews are 100% independent. However, we do use affiliate links for major platforms like Booking.com. If you book through them, we earn a small commission at zero extra cost to you, which helps support the site while recommending the most reliable options.
+                            We have no partnerships with individual hotels or B&Bs. Our reviews are 100% independent.
                         </p>
                         </div>
                 </div>
@@ -340,8 +342,7 @@
             });
 
             // Attempt to fire the mail client
-            window.location.href = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        }
+            window.open(`mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank');        }
 
         // Helper function to show a beautiful, non-intrusive alert toast
         function showToast(message) {
