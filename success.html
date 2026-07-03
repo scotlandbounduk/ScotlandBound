@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Successful | ScotlandBound</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        scottish: {
+                            blue: '#005EB8',
+                            dark: '#1A365D',
+                            light: '#EBF4FF',
+                            accent: '#00A3E0'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Replicating the distinct topographical overlay from index.html */
+        .topo-bg {
+            background-color: #f8fafc;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M0 30c20-10 40-10 60 0s40 20 60 10 30-20 30-20M0 60c30-5 50 15 80 5s40-25 70-15M0 90c20 10 40-5 70-5s50 20 80 10M0 120c40-15 70 5 100-5s30-15 50-15' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="topo-bg text-gray-800 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- Simple, Clean Branded Header -->
+    <header class="bg-scottish-dark text-white py-6 px-6 shadow-md">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <span class="font-black tracking-tight text-xl flex items-center gap-2">
+                <i data-lucide="compass" class="text-scottish-accent w-6 h-6"></i> ScotlandBound
+            </span>
+            <a href="index.html" class="text-xs bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg font-semibold transition">
+                Back to Guide
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Success Showcase Container -->
+    <main class="max-w-xl mx-auto px-4 py-16 w-full flex-grow flex items-center justify-center">
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl border border-slate-200/60 text-center space-y-6 w-full">
+            
+            <!-- Success Animation / Icon Badge -->
+            <div class="inline-flex items-center justify-center bg-emerald-50 text-emerald-600 w-16 h-16 rounded-full border-2 border-emerald-500/20 shadow-sm mx-auto">
+                <i data-lucide="check-circle-2" class="w-10 h-10"></i>
+            </div>
+
+            <div class="space-y-2">
+                <h1 class="text-3xl font-black text-scottish-dark tracking-tight">Thank You!</h1>
+                <p class="text-sm font-bold uppercase tracking-wider text-scottish-accent">Thank You for Your Purchase</p>
+                <p class="text-gray-600 text-sm max-w-sm mx-auto leading-relaxed">
+                    Your payment was successfully processed by Stripe. Your premium offline bundle is ready below.
+                </p>
+            </div>
+
+            <!-- Instant Download Action Card -->
+            <div class="bg-gradient-to-br from-scottish-dark to-scottish-blue text-white rounded-xl p-5 border border-blue-900/40 text-left space-y-4 shadow-inner">
+                <div class="flex justify-between items-center border-b border-white/10 pb-2">
+                    <span class="text-xs uppercase tracking-wider text-blue-200 font-bold">Premium Offline Bundle</span>
+                    <span class="text-xs bg-emerald-500 text-white font-extrabold px-2 py-0.5 rounded-md flex items-center gap-1">
+                        <i data-lucide="lock" class="w-3 h-3"></i> Verified
+                    </span>
+                </div>
+                
+                <p class="text-xs text-blue-100/90 leading-relaxed">
+                    Click the download button below to pull the guide instantly. It is structured for optimal high-resolution mobile browsing or sharp A4 dashboard printing.
+                </p>
+
+                <!-- This is your exact file setup targeting "Scotland Guide.pdf" -->
+                <a href="Scotland Guide.pdf" download="ScotlandBound_Premium_Guide.pdf" class="w-full bg-white text-scottish-dark font-black py-3 px-4 rounded-xl text-sm shadow-md hover:bg-blue-50 transition flex items-center justify-center gap-2 group">
+                    <i data-lucide="download-cloud" class="w-4 h-4 text-scottish-blue transition-transform group-hover:translate-y-0.5"></i>
+                    Download Your Guide (PDF)
+                </a>
+            </div>
+
+            <!-- Helpful Reminders Grid -->
+            <div class="border-t border-slate-100 pt-6 text-left space-y-3">
+                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider">Quick Recommendations:</h4>
+                <div class="space-y-2.5 text-xs text-gray-600">
+                    <div class="flex items-start gap-2">
+                        <i data-lucide="smartphone" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
+                        <span><strong>Keep it Offline:</strong> Save the file directly into your Apple Books or Google Drive offline directory before you lose cell coverage in the glen stretches.</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <i data-lucide="mail" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
+                        <span>A secure invoice and payment breakdown statement has been dispatched to your email inbox.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer matching index.html aesthetics -->
+    <footer class="bg-scottish-dark text-white border-t border-blue-900 py-6 px-6 text-center text-xs text-blue-200/60">
+        © 2026 Scotland Travel Master Planner Dashboard. All rights reserved.
+    </footer>
+
+    <script>
+        // Trigger lucide icon injections cleanly
+        lucide.createIcons();
+    </script>
+</body>
+</html>
