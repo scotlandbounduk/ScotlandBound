@@ -124,35 +124,58 @@
         <div class="lg:col-span-1">
             <div class="bg-gradient-to-br from-scottish-dark to-scottish-blue text-white rounded-2xl p-6 md:p-8 shadow-md sticky top-6 space-y-8">
                 
+                <!-- UPDATED PACK COMPONENT -->
                 <div>
                     <div class="flex items-center gap-2 mb-3">
-                        <i data-lucide="smartphone" class="text-yellow-300 w-6 h-6"></i>
-                        <h3 class="text-xl font-bold">Take It With You On the Road</h3>
+                        <i data-lucide="map" class="text-yellow-300 w-6 h-6"></i>
+                        <h3 class="text-xl font-black">Get the Master Navigation Pack</h3>
                     </div>
                     <p class="text-xs text-blue-100 mb-4 leading-relaxed">
-                        The full itinerary below is 100% free to use here. Grab our premium bundle to access this guide while traveling without worrying about cell coverage or data roaming.
+                        Take this 13-day blueprint on the road. Grab the ultimate offline navigation bundle to ensure seamless driving across the Highlands, even when you completely lose cell service.
                     </p>
                     
-                    <div class="bg-white/10 rounded-xl p-4 border border-white/10">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-xs uppercase tracking-wider text-blue-200 font-bold">Premium Offline Bundle</span>
-                            <span class="text-lg font-black text-yellow-300">€15</span>
+                    <div class="bg-white/10 rounded-xl p-4 border border-white/10 space-y-3.5">
+                        <div class="flex justify-between items-center pb-2 border-b border-white/10">
+                            <span class="text-xs uppercase tracking-wider text-yellow-300 font-extrabold">Complete Offline Bundle</span>
+                            <span class="text-xl font-black text-white">€15</span>
                         </div>
-                        <div class="space-y-2.5 text-xs">
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="file-text" class="w-4 h-4 text-blue-300 flex-shrink-0 mt-0.5"></i>
-                                <span><strong>Print-Optimized PDF:</strong> Structured for clear printing on A4 paper to keep in your dashboard.</span>
+                        
+                        <div class="space-y-3 text-xs">
+                            <!-- PDF Perk with clear details -->
+                            <div class="flex items-start gap-2.5">
+                                <i data-lucide="file-text" class="w-4.5 h-4.5 text-yellow-300 flex-shrink-0 mt-0.5"></i>
+                                <span>
+                                    <strong>Master Route Guide (PDF Pack):</strong> Mobilized and print-ready. Includes clickable reservation URLs, **exact parking coordinates**, up-to-date pricing grids, opening hours, and hidden wayside layout tips.
+                                </span>
                             </div>
-                            <div class="flex items-start gap-2">
-                                <i data-lucide="smartphone" class="w-4 h-4 text-blue-300 flex-shrink-0 mt-0.5"></i>
-                                <span><strong>Mobile-Optimized PDF:</strong> Designed for smartphone screens with clickable links.</span>
+                            
+                            <!-- KML Map perk -->
+                            <div class="flex items-start gap-2.5">
+                                <i data-lucide="layers" class="w-4.5 h-4.5 text-cyan-300 flex-shrink-0 mt-0.5"></i>
+                                <span>
+                                    <strong>Google Maps Interactive Layer (.KML):</strong> Instantly plots every single stop, scenic waypoint, and parking area directly into your own Google Maps app.
+                                </span>
+                            </div>
+
+                            <!-- GPX app perk -->
+                            <div class="flex items-start gap-2.5">
+                                <i data-lucide="navigation" class="w-4.5 h-4.5 text-emerald-300 flex-shrink-0 mt-0.5"></i>
+                                <span>
+                                    <strong>Offline SatNav / Sygic Route (.GPX):</strong> The exact turn-by-turn coordinate paths ready to load straight into standalone GPS units or offline navigation tools like **Sygic**.
+                                </span>
+                            </div>
+
+                            <!-- Email Delivery confirmation -->
+                            <div class="flex items-start gap-2.5 text-[11px] text-blue-200 bg-black/20 p-2 rounded-lg">
+                                <i data-lucide="mail-check" class="w-4 h-4 text-blue-300 flex-shrink-0 mt-0.5"></i>
+                                <span>Instant access on the checkout confirmation screen + a permanent backup copy delivered directly to your inbox.</span>
                             </div>
                         </div>
                     </div>
 
-                    <button onclick="redirectToPayment('bundle')" class="w-full mt-3 bg-white text-scottish-dark font-bold py-2.5 px-4 rounded-xl text-sm shadow-md hover:bg-blue-50 transition flex items-center justify-center gap-2">
-                        <i data-lucide="credit-card" class="w-4 h-4 text-scottish-blue"></i>
-                        Pay with Card via Stripe
+                    <button onclick="redirectToPayment('bundle')" class="w-full mt-4 bg-white text-scottish-dark font-black py-3 px-4 rounded-xl text-sm shadow-md hover:bg-blue-50 transition flex items-center justify-center gap-2 group">
+                        <i data-lucide="download-cloud" class="w-4 h-4 text-scottish-blue group-hover:scale-110 transition"></i>
+                        Download All Maps & Guides
                     </button>
                 </div>
 

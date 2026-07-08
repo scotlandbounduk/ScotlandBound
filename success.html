@@ -45,8 +45,8 @@
     </header>
 
     <!-- Main Success Showcase Container -->
-    <main class="max-w-xl mx-auto px-4 py-16 w-full flex-grow flex items-center justify-center">
-        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-xl border border-slate-200/60 text-center space-y-6 w-full">
+    <main class="max-w-xl mx-auto px-4 py-12 w-full flex-grow flex items-center justify-center">
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-10 shadow-xl border border-slate-200/60 text-center space-y-6 w-full">
             
             <!-- Success Animation / Icon Badge -->
             <div class="inline-flex items-center justify-center bg-emerald-50 text-emerald-600 w-16 h-16 rounded-full border-2 border-emerald-500/20 shadow-sm mx-auto">
@@ -55,43 +55,62 @@
 
             <div class="space-y-2">
                 <h1 class="text-3xl font-black text-scottish-dark tracking-tight">Thank You!</h1>
-                <p class="text-sm font-bold uppercase tracking-wider text-scottish-accent">Thank You for Your Purchase</p>
+                <p class="text-sm font-bold uppercase tracking-wider text-scottish-accent">Your Ultimate Pack is Ready</p>
                 <p class="text-gray-600 text-sm max-w-sm mx-auto leading-relaxed">
-                    Your payment was successfully processed by Stripe. Your premium offline bundle is ready below.
+                    Your payment was successfully processed. Download your custom routes and digital guide dashboard directly below.
                 </p>
             </div>
 
             <!-- Instant Download Action Card -->
             <div class="bg-gradient-to-br from-scottish-dark to-scottish-blue text-white rounded-xl p-5 border border-blue-900/40 text-left space-y-4 shadow-inner">
                 <div class="flex justify-between items-center border-b border-white/10 pb-2">
-                    <span class="text-xs uppercase tracking-wider text-blue-200 font-bold">Premium Offline Bundle</span>
+                    <span class="text-xs uppercase tracking-wider text-blue-200 font-bold">Master Navigation Pack Assets</span>
                     <span class="text-xs bg-emerald-500 text-white font-extrabold px-2 py-0.5 rounded-md flex items-center gap-1">
                         <i data-lucide="lock" class="w-3 h-3"></i> Verified
                     </span>
                 </div>
                 
                 <p class="text-xs text-blue-100/90 leading-relaxed">
-                    Click the download button below to pull the guide instantly. It is structured for optimal high-resolution mobile browsing or sharp A4 dashboard printing.
+                    Download your digital itinerary dashboard and offline map layers below:
                 </p>
 
-                <!-- This is your exact file setup targeting "Scotland Guide.pdf" -->
-                <a href="Scotland Guide.pdf" download="ScotlandBound_Premium_Guide.pdf" class="w-full bg-white text-scottish-dark font-black py-3 px-4 rounded-xl text-sm shadow-md hover:bg-blue-50 transition flex items-center justify-center gap-2 group">
-                    <i data-lucide="download-cloud" class="w-4 h-4 text-scottish-blue transition-transform group-hover:translate-y-0.5"></i>
-                    Download Your Guide (PDF)
-                </a>
+                <!-- Download Grid Split -->
+                <div class="space-y-2.5 pt-1">
+                    <!-- Asset 1: Master Guide PDF -->
+                    <a href="Scotland Guide.pdf" download="ScotlandBound_Master_Guide.pdf" target="_blank" rel="noopener noreferrer" class="w-full bg-white text-scottish-dark font-black py-2.5 px-4 rounded-xl text-xs shadow-sm hover:bg-blue-50 transition flex items-center justify-between group">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="file-text" class="w-4 h-4 text-scottish-blue"></i>
+                            <span>1. Master Route Guide Dashboard (PDF)</span>
+                        </div>
+                        <i data-lucide="download" class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+
+                    <!-- Asset 2: Combined Map Layers Zip -->
+                    <a href="ScotlandBound_Digital_Maps.zip" download="ScotlandBound_Digital_Maps.zip" class="w-full bg-white text-scottish-dark font-black py-2.5 px-4 rounded-xl text-xs shadow-sm hover:bg-blue-50 transition flex items-center justify-between group">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="map" class="w-4 h-4 text-emerald-600"></i>
+                            <span>2. Offline Map Layers Pack (.KML & .GPX inside .ZIP)</span>
+                        </div>
+                        <i data-lucide="download" class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                </div>
             </div>
 
             <!-- Helpful Reminders Grid -->
-            <div class="border-t border-slate-100 pt-6 text-left space-y-3">
-                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider">Quick Recommendations:</h4>
+            <div class="border-t border-slate-100 pt-5 text-left space-y-3">
+                <h4 class="text-xs font-bold text-gray-400 uppercase tracking-wider">Quick Setup Guide:</h4>
                 <div class="space-y-2.5 text-xs text-gray-600">
                     <div class="flex items-start gap-2">
                         <i data-lucide="smartphone" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
-                        <span><strong>Keep it Offline:</strong> Save the file directly into your Apple Books or Google Drive offline directory before you lose cell coverage in the glen stretches.</span>
+                        <span><strong>Google Maps (KML):</strong> Open Google Maps on your desktop/mobile, head to 'Saved' &rarr; 'Maps', and import this file to permanently see all pins offline.</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <i data-lucide="car" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
+                        <span><strong>Offline Apps (GPX):</strong> Import directly into your standalone vehicle GPS unit or mobile companion apps like <strong>Sygic</strong> or <strong>OsmAnd</strong> for active offline routing.</span>
                     </div>
                     <div class="flex items-start gap-2">
                         <i data-lucide="mail" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
-                        <span>A secure invoice and payment breakdown statement has been dispatched to your email inbox.</span>
+                        <span>A secure payment receipt alongside a permanent backup copy of these links has been dispatched to your email inbox.</span>
                     </div>
                 </div>
             </div>
