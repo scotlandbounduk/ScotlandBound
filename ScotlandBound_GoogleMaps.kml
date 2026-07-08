@@ -1,0 +1,1362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+  <Document>
+    <name>ScotlandBound Points</name>
+    <Style id="icon-1899-0097A7-nodesc-normal">
+      <IconStyle>
+        <color>ffa79700</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0097A7-nodesc-highlight">
+      <IconStyle>
+        <color>ffa79700</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0097A7-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0097A7-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0097A7-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-0288D1-nodesc-normal">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-0288D1-nodesc-highlight">
+      <IconStyle>
+        <color>ffd18802</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-0288D1-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-0288D1-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-3949AB-nodesc-normal">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-3949AB-nodesc-highlight">
+      <IconStyle>
+        <color>ffab4939</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-3949AB-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-3949AB-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-3949AB-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-424242-nodesc-normal">
+      <IconStyle>
+        <color>ff424242</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-424242-nodesc-highlight">
+      <IconStyle>
+        <color>ff424242</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-424242-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-424242-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-424242-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-795548-nodesc-normal">
+      <IconStyle>
+        <color>ff485579</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-795548-nodesc-highlight">
+      <IconStyle>
+        <color>ff485579</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-795548-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-795548-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-795548-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-7CB342-nodesc-normal">
+      <IconStyle>
+        <color>ff42b37c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-7CB342-nodesc-highlight">
+      <IconStyle>
+        <color>ff42b37c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-7CB342-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-7CB342-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-7CB342-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-880E4F-nodesc-normal">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-880E4F-nodesc-highlight">
+      <IconStyle>
+        <color>ff4f0e88</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-880E4F-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-880E4F-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-880E4F-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-9C27B0-nodesc-normal">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-9C27B0-nodesc-highlight">
+      <IconStyle>
+        <color>ffb0279c</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-9C27B0-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-9C27B0-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-9C27B0-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-AFB42B-nodesc-normal">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-AFB42B-nodesc-highlight">
+      <IconStyle>
+        <color>ff2bb4af</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-AFB42B-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-AFB42B-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-AFB42B-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-BDBDBD-nodesc-normal">
+      <IconStyle>
+        <color>ffbdbdbd</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-BDBDBD-nodesc-highlight">
+      <IconStyle>
+        <color>ffbdbdbd</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-BDBDBD-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-BDBDBD-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-BDBDBD-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-E65100-nodesc-normal">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-E65100-nodesc-highlight">
+      <IconStyle>
+        <color>ff0051e6</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-E65100-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-E65100-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-E65100-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FF5252-nodesc-normal">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FF5252-nodesc-highlight">
+      <IconStyle>
+        <color>ff5252ff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FF5252-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FF5252-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FF5252-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="icon-1899-FFEA00-nodesc-normal">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>0</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <Style id="icon-1899-FFEA00-nodesc-highlight">
+      <IconStyle>
+        <color>ff00eaff</color>
+        <scale>1</scale>
+        <Icon>
+          <href>https://www.gstatic.com/mapspro/images/stock/503-wht-blank_maps.png</href>
+        </Icon>
+        <hotSpot x="32" xunits="pixels" y="64" yunits="insetPixels"/>
+      </IconStyle>
+      <LabelStyle>
+        <scale>1</scale>
+      </LabelStyle>
+      <BalloonStyle>
+        <text><![CDATA[<h3>$[name]</h3>]]></text>
+      </BalloonStyle>
+    </Style>
+    <StyleMap id="icon-1899-FFEA00-nodesc">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#icon-1899-FFEA00-nodesc-normal</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#icon-1899-FFEA00-nodesc-highlight</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Placemark>
+      <name>Edinburgh Airport</name>
+      <styleUrl>#icon-1899-424242-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.3607946,55.9471784,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Arnold Clark Car & Van Rental, Edinburgh Airport]]></name>
+      <styleUrl>#icon-1899-424242-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.3603129,55.9385663,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Helix Car Park</name>
+      <styleUrl>#icon-1899-424242-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.7529375,56.0164375,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Falkirk Wheel Car Park</name>
+      <styleUrl>#icon-1899-424242-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.8386116,55.9999219,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>King Robert Hotel</name>
+      <styleUrl>#icon-1899-424242-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.9344446,56.0932083,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Battle of Bannockburn Visitor Centre (National Trust for Scotland)</name>
+      <styleUrl>#icon-1899-424242-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.9353116,56.0925633,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Co-op Food - Cambusbarron - The Brae</name>
+      <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.9675534,56.1100867,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>SEA LIFE Loch Lomond Aquarium</name>
+      <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.5910502,56.005786,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Falls of Falloch Parking</name>
+      <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.696164,56.3499751,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Falls Of Falloch</name>
+      <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.6930383,56.3500982,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>St Conan’s Kirk</name>
+      <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.0541441,56.3953171,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[McCaig’s Tower & Battery Hill]]></name>
+      <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.4691948,56.4154179,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Corriemar Guest House Oban</name>
+      <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.4816683,56.4212062,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Piazza</name>
+      <styleUrl>#icon-1899-AFB42B-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.474429,56.414557,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dunstaffnage Castle and Chapel</name>
+      <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.4374339,56.4546794,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Glencoe Mountain Resort</name>
+      <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.8278691,56.6324409,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Glencoe Waterfall Parking</name>
+      <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.964993,56.662888,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Glen Etive Waterfall</name>
+      <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.905458,56.625542,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Glencoe waterfall</name>
+      <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.9657305,56.6624219,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>High Street</name>
+      <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.1125884,56.8171496,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Rosewood Cottage</name>
+      <styleUrl>#icon-1899-9C27B0-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.1107491,56.8151896,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Neptune's Staircase Car Park]]></name>
+      <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.096907,56.8455588,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Neptune's Staircase]]></name>
+      <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.0957115,56.8450758,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Jacobite Steam Train Parking</name>
+      <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.1063153,56.8210726,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Jacobite Steam Train</name>
+      <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.1059885,56.8204282,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cruise Loch Linnhe Parking</name>
+      <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.1182932,56.8147682,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Cruise Loch Linnhe </name>
+      <styleUrl>#icon-1899-E65100-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.114902,56.816917,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Laggan car park</name>
+      <styleUrl>#icon-1899-795548-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.824189,57.0255525,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Laggan Locks</name>
+      <styleUrl>#icon-1899-795548-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.8251894,57.0261607,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Chocolates of Glenshiel</name>
+      <styleUrl>#icon-1899-795548-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.4139792,57.2123136,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Eilean Donan Castle Parking</name>
+      <styleUrl>#icon-1899-795548-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.5134164,57.2740599,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Eilean Donan Castle</name>
+      <styleUrl>#icon-1899-795548-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.5161585,57.2738957,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Co-op Food - Kyle of Lochalsh - Bridge Road</name>
+      <styleUrl>#icon-1899-795548-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.7179462,57.2804845,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kilmuir Park</name>
+      <styleUrl>#icon-1899-795548-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -6.5588397,57.4272918,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Fairy Pools Car Park</name>
+      <styleUrl>#icon-1899-0097A7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -6.273766,57.249688,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Fairy Pools</name>
+      <styleUrl>#icon-1899-0097A7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -6.2582954,57.2503431,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Neist Point Car Park</name>
+      <styleUrl>#icon-1899-0097A7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -6.7788405,57.4297283,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Neist Point Cliff Lighthouse Viewpoint</name>
+      <styleUrl>#icon-1899-0097A7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -6.7832915,57.430911,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Neist Point Lighthouse</name>
+      <styleUrl>#icon-1899-0097A7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -6.7882621,57.4234609,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Dunvegan Castle & Gardens]]></name>
+      <styleUrl>#icon-1899-0097A7-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -6.5900641,57.4484436,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Castle Moil Car Park</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.7301252,57.2728064,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Castle Moil</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.7203162,57.2726769,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Attadale Garden's Parking]]></name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.45006,57.392736,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Attadale Estate</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.4532454,57.3943222,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Bealach na Ba Viewpoint</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.7085562,57.4189142,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Applecross</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.811554,57.432321,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Victoria Falls Parking</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.535201,57.681127,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Victoria Falls</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.5330485,57.6799525,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Corrieshalloch Gorge National Nature Reserve (National Trust for Scotland)</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.0121081,57.7524124,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Royal Hotel</name>
+      <styleUrl>#icon-1899-FFEA00-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.1536111,57.8972222,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Kylesku Bridge Car Park North</name>
+      <styleUrl>#icon-1899-3949AB-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -5.0267964,58.2575417,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Durness Beach Parking</name>
+      <styleUrl>#icon-1899-3949AB-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.739881,58.567963,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Smoo Cave Parking</name>
+      <styleUrl>#icon-1899-3949AB-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.7211316,58.563452,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Clachan Cafe</name>
+      <styleUrl>#icon-1899-3949AB-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.2073832,58.5286855,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Tesco Superstore</name>
+      <styleUrl>#icon-1899-3949AB-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.5175501,58.5903971,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Whitehouse Park</name>
+      <styleUrl>#icon-1899-3949AB-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.083097,58.443463,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Castle Sinclair Parking</name>
+      <styleUrl>#icon-1899-BDBDBD-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.057349,58.47573,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Castle Sinclair Girnigoe</name>
+      <styleUrl>#icon-1899-BDBDBD-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.0680709,58.4780076,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>John o’ Groats Signpost</name>
+      <styleUrl>#icon-1899-BDBDBD-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.0700246,58.6440376,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Puffin Croft, petting Farm, Farm Shop & B&B]]></name>
+      <styleUrl>#icon-1899-BDBDBD-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.0676627,58.6375492,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dunnet Head</name>
+      <styleUrl>#icon-1899-BDBDBD-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.3766034,58.6712038,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Old Pulteney Distillery</name>
+      <styleUrl>#icon-1899-BDBDBD-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.0850261,58.4349337,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Whaligoe Steps Car Park</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1636177,58.3463724,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Whaligoe Steps</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1613755,58.3456828,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Dunrobin Castle</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.9454891,57.981842,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mermaid of the North Parking</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.9032444,57.7590581,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Mermaid of the North</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.9059441,57.7573998,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Urquhart Castle Parking</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.4445115,57.3241824,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Urquhart Castle</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.4420013,57.3241399,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Haste Ye Back</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.2369247,57.4795609,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>River Ness</name>
+      <styleUrl>#icon-1899-880E4F-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.2305857,57.4787475,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>City Sightseeing</name>
+      <styleUrl>#icon-1899-7CB342-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.225515,57.48087,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Inverness Botanic Gardens and Café</name>
+      <styleUrl>#icon-1899-7CB342-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.2403298,57.4631972,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Castlehill Park</name>
+      <styleUrl>#icon-1899-7CB342-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.169211,57.4709932,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Inverness Museum and Art Gallery</name>
+      <styleUrl>#icon-1899-7CB342-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.2252588,57.477002,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Victorian Market</name>
+      <styleUrl>#icon-1899-7CB342-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.2246646,57.4792027,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Eastgate Shopping Centre</name>
+      <styleUrl>#icon-1899-7CB342-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -4.221907,57.4794255,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Highland Wildlife Park</name>
+      <styleUrl>#icon-1899-FF5252-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.9681609,57.1097725,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Pitlochry Dam Visitor Centre</name>
+      <styleUrl>#icon-1899-FF5252-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.7393004,56.7003413,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Car Return</name>
+      <styleUrl>#icon-1899-FF5252-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.14258,55.96675,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Edinburgh Castle</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1999135,55.9485947,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Camera Obscura & World of Illusions]]></name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1956707,55.9489544,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>The Scotch Whisky Experience</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1958982,55.9487452,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Royal Mile</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.188021,55.9501093,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Ross Fountain</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.2030618,55.9500754,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Princes Street Gardens</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1985488,55.9509847,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Calton Hill</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1827409,55.9550465,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Deans Village – Riverside Hamlet & Water of Leith Walk]]></name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.2136954,55.9522999,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name>Leith</name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1665302,55.9754642,0
+        </coordinates>
+      </Point>
+    </Placemark>
+    <Placemark>
+      <name><![CDATA[Arthur's Seat]]></name>
+      <styleUrl>#icon-1899-0288D1-nodesc</styleUrl>
+      <Point>
+        <coordinates>
+          -3.1618324,55.9440825,0
+        </coordinates>
+      </Point>
+    </Placemark>
+  </Document>
+</kml>
