@@ -182,39 +182,63 @@
                 <div class="border-t border-white/20"></div>
 
                 <div>
-                    <div class="flex items-center gap-2 mb-3">
-                        <i data-lucide="sparkles" class="text-yellow-300 w-6 h-6"></i>
-                        <h3 class="text-xl font-bold">Want Something Tailored Just for You?</h3>
-                    </div>
-                    <p class="text-xs text-blue-100 mb-4 leading-relaxed">
-                        If you want to take this exact route but tweak it to fit your specific timeline, group dynamic, or bucket list, we offer personalized custom itinerary curation.
-                    </p>
-                    
-                    <div class="space-y-3">
-                        <div class="bg-white/10 rounded-xl p-3 border border-white/10 cursor-pointer hover:bg-white/15 transition" onclick="redirectToPayment('adjuster')">
-                            <div class="flex justify-between items-start mb-1">
-                                <h4 class="font-bold text-xs text-white">Route Adjuster</h4>
-                                <span class="text-[10px] bg-yellow-400 text-scottish-dark font-extrabold px-1.5 py-0.5 rounded">€125 - €200</span>
-                            </div>
-                            <p class="text-[11px] text-blue-100/90 leading-tight">We modify daily stops, pacing, and driving times to match your specific trip length.</p>
-                        </div>
-                        
-                        <div class="bg-white/10 rounded-xl p-3 border border-white/10 cursor-pointer hover:bg-white/15 transition" onclick="redirectToPayment('bespoke')">
-                            <div class="flex justify-between items-start mb-1">
-                                <h4 class="font-bold text-xs text-white">Bespoke Explorer</h4>
-                                <span class="text-[10px] bg-yellow-400 text-scottish-dark font-extrabold px-1.5 py-0.5 rounded">€299+</span>
-                            </div>
-                            <p class="text-[11px] text-blue-100/90 leading-tight">Secure your custom slot with an initial deposit. We build your entire route from the ground up.</p>
-                        </div>
-                    </div>
-
-                    <div class="pt-4 text-center">
+                    <div class="text-center mt-3">
                         <p class="text-[10px] text-blue-200/80 flex items-center justify-center gap-1">
                             <i data-lucide="lock" class="w-3 h-3 text-yellow-300"></i> Secure card processing encrypted by Stripe
                         </p>
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- UPDATED SECTION: Full-width layout & optimized top padding only to fix double spacing -->
+    <section class="max-w-7xl mx-auto px-4 pt-12 pb-0 relative z-10">
+        <div class="w-full">
+            <!-- Main Container Card -->
+            <div class="bg-gradient-to-br from-scottish-dark to-scottish-blue text-white rounded-2xl p-6 md:p-8 shadow-md border border-white/10">
+                <div class="flex items-center gap-3 mb-3">
+                    <i data-lucide="sparkles" class="text-yellow-300 w-6 h-6"></i>
+                    <h2 class="text-2xl font-black text-white">Want Something Tailored to Your Group?</h2>
+                </div>
+                <p class="text-sm text-blue-100 mb-6 max-w-3xl leading-relaxed">
+                    If you want to take this exact 13-day route blueprint but tweak it to fit your specific trip lengths, calendar dates, individual budget limits, or distinct family requirements, we offer direct custom itinerary design services.[cite: 4]
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Option 1: Route Adjuster -->
+                    <div class="bg-white/10 rounded-2xl p-6 border border-white/10 flex flex-col justify-between cursor-pointer hover:border-yellow-300/50 transition group" onclick="redirectToPayment('adjuster')">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-start">
+                                <h4 class="font-black text-lg text-white group-hover:text-yellow-300 transition">The Route Adjuster</h4>
+                                <span class="text-xs bg-white/20 text-white font-extrabold px-2.5 py-1 rounded-md border border-white/10">€125 - €200</span>
+                            </div>
+                            <p class="text-xs text-blue-100/90 leading-relaxed">
+                                We modify daily driving steps, stop allocations, and timeline milestones to match your exact trip length. Perfect if you have a tight 7-day window or want to extend this layout seamlessly.[cite: 4]
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-1.5 text-xs font-bold text-yellow-300 group-hover:underline">
+                            Request adjustments <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </div>
+                    
+                    <!-- Option 2: Bespoke Explorer -->
+                    <div class="bg-white/10 rounded-2xl p-6 border border-white/10 flex flex-col justify-between cursor-pointer hover:border-yellow-300/50 transition group" onclick="redirectToPayment('bespoke')">
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-start">
+                                <h4 class="font-black text-lg text-white group-hover:text-yellow-300 transition">Bespoke Explorer</h4>
+                                <span class="text-xs bg-yellow-400 text-scottish-dark font-extrabold px-2.5 py-1 rounded-md shadow-sm">€299+</span>
+                            </div>
+                            <p class="text-xs text-blue-100/90 leading-relaxed">
+                                Secure your custom curation planning block with an initial deposit. We map out your entire tailored route layout completely from the ground up, tailored fully to your bucket list.[cite: 4]
+                            </p>
+                        </div>
+                        <div class="mt-6 flex items-center gap-1.5 text-xs font-bold text-yellow-300 group-hover:underline">
+                            Secure custom slot <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -253,27 +277,39 @@
             </div>
 
             <h3 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
-                <i data-lucide="car" class="text-scottish-blue w-5 h-5"></i>
-                Our Tried-and-Tested Car Rental Strategy
-            </h3>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
-                <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
-                    <span class="block font-bold text-scottish-dark mb-1">The Provider</span>
-                    We highly recommend renting through <a href="https://www.celticlegend.co.uk" target="_blank" class="text-scottish-blue font-semibold underline">Celtic Legend</a>.
-                </div>
-                <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
-                    <span class="block font-bold text-scottish-dark mb-1">The Cover</span>
-                    Always opt for the total insurance waiver.
-                </div>
-                <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
-                    <span class="block font-bold text-scottish-dark mb-1">The Tech</span>
-                    Don't waste money renting a standalone GPS unit. Instead, download <a href="https://www.sygic.com" target="_blank" class="text-scottish-blue font-semibold underline">Sygic</a> onto your smartphone for reliable, offline navigation.
-                </div>
-                <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
-                    <span class="block font-bold text-scottish-dark mb-1">The Extra</span>
-                    If they offer a dashcam option, take it. It's excellent for safety insurance, and you'll end up with incredible footage of your drive.
-                </div>
+            <i data-lucide="car" class="text-scottish-blue w-5 h-5"></i>
+            Our Tried-and-Tested Car Rental Strategy
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
+            <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
+                <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
+                    <i data-lucide="building-2" class="text-scottish-blue w-4 h-4"></i>
+                    The Provider
+                </span>
+                We highly recommend renting through <a href="https://www.celticlegend.co.uk" target="_blank" class="text-scottish-blue font-semibold underline">Celtic Legend</a>.
             </div>
+            <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
+                <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
+                    <i data-lucide="shield-check" class="text-scottish-blue w-4 h-4"></i>
+                    The Cover
+                </span>
+                Always opt for the total insurance waiver.
+            </div>
+            <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
+                <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
+                    <i data-lucide="smartphone" class="text-scottish-blue w-4 h-4"></i>
+                    The Tech
+                </span>
+                Don't waste money renting a standalone GPS unit. Instead, download <a href="https://www.sygic.com" target="_blank" class="text-scottish-blue font-semibold underline">Sygic</a> onto your smartphone for reliable, offline navigation.
+            </div>
+            <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
+                <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
+                    <i data-lucide="video" class="text-scottish-blue w-4 h-4"></i>
+                    The Extra
+                </span>
+                If they offer a dashcam option, take it. It's excellent for safety insurance, and you'll end up with incredible footage of your drive.
+            </div>
+        </div>
         </div>
     </section>
 
