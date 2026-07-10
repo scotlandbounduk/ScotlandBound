@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request Received | ScotlandBound</title>
+        <!-- Cache-Busted Favicon Link -->
+        <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        scottish: { blue: '#005EB8', dark: '#1A365D', light: '#EBF4FF' }
+                    }
+                }
+            }
+        }
+    </script>
+    <meta http-equiv="refresh" content="10;url=https://scotlandbound.co.uk/">
+    <style>
+        .topo-bg {
+            background-color: #f8fafc;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M0 30c20-10 40-10 60 0s40 20 60 10 30-20 30-20M0 60c30-5 50 15 80 5s40-25 70-15M0 90c20 10 40-5 70-5s50 20 80 10M0 120c40-15 70 5 100-5s30-15 50-15' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="topo-bg min-h-screen flex items-center justify-center p-4 font-sans">
+
+    <div class="bg-white/95 backdrop-blur-md rounded-2xl shadow-md border border-slate-200/60 p-8 max-w-md w-full text-center space-y-6">
+        <div class="w-16 h-16 bg-green-50 text-green-600 rounded-full flex items-center justify-center mx-auto border border-green-100 shadow-xs">
+            <i data-lucide="check" class="w-8 h-8"></i>
+        </div>
+        
+        <div class="space-y-2">
+            <h1 class="text-2xl font-black text-scottish-dark">Route Request Received!</h1>
+            <p class="text-sm text-slate-500 leading-relaxed">
+                We have sent your routing parameters straight to our planning desk. A confirmation details summary has been dispatched to your inbox.
+            </p>
+        </div>
+
+        <div class="p-3 bg-slate-50 rounded-xl border border-slate-100 text-xs text-slate-400 font-medium">
+            Redirecting back to homepage in <span id="countdown" class="font-bold text-scottish-blue">10</span> seconds...
+        </div>
+
+        <a href="/" class="inline-flex items-center gap-1.5 text-xs font-bold text-scottish-blue hover:underline">
+            <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Return immediately
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        let seconds = 10;
+        setInterval(() => {
+            seconds--;
+            if (seconds >= 0) document.getElementById('countdown').textContent = seconds;
+        }, 1000);
+    </script>
+</body>
+</html>

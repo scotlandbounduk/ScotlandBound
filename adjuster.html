@@ -6,7 +6,7 @@
     <title>The Route Adjuster | ScotlandBound</title>
     
         <!-- Cache-Busted Favicon Link -->
-    <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
+        <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -125,10 +125,15 @@
                 </div>
             </div>
 
-            <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" class="space-y-6">
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+    
+                <input type="hidden" name="access_key" value="94823dfc-35c0-493f-9c13-0c523c62f753">
                 
-                <input type="hidden" name="_subject" value="New Route Adjuster Booking Request">
-                <input type="hidden" name="Service Type" value="The Route Adjuster">
+                <input type="hidden" name="subject" value="New Route Adjuster Booking Request">
+                
+                <input type="hidden" name="redirect" value="https://scotlandbound.co.uk/emailsuccess.html">
+                
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="space-y-1.5">
