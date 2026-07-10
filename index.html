@@ -206,8 +206,11 @@
                     If you want to take this exact 13-day route blueprint but tweak it to fit your specific trip lengths, calendar dates, individual budget limits, or distinct family requirements, we offer direct custom itinerary design services.[cite: 4]
                 </p>
                 
-                    <!-- Option 1: Adjuster -->
-                    <a href="adjuster.html" class="bg-white/10 rounded-2xl p-6 border border-white/10 flex flex-col justify-between hover:border-yellow-300/50 transition group">
+                    <!-- Grid Wrapper: Stacks on mobile, splits into 2 equal columns on desktop with a 6-unit gap (gap-6) -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                        <!-- Option 1: Adjuster -->
+                        <a href="adjuster.html" class="bg-white/10 rounded-2xl p-6 border border-white/10 flex flex-col justify-between hover:border-yellow-300/50 transition group">
                             <div class="space-y-2">
                                 <div class="flex justify-between items-start">
                                     <h4 class="font-black text-lg text-white group-hover:text-yellow-300 transition">The Route Adjuster</h4>
@@ -221,21 +224,23 @@
                                 Request adjustments <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
                             </div>
                         </a>
-                    
-                    <!-- Option 2: Bespoke Explorer -->
-                    <div class="bg-white/10 rounded-2xl p-6 border border-white/10 flex flex-col justify-between cursor-pointer hover:border-yellow-300/50 transition group" onclick="redirectToPayment('bespoke')">
-                        <div class="space-y-2">
-                            <div class="flex justify-between items-start">
-                                <h4 class="font-black text-lg text-white group-hover:text-yellow-300 transition">Bespoke Explorer</h4>
-                                <span class="text-xs bg-yellow-400 text-scottish-dark font-extrabold px-2.5 py-1 rounded-md shadow-sm">€299+</span>
+
+                        <!-- Option 2: Bespoke Explorer -->
+                        <a href="bespoke.html" class="bg-white/10 rounded-2xl p-6 border border-white/10 flex flex-col justify-between hover:border-yellow-300/50 transition group"></a>    
+                            
+                            <div class="space-y-2">
+                                <div class="flex justify-between items-start">
+                                    <h4 class="font-black text-lg text-white group-hover:text-yellow-300 transition">Bespoke Explorer</h4>
+                                    <span class="text-xs bg-yellow-400 text-scottish-dark font-extrabold px-2.5 py-1 rounded-md shadow-sm">€299+</span>
+                                </div>
+                                <p class="text-xs text-blue-100/90 leading-relaxed">
+                                    Secure your custom curation planning block with an initial deposit. We map out your entire tailored route layout completely from the ground up, tailored fully to your bucket list.
+                                </p>
                             </div>
-                            <p class="text-xs text-blue-100/90 leading-relaxed">
-                                Secure your custom curation planning block with an initial deposit. We map out your entire tailored route layout completely from the ground up, tailored fully to your bucket list.[cite: 4]
-                            </p>
-                        </div>
-                        <div class="mt-6 flex items-center gap-1.5 text-xs font-bold text-yellow-300 group-hover:underline">
-                            Secure custom slot <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
-                        </div>
+                            <div class="mt-6 flex items-center gap-1.5 text-xs font-bold text-yellow-300 group-hover:underline">
+                                Secure custom slot <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+                            </div>
+                            
                     </div>
                 </div>
             </div>
