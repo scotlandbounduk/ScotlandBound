@@ -4,8 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Successful | ScotlandBound</title>
+    
+    <!-- Cache-Busted Favicon Link -->
+    <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
+    
     <script>
         tailwind.config = {
             theme: {
@@ -22,6 +27,7 @@
             }
         }
     </script>
+    
     <style>
         /* Replicating the distinct topographical overlay from index.html */
         .topo-bg {
@@ -30,16 +36,17 @@
         }
     </style>
 </head>
-<body class="topo-bg text-gray-800 font-sans min-h-screen flex flex-col justify-between">
+<body class="topo-bg text-gray-800 font-sans min-h-screen flex flex-col justify-between selection:bg-blue-500 selection:text-white">
 
-    <!-- Simple, Clean Branded Header -->
-    <header class="bg-scottish-dark text-white py-6 px-6 shadow-md">
-        <div class="max-w-6xl mx-auto flex items-center justify-between">
-            <span class="font-black tracking-tight text-xl flex items-center gap-2">
-                <i data-lucide="compass" class="text-scottish-accent w-6 h-6"></i> ScotlandBound
-            </span>
-            <a href="index.html" class="text-xs bg-white/10 hover:bg-white/20 px-4 py-2 rounded-lg font-semibold transition">
-                Back to Guide
+    <!-- Top Navigation Header -->
+    <header class="bg-scottish-dark text-white py-3 px-6 shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-xl font-black tracking-tight hover:text-blue-200 transition">
+                <img src="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1" alt="Scottish Flag" class="w-6 h-6 object-contain">
+                <span>Scotland Bound</span>
+            </a>
+            <a href="index.html" class="text-xs font-bold bg-white/10 hover:bg-white/20 text-white py-2 px-4 rounded-lg border border-white/20 transition flex items-center gap-1.5">
+                <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Main Guide
             </a>
         </div>
     </header>
@@ -118,9 +125,11 @@
         </div>
     </main>
 
-    <!-- Footer matching index.html aesthetics -->
-    <footer class="bg-scottish-dark text-white border-t border-blue-900 py-6 px-6 text-center text-xs text-blue-200/60">
-        © 2026 Scotland Travel Master Planner Dashboard. All rights reserved.
+    <!-- Footer matching site aesthetics -->
+    <footer class="bg-scottish-dark text-white border-t border-blue-900 py-6">
+        <div class="max-w-4xl mx-auto px-4 text-center text-xs text-blue-200/60 font-medium">
+            &copy; 2026 ScotlandBound. All rights reserved.
+        </div>
     </footer>
 
     <script>
