@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Canonical URL Tag (Fixes Trailing Slash / index.html Duplication Issues) -->
+    <!-- Canonical URL Tag -->
     <link rel="canonical" href="https://scotlandbound.co.uk/">
+
+    <!-- Preload LCP Hero Image with High Priority (Fixes Warning #1) -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1612422499157-addd7df3526e?fm=jpg&q=60&w=3000&auto=format&fit=crop" fetchpriority="high">
 
     <!-- CDN & Performance Resource Hints -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
@@ -28,7 +31,7 @@
 
     <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
     
-    <!-- Tailwind CDN MUST run synchronously to generate utilities -->
+    <!-- Tailwind CDN (Kept synchronous to maintain design integrity) -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script>
@@ -55,6 +58,75 @@
             .hero-bg { padding-top: 5rem; padding-bottom: 5rem; }
         }
     </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "TouristTrip",
+        "name": "The Ultimate 13-Day Scotland Road Trip",
+        "description": "A 13-day master driving route tracking from the historic Lowlands through the wild Highlands, Isle of Skye, and the North Coast 500.",
+        "touristType": ["Roadtripper", "Self-drive Traveler", "Explorer"],
+        "itinerary": {
+          "@type": "ItemList",
+          "numberOfItems": 13,
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Arrival at EDI Airport & Stirling Castle" },
+            { "@type": "ListItem", "position": 2, "name": "Stirling to Oban via Loch Lomond & St Conan's Kirk" },
+            { "@type": "ListItem", "position": 3, "name": "Oban to Fort William through Glencoe Pass" },
+            { "@type": "ListItem", "position": 4, "name": "Jacobite Steam Train & Loch Linnhe Sunset Cruise" },
+            { "@type": "ListItem", "position": 5, "name": "The Great Glen to Isle of Skye via Eilean Donan Castle" },
+            { "@type": "ListItem", "position": 6, "name": "Exploring Western Skye: Fairy Pools & Neist Point" },
+            { "@type": "ListItem", "position": 7, "name": "Skye to Ullapool via Applecross Pass & Corrieshalloch Gorge" },
+            { "@type": "ListItem", "position": 8, "name": "The Wild North Coast 500: Kylesku Bridge & Smoo Cave" },
+            { "@type": "ListItem", "position": 9, "name": "Wick, John o'Groats & Dunnet Head" },
+            { "@type": "ListItem", "position": 10, "name": "Southbound Coastal Drive to Inverness & Urquhart Castle" },
+            { "@type": "ListItem", "position": 11, "name": "Inverness City Walk & Botanical Gardens" },
+            { "@type": "ListItem", "position": 12, "name": "Cairngorms Safari & Edinburgh Return" },
+            { "@type": "ListItem", "position": 13, "name": "Edinburgh Old Town & Castle Exploration" }
+          ]
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Master Navigation Pack & Offline SatNav Bundle",
+        "image": "https://images.unsplash.com/photo-1612422499157-addd7df3526e",
+        "description": "Complete offline road trip bundle including mobilized PDF guide, interactive Google Maps KML layer, and GPX route files.",
+        "offers": {
+          "@type": "Offer",
+          "price": "15.00",
+          "priceCurrency": "EUR",
+          "availability": "https://schema.org/InStock",
+          "url": "https://scotlandbound.co.uk/"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How many days do you need for a Scotland road trip?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A 13-day itinerary is the ideal timeframe to comfortably cover the Lowlands, Western Highlands, Isle of Skye, and the dramatic North Coast 500 without spending all day driving."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the best way to drive single-track roads in the Scottish Highlands?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Always use designated passing places on your left to let faster vehicles overtake, maintain high spatial awareness over blind summits, and yield to oncoming traffic on narrow lanes."
+            }
+          }
+        ]
+      }
+    ]
+    </script>
+</head>
 
 <body class="topo-bg text-gray-800 font-sans">
 
@@ -343,21 +415,23 @@
 
     <!-- Application Script Execution Layer -->
     <script>
-        // Console-Safe Obfuscated Email Injection
+        function getEmailAddress() {
+            return ['scotlandbounduk', 'gmail.com'].join('@');
+        }
+
         (function() {
             try {
-                const u = 'scotlandbounduk', d = 'gmail.com';
                 const c = document.getElementById('email-container');
-                if (c) c.innerHTML = `<a href="mailto:${u}@${d}" class="hover:underline text-scottish-dark font-semibold">${u}@${d}</a>`;
+                const e = getEmailAddress();
+                if (c) c.innerHTML = `<a href="mailto:${e}" class="hover:underline text-scottish-dark font-semibold">${e}</a>`;
             } catch(e) { console.error("Email obfuscation init error:", e); }
         })();
 
-        // Safe Checkout and Email Handler
         function redirectToPayment(productType) {
             try {
                 const paymentLinks = { 'bundle': 'https://buy.stripe.com/cNi5kwf8O5DZ2bP0TXcMM03' };
-                const recipient = ['scotlandbounduk', 'gmail.com'].join('@');
-                
+                const recipient = getEmailAddress();
+
                 if (productType === 'bundle') {
                     window.location.href = paymentLinks['bundle'];
                     return;
@@ -563,6 +637,57 @@
             }
         ];
 
+        let currentActiveTab = 0;
+
+        function renderDayContent(idx) {
+            const dayData = itineraryData[idx];
+            let stopsHTML = '';
+
+            dayData.stops.forEach(stop => {
+                let warningHTML = stop.warning ? `<div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-xl text-xs text-amber-800 font-medium flex gap-2 items-start mt-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i><div>${stop.warning}</div></div>` : '';
+                let imgPositionClass = stop.position ? `object-${stop.position}` : 'object-center';
+                let photoHTML = stop.photo ? `
+                    <div class="mt-3 md:mt-0 md:w-48 flex-shrink-0">
+                        <div onclick="openImageModal('${stop.photo}')" class="overflow-hidden rounded-xl border border-slate-200 shadow-sm aspect-[4/3] md:aspect-square cursor-zoom-in group/img relative">
+                            <img src="${stop.photo}" alt="${stop.name}" class="w-full h-full object-cover ${imgPositionClass} hover:scale-105 transition duration-300" loading="lazy">
+                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition duration-300 flex items-center justify-center">
+                                <i data-lucide="maximize-2" class="text-white opacity-0 group-hover/img:opacity-100 w-5 h-5 drop-shadow transition duration-300"></i>
+                            </div>
+                        </div>
+                    </div>
+                ` : '';
+
+                stopsHTML += `
+                    <div class="relative pl-8 border-l-2 border-slate-100 last:border-0 pb-6 last:pb-0">
+                        <div class="absolute -left-[11px] top-0.5 bg-white border-2 border-scottish-blue w-5 h-5 rounded-full flex items-center justify-center shadow-sm">
+                            <div class="bg-scottish-blue w-1.5 h-1.5 rounded-full"></div>
+                        </div>
+                        <div class="flex flex-col md:flex-row gap-4 justify-between items-start">
+                            <div class="flex-1 space-y-1">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <span class="bg-scottish-light text-scottish-dark font-bold text-xs px-2.5 py-0.5 rounded-md flex items-center gap-1">
+                                        <i data-lucide="clock" class="w-3 h-3"></i> ${stop.time}
+                                    </span>
+                                    <h4 class="text-base font-bold text-gray-900">${stop.name}</h4>
+                                </div>
+                                <p class="text-sm text-gray-600 leading-relaxed">${stop.details}</p>
+                                ${warningHTML}
+                            </div>
+                            ${photoHTML}
+                        </div>
+                    </div>
+                `;
+            });
+
+            return `
+                <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60">
+                    <h2 class="text-2xl font-black text-scottish-dark mb-2">${dayData.title}</h2>
+                    <p class="text-sm text-gray-500 italic font-medium mb-6 border-b border-slate-100 pb-4">${dayData.intro}</p>
+                    <div class="space-y-6">${stopsHTML}</div>
+                </div>
+            `;
+        }
+
         function buildDashboard() {
             try {
                 const menuContainer = document.getElementById('tabMenu');
@@ -570,71 +695,27 @@
                 if (!menuContainer || !panelsContainer) return;
 
                 menuContainer.innerHTML = '';
-                panelsContainer.innerHTML = '';
 
                 itineraryData.forEach((dayData, idx) => {
                     const btn = document.createElement('button');
+                    btn.id = `tab-btn-${idx}`;
                     btn.className = `w-full text-left px-4 py-3 rounded-xl font-medium text-sm transition flex items-center justify-between ${idx === 0 ? 'bg-scottish-blue text-white shadow-md font-bold' : 'text-gray-600 hover:bg-gray-100 hover:text-scottish-dark'}`;
                     btn.innerHTML = `<span>${dayData.label}</span> <i data-lucide="chevron-right" class="w-4 h-4 opacity-70"></i>`;
                     btn.onclick = () => switchTab(idx);
                     menuContainer.appendChild(btn);
-
-                    const panel = document.createElement('div');
-                    panel.className = `tab-content ${idx === 0 ? 'active' : ''} space-y-6`;
-                    panel.id = `panel-${idx}`;
-
-                    let stopsHTML = '';
-                    dayData.stops.forEach(stop => {
-                        let warningHTML = stop.warning ? `<div class="bg-amber-50 border-l-4 border-amber-500 p-3 rounded-r-xl text-xs text-amber-800 font-medium flex gap-2 items-start mt-2"><i data-lucide="alert-circle" class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5"></i><div>${stop.warning}</div></div>` : '';
-                        let imgPositionClass = stop.position ? `object-${stop.position}` : 'object-center';
-                        let photoHTML = stop.photo ? `
-                            <div class="mt-3 md:mt-0 md:w-48 flex-shrink-0">
-                                <div onclick="openImageModal('${stop.photo}')" class="overflow-hidden rounded-xl border border-slate-200 shadow-sm aspect-[4/3] md:aspect-square cursor-zoom-in group/img relative">
-                                    <img src="${stop.photo}" alt="${stop.name}" class="w-full h-full object-cover ${imgPositionClass} hover:scale-105 transition duration-300" loading="lazy">
-                                    <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition duration-300 flex items-center justify-center">
-                                        <i data-lucide="maximize-2" class="text-white opacity-0 group-hover/img:opacity-100 w-5 h-5 drop-shadow transition duration-300"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        ` : '';
-
-                        stopsHTML += `
-                            <div class="relative pl-8 border-l-2 border-slate-100 last:border-0 pb-6 last:pb-0">
-                                <div class="absolute -left-[11px] top-0.5 bg-white border-2 border-scottish-blue w-5 h-5 rounded-full flex items-center justify-center shadow-sm">
-                                    <div class="bg-scottish-blue w-1.5 h-1.5 rounded-full"></div>
-                                </div>
-                                <div class="flex flex-col md:flex-row gap-4 justify-between items-start">
-                                    <div class="flex-1 space-y-1">
-                                        <div class="flex flex-wrap items-center gap-2">
-                                            <span class="bg-scottish-light text-scottish-dark font-bold text-xs px-2.5 py-0.5 rounded-md flex items-center gap-1">
-                                                <i data-lucide="clock" class="w-3 h-3"></i> ${stop.time}
-                                            </span>
-                                            <h4 class="text-base font-bold text-gray-900">${stop.name}</h4>
-                                        </div>
-                                        <p class="text-sm text-gray-600 leading-relaxed">${stop.details}</p>
-                                        ${warningHTML}
-                                    </div>
-                                    ${photoHTML}
-                                </div>
-                            </div>
-                        `;
-                    });
-
-                    panel.innerHTML = `
-                        <div class="bg-white rounded-2xl p-6 shadow-sm border border-slate-200/60">
-                            <h2 class="text-2xl font-black text-scottish-dark mb-2">${dayData.title}</h2>
-                            <p class="text-sm text-gray-500 italic font-medium mb-6 border-b border-slate-100 pb-4">${dayData.intro}</p>
-                            <div class="space-y-6">${stopsHTML}</div>
-                        </div>
-                    `;
-                    panelsContainer.appendChild(panel);
                 });
+
+                panelsContainer.innerHTML = renderDayContent(0);
+
                 if (window.lucide) lucide.createIcons();
             } catch(e) { console.error("Dashboard render error:", e); }
         }
 
         function switchTab(index) {
             try {
+                if (currentActiveTab === index) return;
+                currentActiveTab = index;
+
                 const buttons = document.querySelectorAll('#tabMenu button');
                 buttons.forEach((btn, idx) => {
                     btn.className = idx === index 
@@ -642,11 +723,11 @@
                         : "w-full text-left px-4 py-3 rounded-xl font-medium text-sm transition flex items-center justify-between text-gray-600 hover:bg-gray-100 hover:text-scottish-dark";
                 });
 
-                const panels = document.querySelectorAll('.tab-content');
-                panels.forEach((panel, idx) => {
-                    if (idx === index) panel.classList.add('active');
-                    else panel.classList.remove('active');
-                });
+                const panelsContainer = document.getElementById('tabPanels');
+                if (panelsContainer) {
+                    panelsContainer.innerHTML = renderDayContent(index);
+                }
+
                 if (window.lucide) lucide.createIcons();
             } catch(e) { console.error("Tab switch error:", e); }
         }
@@ -674,7 +755,29 @@
             if (e.key === 'Escape') closeImageModal();
         });
 
-        document.addEventListener('DOMContentLoaded', buildDashboard);
+        document.addEventListener('DOMContentLoaded', function() {
+            buildDashboard();
+            
+            // Deferred Non-Critical Analytics Execution (Fixes Warning #2, #3, #4)
+            setTimeout(() => {
+                // Load Google Analytics
+                const ga = document.createElement('script');
+                ga.src = "https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0";
+                ga.async = true;
+                document.head.appendChild(ga);
+
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-9R8KD5FZD0');
+
+                // Load Travelpayouts Script
+                const tp = document.createElement('script');
+                tp.src = "https://emrld.ltd/NTQ1ODM1.js?t=545835";
+                tp.async = true;
+                document.head.appendChild(tp);
+            }, 2500);
+        });
     </script>
 </body>
 </html>
