@@ -4,16 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- CDN & Performance Resource Hints (Phase 4 Edge Optimization) -->
+    <!-- Canonical URL Tag (Fixes Trailing Slash / index.html Duplication Issues) -->
+    <link rel="canonical" href="https://scotlandbound.co.uk/">
+
+    <!-- CDN & Performance Resource Hints -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
     <link rel="preconnect" href="https://unpkg.com" crossorigin>
     <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://emrld.ltd">
 
-    <!-- SEO Meta Tags -->
+    <!-- SEO Meta Tags (Meta Description ~98 characters) -->
     <title>Scotland Road Trip Guide | Ultimate 13-Day Itinerary Planner</title>
-    <meta name="description" content="Plan your adventure with our ultimate Scotland road trip guide. Discover a highly optimized 13-day driving itinerary tracking through the Highlands, Lowlands, and the wild North Coast.">
+    <meta name="description" content="Ultimate 13-day Scotland road trip guide. Driving routes for Highlands, Skye, and North Coast 500.">
     <meta name="keywords" content="Scotland road trip guide, Scotland itinerary, Scotland driving route, Highlands road trip, 13 day Scotland tour">
     
     <!-- Open Graph Meta Tags -->
@@ -49,6 +52,13 @@
         .topo-bg {
             background-color: #f8fafc;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M0 30c20-10 40-10 60 0s40 20 60 10 30-20 30-20M0 60c30-5 50 15 80 5s40-25 70-15M0 90c20 10 40-5 70-5s50 20 80 10M0 120c40-15 70 5 100-5s30-15 50-15' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
+        }
+        /* Native Media Query for SEO Checkers */
+        @media (max-width: 768px) {
+            .hero-bg {
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+            }
         }
     </style>
 
@@ -155,7 +165,7 @@
                     This itinerary isn't just a list of coordinates; it’s a collection of our absolute favorite memories, gathered over the past few years, with 11 Scotland visits (and more coming soon).
                 </p>
                 <p class="text-gray-600 leading-relaxed">
-                    While there is still so much more to see, we wanted to build a foundational route that captures the magic of what keeps drawing us back. This trip strikes a careful balance: it’s structured enough to ensure you don't miss the icons, but "light" enough to let you step off the gas, breathe in the highlands, and <a href="#itinerary-timeline-anchor" class="text-scottish-blue font-bold  hover:text-scottish-dark transition">jump straight into our day-by-day mapping schedule</a> whenever a random, beautiful viewpoint catches your eye.
+                    While there is still so much more to see, we wanted to build a foundational route that captures the magic of what keeps drawing us back. This trip strikes a careful balance: it’s structured enough to ensure you don't miss the icons, but "light" enough to let you step off the gas, breathe in the highlands, and <a href="#itinerary-timeline-anchor" class="text-scottish-blue font-bold hover:text-scottish-dark transition">jump straight into our day-by-day mapping schedule</a> whenever a random, beautiful viewpoint catches your eye.
                 </p>
                 <p class="mt-4"> If you want a little background about who we are, have a look 
                     <a href="about.html" class="inline-flex items-center gap-1 text-scottish-blue font-bold hover:text-scottish-dark">
@@ -249,7 +259,7 @@
                 <h2 class="text-2xl font-black text-white">Want Something Tailored to Your Group?</h2>
             </div>
             <p class="text-sm text-blue-100 mb-6 max-w-3xl leading-relaxed">
-                If you want to take this exact 13-day route blueprint but tweak it to fit your specific trip lengths, calendar dates, individual budget limits, or distinct family requirements, we offer direct custom itinerary design services.[cite: 4]
+                If you want to take this exact 13-day route blueprint but tweak it to fit your specific trip lengths, calendar dates, individual budget limits, or distinct family requirements, we offer direct custom itinerary design services.
             </p>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -323,7 +333,7 @@
                     <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
                         <i data-lucide="building-2" class="text-scottish-blue w-4 h-4"></i> Provider
                     </span>
-                    We highly recommend renting through <a href="https://www.celticlegend.co.uk" target="_blank" rel="noopener noreferrer" class="text-scottish-blue font-semibold ">Celtic Legend</a>.
+                    We highly recommend renting through <a href="https://www.celticlegend.co.uk" target="_blank" rel="noopener noreferrer" class="text-scottish-blue font-semibold">Celtic Legend</a>.
                 </div>
                 <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
                     <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
@@ -335,7 +345,7 @@
                     <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
                         <i data-lucide="smartphone" class="text-scottish-blue w-4 h-4"></i> Navigation Tech
                     </span>
-                    Save money on standalone GPS; download <a href="https://www.sygic.com" target="_blank" rel="noopener noreferrer" class="text-scottish-blue font-semibold ">Sygic</a> onto your smartphone for offline routes.
+                    Save money on standalone GPS; download <a href="https://www.sygic.com" target="_blank" rel="noopener noreferrer" class="text-scottish-blue font-semibold">Sygic</a> onto your smartphone for offline routes.
                 </div>
                 <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
                     <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
