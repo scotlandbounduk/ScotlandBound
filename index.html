@@ -14,7 +14,7 @@
     <link rel="dns-prefetch" href="https://www.googletagmanager.com">
     <link rel="dns-prefetch" href="https://emrld.ltd">
 
-    <!-- SEO Meta Tags (Meta Description ~98 characters) -->
+    <!-- SEO Meta Tags -->
     <title>Scotland Road Trip Guide | Ultimate 13-Day Itinerary Planner</title>
     <meta name="description" content="Ultimate 13-day Scotland road trip guide. Driving routes for Highlands, Skye, and North Coast 500.">
     <meta name="keywords" content="Scotland road trip guide, Scotland itinerary, Scotland driving route, Highlands road trip, 13 day Scotland tour">
@@ -28,7 +28,7 @@
 
     <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
     
-    <!-- Tailored Scripts (Non-blocking Edge Loading) -->
+    <!-- Tailwind CDN MUST run synchronously to generate utilities -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest" defer></script>
     <script>
@@ -44,8 +44,6 @@
     </script>
     
     <style>
-        .tab-content { display: none; }
-        .tab-content.active { display: block; }
         .hero-bg {
             background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.65)), url('https://images.unsplash.com/photo-1612422499157-addd7df3526e?fm=jpg&q=60&w=3000&auto=format&fit=crop') no-repeat center/cover;
         }
@@ -53,95 +51,10 @@
             background-color: #f8fafc;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M0 30c20-10 40-10 60 0s40 20 60 10 30-20 30-20M0 60c30-5 50 15 80 5s40-25 70-15M0 90c20 10 40-5 70-5s50 20 80 10M0 120c40-15 70 5 100-5s30-15 50-15' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
         }
-        /* Native Media Query for SEO Checkers */
         @media (max-width: 768px) {
-            .hero-bg {
-                padding-top: 5rem;
-                padding-bottom: 5rem;
-            }
+            .hero-bg { padding-top: 5rem; padding-bottom: 5rem; }
         }
     </style>
-
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9R8KD5FZD0');
-    </script>
-
-    <!-- Travelpayouts Monetization Script -->
-    <script async src="https://emrld.ltd/NTQ1ODM1.js?t=545835"></script>
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "TouristTrip",
-        "name": "The Ultimate 13-Day Scotland Road Trip",
-        "description": "A 13-day master driving route tracking from the historic Lowlands through the wild Highlands, Isle of Skye, and the North Coast 500.",
-        "touristType": ["Roadtripper", "Self-drive Traveler", "Explorer"],
-        "itinerary": {
-          "@type": "ItemList",
-          "numberOfItems": 13,
-          "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Arrival at EDI Airport & Stirling Castle" },
-            { "@type": "ListItem", "position": 2, "name": "Stirling to Oban via Loch Lomond & St Conan's Kirk" },
-            { "@type": "ListItem", "position": 3, "name": "Oban to Fort William through Glencoe Pass" },
-            { "@type": "ListItem", "position": 4, "name": "Jacobite Steam Train & Loch Linnhe Sunset Cruise" },
-            { "@type": "ListItem", "position": 5, "name": "The Great Glen to Isle of Skye via Eilean Donan Castle" },
-            { "@type": "ListItem", "position": 6, "name": "Exploring Western Skye: Fairy Pools & Neist Point" },
-            { "@type": "ListItem", "position": 7, "name": "Skye to Ullapool via Applecross Pass & Corrieshalloch Gorge" },
-            { "@type": "ListItem", "position": 8, "name": "The Wild North Coast 500: Kylesku Bridge & Smoo Cave" },
-            { "@type": "ListItem", "position": 9, "name": "Wick, John o'Groats & Dunnet Head" },
-            { "@type": "ListItem", "position": 10, "name": "Southbound Coastal Drive to Inverness & Urquhart Castle" },
-            { "@type": "ListItem", "position": 11, "name": "Inverness City Walk & Botanical Gardens" },
-            { "@type": "ListItem", "position": 12, "name": "Cairngorms Safari & Edinburgh Return" },
-            { "@type": "ListItem", "position": 13, "name": "Edinburgh Old Town & Castle Exploration" }
-          ]
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "Product",
-        "name": "Master Navigation Pack & Offline SatNav Bundle",
-        "image": "https://images.unsplash.com/photo-1612422499157-addd7df3526e",
-        "description": "Complete offline road trip bundle including mobilized PDF guide, interactive Google Maps KML layer, and GPX route files.",
-        "offers": {
-          "@type": "Offer",
-          "price": "15.00",
-          "priceCurrency": "EUR",
-          "availability": "https://schema.org/InStock",
-          "url": "https://scotlandbound.co.uk/"
-        }
-      },
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "How many days do you need for a Scotland road trip?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A 13-day itinerary is the ideal timeframe to comfortably cover the Lowlands, Western Highlands, Isle of Skye, and the dramatic North Coast 500 without spending all day driving."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the best way to drive single-track roads in the Scottish Highlands?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Always use designated passing places on your left to let faster vehicles overtake, maintain high spatial awareness over blind summits, and yield to oncoming traffic on narrow lanes."
-            }
-          }
-        ]
-      }
-    ]
-    </script>
-</head>
 
 <body class="topo-bg text-gray-800 font-sans">
 
@@ -443,8 +356,8 @@
         function redirectToPayment(productType) {
             try {
                 const paymentLinks = { 'bundle': 'https://buy.stripe.com/cNi5kwf8O5DZ2bP0TXcMM03' };
-                const recipient = "scotlandbounduk@gmail.com";
-
+                const recipient = ['scotlandbounduk', 'gmail.com'].join('@');
+                
                 if (productType === 'bundle') {
                     window.location.href = paymentLinks['bundle'];
                     return;
