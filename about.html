@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Tag Manager (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -13,13 +13,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>About Us | Scotland Road Trip Guide & Driving Protocols</title>
-    <meta name="description" content="Learn more about the team behind Scotland Bound. Over 11 Highland road trips mapped, tested driving protocols, and independent travel planning.">
+    <!-- SEO Meta Tags -->
+    <title>About Us | Scotland Road Trip Guide & Real Photo Gallery</title>
+    <meta name="description" content="Learn about the team behind Scotland Bound. Over 11 Highland road trips, 5 NC500 loops, real photography gallery, and tested driving protocols.">
+    <meta name="keywords" content="Scotland road trip gallery, NC500 photo gallery, Highland travel experience, Scotland Bound story">
     
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scotlandbound.co.uk/about.html">
+    <meta property="og:title" content="About Scotland Bound | Real Travel Photography & Story">
+    <meta property="og:description" content="Explore over a decade of authentic Highland driving experience and personal photo archives across Scotland.">
+    <meta property="og:image" content="https://scotlandbound.co.uk/images/Eilean%20Donan%20Castle.jpeg">
+
     <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
     
+    <!-- CDN Preconnect Resource Hints -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     <script>
         tailwind.config = {
             theme: {
@@ -42,14 +55,54 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M0 30c20-10 40-10 60 0s40 20 60 10 30-20 30-20M0 60c30-5 50 15 80 5s40-25 70-15M0 90c20 10 40-5 70-5s50 20 80 10M0 120c40-15 70 5 100-5s30-15 50-15' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
         }
     </style>
+
+    <!-- Image Gallery Structured Data (SEO / E-E-A-T Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ImageGallery",
+      "name": "CJ's Personal Scotland Travel Photography Archive",
+      "description": "Authentic original photos captured across 11+ trips to Scotland, including the NC500, Isle of Skye, Glencoe, and Edinburgh.",
+      "author": {
+        "@type": "Person",
+        "name": "CJ"
+      },
+      "image": [
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://scotlandbound.co.uk/images/Eilean%20Donan%20Castle.jpeg",
+          "name": "Eilean Donan Castle at Loch Duich",
+          "description": "Historic 13th-century castle in the Western Highlands near Kyle of Lochalsh."
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://scotlandbound.co.uk/images/GlencoeWaterfall.jpg",
+          "name": "Glencoe Mountain Valley Cascades",
+          "description": "Roadside waterfalls carving through the volcanic Glencoe Pass."
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://scotlandbound.co.uk/images/Kylesku%20Bridge.jpg",
+          "name": "Kylesku Bridge along the NC500",
+          "description": "Curved concrete box girder bridge on the northern stretch of the North Coast 500."
+        },
+        {
+          "@type": "ImageObject",
+          "contentUrl": "https://scotlandbound.co.uk/images/Lighthouse.jpeg",
+          "name": "Neist Point Lighthouse Isle of Skye",
+          "description": "Dramatic sea cliffs and coastal lighthouse at Neist Point on the Isle of Skye."
+        }
+      ]
+    }
+    </script>
 </head>
 <body class="topo-bg text-gray-800 font-sans">
 
-<!-- Top Navigation Header -->
+    <!-- Top Navigation Header -->
     <header class="bg-scottish-dark text-white py-3 px-6 shadow-md">
         <div class="max-w-6xl mx-auto flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-2 text-xl font-black tracking-tight hover:text-blue-200 transition">
-                <img src="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1" alt="Scottish Flag" class="w-6 h-6 object-contain">
+                <img src="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1" alt="Scottish Flag Logo" class="w-6 h-6 object-contain">
                 <span>Scotland Bound</span>
             </a>
             <a href="index.html" class="text-xs font-bold bg-white/10 hover:bg-white/20 text-white py-2 px-4 rounded-lg border border-white/20 transition flex items-center gap-1.5">
@@ -58,12 +111,12 @@
         </div>
     </header>
 
-<!-- Page Title Banner -->
+    <!-- Page Title Banner -->
     <section class="relative text-white py-16 px-6 shadow-lg bg-cover bg-center" style="background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.65)), url('https://images.squarespace-cdn.com/content/v1/5efb46cf46fb3d2f36091afa/5a594c5a-729a-44ca-9361-6c7196245dda/Scotland+Tours+2025+Small-Group+Scottish+Adventures.jpg');">
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <h1 class="text-3xl md:text-5xl font-black tracking-tight mb-4">About Scotland Bound</h1>
             <p class="text-lg opacity-90 max-w-2xl mx-auto font-medium">
-                The story, mission, and hands-on driving experience behind Scotland’s premier independent road trip planner.
+                The story, real-world photography, and hands-on driving experience behind Scotland’s premier independent road trip planner.
             </p>
         </div>
     </section>
@@ -77,7 +130,7 @@
                 <h2 class="text-2xl font-black text-scottish-dark">Our Story & Experience</h2>
             </div>
             <p class="text-gray-600 leading-relaxed">
-                Hi there, I’m CJ, born and raised on the sun-soaked island of Malta, but by now, i feel entirely Scottish at heart. Between running a full-time corporate job and keeping up with a busy family life, Scotland has become our ultimate escape, our slice of paradise, the place where one day we plan to retire. 
+                Hi there, I’m CJ, born and raised on the sun-soaked island of Malta, but by now, I feel entirely Scottish at heart. Between running a full-time corporate job and keeping up with a busy family life, Scotland has become our ultimate escape, our slice of paradise, the place where one day we plan to retire.
             </p>
             <p class="text-gray-600 leading-relaxed">
                 My love affair with the country began on my first visit back in 2009. Since then, I’ve returned over 11 times, leaving a small piece of my heart behind with every single trip.
@@ -95,6 +148,255 @@
             <p class="text-gray-600 leading-relaxed">
                 Every route, tip, and stop in this guide comes from thousands of miles spent navigating single-track Highland roads, coastal loops, and island ferry crossings. We built this blueprint to give you a realistic, battle-tested, and beautifully paced driving masterclass, so you can experience the real magic of Scotland without the stress.
             </p>
+        </div>
+
+        <!-- NEW: SEO & E-E-A-T PHOTO GALLERY SECTION -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60 space-y-6">
+            <div class="flex items-center justify-between border-b border-slate-100 pb-4">
+                <div class="flex items-center gap-3">
+                    <i data-lucide="camera" class="text-scottish-blue w-6 h-6"></i>
+                    <div>
+                        <h2 class="text-2xl font-black text-scottish-dark">Snapshots taken over the years</h2>
+                        <p class="text-xs text-gray-500 font-medium">Original photos taken across the various visits along the years. Included photos of places which aren't part of the off-the-shelf itinerary, just to show that there's so much more to discover.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gallery Grid with Optimized WebP/JPEG Fallbacks & SEO Alt Text -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                
+                <div onclick="openImageModal('GalleryImages/Attadale.jpg', 'Attadale')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Attadale.jpg" alt="Attadale" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Attadale</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Auchentoshan.jpg', 'Auchentoshan Distillery')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Auchentoshan.jpg" alt="Auchentoshan Distillery" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Auchentoshan Distillery</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/CoralBeach.jpg', 'Coral Beach')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/CoralBeach.jpg" alt="Coral Beach" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Coral Beach</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Dunvegan.jpg', 'Dunvegan')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Dunvegan.jpg" alt="Dunvegan" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Dunvegan</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/DurnessBeach.jpg', 'Durness Beach')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/DurnessBeach.jpg" alt="Durness Beach" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Durness Beach</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/FallsOfFalloch.jpg', 'Falls of Falloch')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/FallsOfFalloch.jpg" alt="Falls of Falloch" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Falls of Falloch</span>
+                    </div>
+                </div>
+                
+                <div onclick="openImageModal('GalleryImages/FortWilliam.jpg', 'Fort William')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/FortWilliam.jpg" alt="Fort William" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Fort William</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Glasgow.jpg', 'Glasgow')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Glasgow.jpg" alt="Glasgow" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Glasgow</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/HighlandZoo.jpg', 'Highland Zoo')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/HighlandZoo.jpg" alt="Highland Zoo" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Highland Zoo</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/InvernessBridge.jpg', 'Inverness Bridge')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/InvernessBridge.jpg" alt="Inverness Bridge" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Inverness Bridge</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/JohnOgroats.jpg', 'John O\'Groats')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/JohnOgroats.jpg" alt="John O'Groats" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">John O'Groats</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Kelpies.jpg', 'Kelpies')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Kelpies.jpg" alt="Kelpies" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Kelpies</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/KelvingroveMuseum.jpg', 'Kelvingrove Museum')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/KelvingroveMuseum.jpg" alt="Kelvingrove Museum" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Kelvingrove Museum</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Kirk.jpg', 'St Conan\'s Kirk')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Kirk.jpg" alt="St Conan's Kirk" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">St Conan's Kirk</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/KyleskuBridge.jpg', 'Kylesku Bridge')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/KyleskuBridge.jpg" alt="Kylesku Bridge" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Kylesku Bridge</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Loch.jpg', 'Loch')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Loch.jpg" alt="Loch" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Loch</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/LochLomond.jpg', 'Loch Lomond')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/LochLomond.jpg" alt="Loch Lomond" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Loch Lomond</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/NeistPoint.jpg', 'Neist Point')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/NeistPoint.jpg" alt="Neist Point" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Neist Point</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Oban.jpg', 'Oban')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Oban.jpg" alt="Oban" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Oban</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/PortreeBoatTour1.jpg', 'Portree Boat Tour')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/PortreeBoatTour1.jpg" alt="Portree Boat Tour" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Portree Boat Tour</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/PortreeBoatTour2.jpg', 'Portree Boat Tour')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/PortreeBoatTour2.jpg" alt="Portree Boat Tour" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Portree Boat Tour</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/PortreeBoatTour3.jpg', 'Portree Boat Tour')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/PortreeBoatTour3.jpg" alt="Portree Boat Tour" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Portree Boat Tour</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/RobertTheBruce.jpg', 'Robert the Bruce')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/RobertTheBruce.jpg" alt="Robert the Bruce" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Robert the Bruce</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/RossFountain.jpg', 'Ross Fountain')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/RossFountain.jpg" alt="Ross Fountain" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Ross Fountain</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Ruins.jpg', 'Ruins')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Ruins.jpg" alt="Ruins" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Ruins</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/SalmonSteps.jpg', 'Salmon Steps')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/SalmonSteps.jpg" alt="Salmon Steps" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Salmon Steps</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/SeaLifeAquarium.jpg', 'SeaLife Aquarium')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/SeaLifeAquarium.jpg" alt="SeaLife Aquarium" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">SeaLife Aquarium</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/SmooCave.jpg', 'Smoo Cave')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/SmooCave.jpg" alt="Smoo Cave" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Smoo Cave</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Steps.jpg', 'Steps')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Steps.jpg" alt="Steps" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Steps</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/StirlingGrounds.jpg', 'Stirling Castle Grounds')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/StirlingGrounds.jpg" alt="Stirling Castle Grounds" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Stirling Castle Grounds</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/StMarys.jpg', 'St Mary\'s Church')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/StMarys.jpg" alt="St Mary's Church" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">St Mary's Church</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Ullapool.jpg', 'Ullapool')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Ullapool.jpg" alt="Ullapool" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Ullapool</span>
+                    </div>
+                </div>
+
+                <div onclick="openImageModal('GalleryImages/Wheel.jpg', 'Edinburgh Wheel')" class="group relative aspect-square rounded-xl overflow-hidden border border-slate-200 shadow-sm cursor-zoom-in bg-slate-100">
+                    <img src="GalleryImages/Wheel.jpg" alt="Edinburgh Wheel" class="w-full h-full object-cover group-hover:scale-105 transition duration-300" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-3">
+                        <span class="text-xs text-white font-bold truncate">Edinburgh Wheel</span>
+                    </div>
+                </div>
+
+            </div>
         </div>
 
         <!-- Principles Grid -->
@@ -145,8 +447,48 @@
         </div>
     </footer>
 
+    <!-- LIGHTBOX MODAL CONTAINER -->
+    <div id="imageModal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 cursor-zoom-out" onclick="closeImageModal()">
+        <div class="relative max-w-4xl w-full max-h-[85vh] flex flex-col items-center" onclick="event.stopPropagation()">
+            <button onclick="closeImageModal()" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition flex items-center gap-1 text-sm font-semibold bg-black/40 px-3 py-1.5 rounded-lg border border-white/20">
+                <i data-lucide="x" class="w-4 h-4"></i> Close
+            </button>
+            <img id="modalTargetImage" src="" alt="Enlarged view" class="rounded-xl max-w-full max-h-[80vh] object-contain shadow-2xl border border-white/10">
+            <p id="modalCaption" class="text-white text-sm font-medium mt-3 bg-black/60 px-4 py-1.5 rounded-full border border-white/10"></p>
+        </div>
+    </div>
+
+    <!-- Script Layer -->
     <script>
-        lucide.createIcons();
+        function openImageModal(imageSrc, caption) {
+            try {
+                const modal = document.getElementById('imageModal');
+                const modalImg = document.getElementById('modalTargetImage');
+                const modalCap = document.getElementById('modalCaption');
+                if (modal && modalImg) {
+                    modalImg.src = imageSrc;
+                    if (modalCap) modalCap.textContent = caption || '';
+                    modal.classList.remove('hidden');
+                    document.body.style.overflow = 'hidden';
+                }
+            } catch(e) { console.error("Lightbox error:", e); }
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.style.overflow = '';
+            }
+        }
+
+        window.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeImageModal();
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            if (window.lucide) lucide.createIcons();
+        });
     </script>
 </body>
 </html>
