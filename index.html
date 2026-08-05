@@ -51,9 +51,9 @@
             background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.65)), url('GalleryImages/Kelpies.jpg') no-repeat center/cover;
         }
         .topo-bg {
-            background-color: #f8fafc;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Cpath d='M0 30c20-10 40-10 60 0s40 20 60 10 30-20 30-20M0 60c30-5 50 15 80 5s40-25 70-15M0 90c20 10 40-5 70-5s50 20 80 10M0 120c40-15 70 5 100-5s30-15 50-15' fill='none' stroke='%23e2e8f0' stroke-width='1.5' stroke-linecap='round' opacity='0.4'/%3E%3C/svg%3E");
-        }
+    background-color: #f8fafc;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.96), rgba(255, 255, 255, 0.96)), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill-opacity='0.2'%3E%3Cpath d='M0 40h80M40 0v80' stroke='%230f172a' stroke-width='4'/%3E%3Cpath d='M0 20h80M0 60h80M20 0v80M60 0v80' stroke='%231d4ed8' stroke-width='2'/%3E%3Cpath d='M0 40h80M40 0v80' stroke='%233b82f6' stroke-width='1.5' stroke-opacity='0.4'/%3E%3Crect x='22' y='22' width='16' height='16' fill='%231e3a8a' fill-opacity='0.15'/%3E%3Crect x='42' y='22' width='16' height='16' fill='%232563eb' fill-opacity='0.1'/%3E%3Crect x='22' y='42' width='16' height='16' fill='%232563eb' fill-opacity='0.1'/%3E%3Crect x='42' y='42' width='16' height='16' fill='%231d4ed8' fill-opacity='0.1'/%3E%3C/g%3E%3C/svg%3E");
+}
         @media (max-width: 768px) {
             .hero-bg { padding-top: 5rem; padding-bottom: 5rem; }
         }
@@ -179,7 +179,7 @@
                     </div>
                     <div>
                         <h4 class="font-bold text-gray-900 mb-2 flex items-center gap-2"><i data-lucide="heart" class="w-4 h-4 text-scottish-accent"></i> Honest Links, Zero Hotel Bias</h4>
-                        <p class="text-sm text-gray-600 leading-relaxed">We have zero partnerships with individual hotels or B&Bs. Reviews are 100% independent. Read our criteria in our <a href="#driving-protocol-anchor" class="text-scottish-blue font-bold hover:text-scottish-dark transition">driving & booking matrix</a> below.</p>
+                        <p class="text-sm text-gray-600 leading-relaxed">We have zero partnerships with individual hotels or B&Bs. Reviews are 100% independent. </p>
                     </div>
                 </div>
             </div>
@@ -193,9 +193,9 @@
                         <h3 class="text-xl font-black">Get the Master Navigation Pack</h3>
                     </div>
                     <p class="text-xs text-blue-100 mb-4 leading-relaxed">
-                        Take this 13-day blueprint on the road. Grab the ultimate offline navigation bundle to ensure seamless driving across the Highlands, even with zero cellular signal.
+                        Love the itinerary below? If you want to skip hours of tedious research and planning, this pack gives you everything you need to hit the road with complete confidence.
                     </p>
-                    
+
                     <div class="bg-white/10 rounded-xl p-4 border border-white/10 space-y-3.5">
                         <div class="flex justify-between items-center pb-2 border-b border-white/10">
                             <span class="text-xs uppercase tracking-wider text-yellow-300 font-extrabold">Complete Offline Bundle</span>
@@ -203,25 +203,38 @@
                         </div>
                         
                         <div class="space-y-3 text-xs">
+                            <div class="text-yellow-300 font-bold uppercase tracking-wider text-[11px] mb-1">What's in the pack:</div>
+                            
                             <div class="flex items-start gap-2.5">
                                 <i data-lucide="file-text" class="w-4.5 h-4.5 text-yellow-300 flex-shrink-0 mt-0.5"></i>
-                                <span><strong>Master Route Guide (PDF Pack):</strong> Mobilized & print-ready. Includes clickable reservation URLs, exact parking coordinates, pricing grids, and hidden layout tips.</span>
+                                <div>
+                                    <strong>Master Route Guide (PDF Pack):</strong>
+                                    <ul class="list-disc list-inside mt-1 space-y-1 text-blue-100/90">
+                                        <li>Available offline & print-ready</li>
+                                        <li>Clickable URLs to each attraction/POI/etc.</li>
+                                        <li>Exact parking coordinates</li>
+                                        <li>Pricing grids</li>
+                                        <li>Tips and tricks</li>
+                                    </ul>
+                                </div>
                             </div>
+
                             <div class="flex items-start gap-2.5">
                                 <i data-lucide="layers" class="w-4.5 h-4.5 text-cyan-300 flex-shrink-0 mt-0.5"></i>
                                 <span><strong>Google Maps Layer (.KML):</strong> Instantly plots every stop, scenic waypoint, and parking area directly into your Google Maps app.</span>
                             </div>
+
                             <div class="flex items-start gap-2.5">
                                 <i data-lucide="navigation" class="w-4.5 h-4.5 text-emerald-300 flex-shrink-0 mt-0.5"></i>
                                 <span><strong>Offline SatNav / Sygic (.GPX):</strong> Turn-by-turn coordinate paths ready to load into standalone GPS units or offline navigation tools like <strong>Sygic</strong>.</span>
                             </div>
+
                             <div class="flex items-start gap-2.5 text-[11px] text-blue-200 bg-black/20 p-2 rounded-lg">
                                 <i data-lucide="mail-check" class="w-4 h-4 text-blue-300 flex-shrink-0 mt-0.5"></i>
                                 <span>Instant access on checkout confirmation screen + permanent backup copy delivered to your inbox.</span>
                             </div>
                         </div>
                     </div>
-
                     <button onclick="redirectToPayment('bundle')" class="w-full mt-4 bg-white text-scottish-dark font-black py-3 px-4 rounded-xl text-sm shadow-md hover:bg-blue-50 transition flex items-center justify-center gap-2 group">
                         <i data-lucide="download-cloud" class="w-4 h-4 text-scottish-blue group-hover:scale-110 transition"></i>
                         Download All Maps & Guides
@@ -298,7 +311,7 @@
                 <h2 class="text-2xl font-black text-scottish-dark">Critical Road Tips & Etiquette</h2>
             </div>
             <p class="text-gray-600 leading-relaxed mb-4">
-                Driving in Scotland—especially single-track Highland routes—is incredible, but requires strict rules. Please familiarize yourself with local road laws before booking your vehicle.
+                Driving in Scotland (especially single-track Highland routes) is incredible, but requires concentration, and abiding to strict rules. Please familiarize yourself with local road laws before booking your vehicle.
             </p>
             <div class="bg-amber-50/90 border-l-4 border-amber-500 p-4 rounded-r-xl flex gap-3 items-center mb-6">
                 <i data-lucide="book-open" class="text-amber-600 flex-shrink-0"></i>
@@ -318,25 +331,25 @@
                     <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
                         <i data-lucide="building-2" class="text-scottish-blue w-4 h-4"></i> Provider
                     </span>
-                    We highly recommend renting through <a href="https://www.celticlegend.co.uk" target="_blank" rel="noopener noreferrer" class="text-scottish-blue font-semibold">Celtic Legend</a>.
+                    We highly recommend renting through <a href="https://www.celticlegend.co.uk" target="_blank" rel="noopener noreferrer" class="text-scottish-blue font-semibold">Celtic Legend</a>, which from our experience, offer great deals along with excellent customer service.
                 </div>
                 <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
                     <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
                         <i data-lucide="shield-check" class="text-scottish-blue w-4 h-4"></i> Cover
                     </span>
-                    Always opt for the total insurance waiver.
+                    Always opt for the total insurance waiver. It’s a small price to pay for peace of mind, especially on single-track roads where minor scrapes can happen.
                 </div>
                 <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
                     <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
                         <i data-lucide="smartphone" class="text-scottish-blue w-4 h-4"></i> Navigation Tech
                     </span>
-                    Save money on standalone GPS; download <a href="https://www.sygic.com" target="_blank" rel="noopener noreferrer" class="text-scottish-blue font-semibold">Sygic</a> onto your smartphone for offline routes.
+                    Save money on standalone GPS; download <a href="https://www.sygic.com" target="_blank" rel="noopener noreferrer" class="text-scottish-blue font-semibold">Sygic</a> onto your smartphone for offline routes. (Our paid packages include a GPX file for Sygic, so you can load the entire route in a couple of clicks.)
                 </div>
                 <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100">
                     <span class="flex items-center gap-2 font-bold text-scottish-dark mb-1">
                         <i data-lucide="video" class="text-scottish-blue w-4 h-4"></i> Dashcam
                     </span>
-                    If offered, take the dashcam option. It provides extra safety insurance and records incredible scenic footage.
+                    If available, take the dashcam option. It provides extra safety insurance and records incredible scenic footage.
                 </div>
             </div>
         </div>
