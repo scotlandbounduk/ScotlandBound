@@ -37,8 +37,13 @@
     <priority>0.1</priority>
   </url>
   <url>
-  <loc>https://scotlandbound.co.uk/faq.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
+    <loc>https://scotlandbound.co.uk/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scotlandbound.co.uk/do-you-need-a-4x4-scotland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
