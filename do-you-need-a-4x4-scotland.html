@@ -77,7 +77,9 @@ tailwind.config = {
   </div>
 </header>
 
-<main class="max-w-3xl mx-auto px-4 py-12 relative z-10 space-y-8">
+<main class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+
+  <div class="lg:col-span-2 space-y-6">
 
   <div class="bg-gradient-to-br from-scottish-blue/30 to-scottish-light/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60">
     <div class="flex items-center gap-3 mb-4">
@@ -127,10 +129,13 @@ tailwind.config = {
     </ol>
   </div>
 
-  <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 text-center">
+  </div>
+
+  <aside class="lg:col-span-1">
+  <div class="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200 text-center sticky top-6">
     <h2 class="text-xl font-black text-scottish-dark mb-2">Want the exact route with driving times and warnings built in?</h2>
-    <p class="text-sm text-base mb-5 max-w-xl mx-auto">Our 13-day itinerary flags every single-track stretch, the Applecross pass decision point, and where to fuel up - day by day.</p>
-    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+    <p class="text-sm text-base mb-5">Our 13-day itinerary flags every single-track stretch, the Applecross pass decision point, and where to fuel up - day by day.</p>
+    <div class="flex flex-col gap-3">
       <a href="index.html#itinerary-timeline-anchor" class="bg-scottish-blue hover:bg-scottish-dark text-white font-black py-3 px-6 rounded-xl text-sm shadow-md transition">
         See the Full Itinerary
       </a>
@@ -139,6 +144,7 @@ tailwind.config = {
       </a>
     </div>
   </div>
+  </aside>
 
 </main>
 
