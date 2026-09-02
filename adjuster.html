@@ -3,13 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Route Adjuster | ScotlandBound</title>
+
+    <link rel="canonical" href="https://scotlandbound.co.uk/adjuster.html">
+
+    <title>The Route Adjuster | Custom Scotland Itinerary Tweaks | Scotland Bound</title>
+    <meta name="description" content="Get our 13-day Scotland itinerary compressed, slowed down, or extended to fit your exact trip length, pace, and group - from €125.">
+    <meta name="keywords" content="custom Scotland itinerary, shorten Scotland road trip, Scotland itinerary for families, Scotland trip planning service">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://scotlandbound.co.uk/adjuster.html">
+    <meta property="og:title" content="The Route Adjuster | Custom Scotland Itinerary Tweaks">
+    <meta property="og:description" content="Get our 13-day Scotland itinerary compressed, slowed down, or extended to fit your exact trip length, pace, and group.">
+    <meta property="og:image" content="https://scotlandbound.co.uk/GalleryImages/KyleskuBridge.jpg">
     
     <!-- Cache-Busted Favicon Link -->
     <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
     
     <script>
         tailwind.config = {
@@ -222,6 +233,17 @@
     <script>
         // Initialize Lucide Icons
         lucide.createIcons();
+
+        setTimeout(() => {
+        const ga = document.createElement('script');
+        ga.src = "https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0";
+        ga.async = true;
+        document.head.appendChild(ga);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9R8KD5FZD0');
+        }, 2500);
     </script>
 </body>
 </html>
