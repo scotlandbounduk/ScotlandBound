@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google Tag Manager (gtag.js) -->
+    <!-- Google Tag Manager (gtag.js) 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-9R8KD5FZD0');
-    </script>
+    </script>-->
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <link rel="canonical" href="https://scotlandbound.co.uk/about.html">
+
     <!-- SEO Meta Tags -->
     <title>About Us | Scotland Road Trip Guide & Real Photo Gallery</title>
     <meta name="description" content="Learn about the team behind Scotland Bound. Over 11 Highland road trips, 5 NC500 loops, real photography gallery, and tested driving protocols.">
@@ -422,6 +424,16 @@
             </div>
         </div>
 
+        <!-- Guide Links -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+            <h3 class="font-black text-scottish-dark mb-3 flex items-center gap-2"><i data-lucide="compass" class="text-scottish-blue w-5 h-5"></i> Keep Planning</h3>
+            <div class="flex flex-wrap gap-3 text-sm">
+                <a href="faq.html" class="bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 font-semibold text-scottish-dark hover:border-scottish-blue transition">Road Trip FAQ</a>
+                <a href="do-you-need-a-4x4-scotland.html" class="bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 font-semibold text-scottish-dark hover:border-scottish-blue transition">Do You Need a 4x4?</a>
+                <a href="best-time-to-visit-scotland.html" class="bg-slate-50 border border-slate-200 rounded-lg px-4 py-2 font-semibold text-scottish-dark hover:border-scottish-blue transition">Best Time to Visit</a>
+            </div>
+        </div>
+
         <!-- Contact / CTA Card -->
         <div class="bg-gradient-to-br from-scottish-dark to-scottish-blue text-white rounded-2xl p-6 md:p-8 shadow-md text-center space-y-4">
             <h3 class="text-2xl font-black">Planning Your Own Scottish Adventure?</h3>
@@ -494,6 +506,16 @@
 
         document.addEventListener('DOMContentLoaded', () => {
             if (window.lucide) lucide.createIcons();
+            setTimeout(() => {
+            const ga = document.createElement('script');
+            ga.src = "https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0";
+            ga.async = true;
+            document.head.appendChild(ga);
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-9R8KD5FZD0');
+            }, 2500);
         });
     </script>
 </body>
