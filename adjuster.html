@@ -47,7 +47,23 @@
         }
     </style>
 </head>
-<body class="topo-bg text-base font-sans antialiased selection:bg-blue-500 selection:text-white">
+<body class="topo-bg text-base font-sans antialiased selection:bg-blue-500 selection:text-white"> 
+    
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        setTimeout(() => {
+        const ga = document.createElement('script');
+        ga.src = "https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0";
+        ga.async = true;
+        document.head.appendChild(ga);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9R8KD5FZD0');
+        }, 2500);
+    </script>
 
     <!-- Top Navigation Header -->
     <header class="bg-scottish-dark text-white py-3 px-6 shadow-md">
@@ -230,20 +246,6 @@
         </div>
     </footer>
 
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
 
-        setTimeout(() => {
-        const ga = document.createElement('script');
-        ga.src = "https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0";
-        ga.async = true;
-        document.head.appendChild(ga);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9R8KD5FZD0');
-        }, 2500);
-    </script>
 </body>
 </html>
