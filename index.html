@@ -314,17 +314,6 @@
         </div>
     </section>
 
-    <!--
-    <main id="itinerary-timeline-anchor" class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-4 gap-8 relative z-10">        
-        <aside class="lg:col-span-1 space-y-4">
-            <div class="bg-gradient-to-br from-scottish-blue/30 to-scottish-light/40 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-slate-200/60 sticky top-6">
-                <h2 class="text-sm font-bold text-base uppercase tracking-wider px-3 mb-3">13-Day Scotland Road Trip</h2>
-                <nav class="space-y-1" id="tabMenu"></nav>
-            </div>
-        </aside>
-        <section class="lg:col-span-3" id="tabPanels"></section>
-    </main>-->
-
     <section id="itinerary-timeline-anchor" aria-labelledby="itinerary-heading" class="max-w-7xl mx-auto px-4 py-12 relative z-10">
         <div class="max-w-7xl mx-auto mb-8">
             <h2 id="itinerary-heading" class="text-3xl md:text-4xl font-black text-scottish-dark">
@@ -340,10 +329,12 @@
             <aside class="lg:col-span-1 space-y-4">
                 <div class="bg-gradient-to-br from-scottish-blue/30 to-scottish-light/40 backdrop-blur-sm rounded-2xl p-4 shadow-sm border border-slate-200/60 sticky top-6">
                     <h2 class="text-sm font-bold text-base uppercase tracking-wider px-3 mb-3">13-Day Scotland Road Trip</h2>
-                    <nav class="space-y-1" id="tabMenu"></nav>
+                    <nav class="space-y-1" id="tabMenu" role="tablist" aria-label="Scotland road trip itinerary days"></nav>
                 </div>
             </aside>
-            <section class="lg:col-span-3" id="tabPanels"></section>
+            <section class="lg:col-span-3" id="tabPanels" aria-live="polite">
+                <div id="staticItineraryContent"></div>
+            </section>
         </div>
     </section>
 
@@ -585,6 +576,7 @@
             } catch(e) { console.error("Toast notification error:", e); }
         }
 
+        let panelsContainer;
         const itineraryData = [
             {
                 day: 1, label: "Day 1: Edinburgh Airport to Stirling", title: "Edinburgh Airport to Stirling: The Kelpies & Falkirk Wheel",
@@ -753,12 +745,11 @@
                 let imgPositionClass = stop.position ? `object-${stop.position}` : 'object-center';
                 let photoHTML = stop.photo ? `
                     <div class="mt-3 md:mt-0 md:w-48 flex-shrink-0">
-                        <div onclick="openImageModal('${stop.photo}')" class="overflow-hidden rounded-xl border border-slate-200 shadow-sm aspect-[4/3] md:aspect-square cursor-zoom-in group/img relative">
-                            <img src="${stop.photo}" alt="${stop.name} on the Scotland road trip itinerary" class="w-full h-full object-cover ${imgPositionClass} hover:scale-105 transition duration-300" loading="lazy">
-                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition duration-300 flex items-center justify-center">
+                        <button type="button" onclick="openImageModal('${stop.photo}')" aria-label="Enlarge photo of ${stop.name}" class="overflow-hidden rounded-xl border border-slate-200 shadow-sm aspect-[4/3] md:aspect-square cursor-zoom-in group/img relative w-full text-left">
+                                <img src="${stop.photo}" alt="${stop.name} - Scotland road trip stop" class="w-full h-full object-cover ${imgPositionClass} hover:scale-105 transition duration-300" loading="lazy">                            <div class="absolute inset-0 bg-black/0 group-hover/img:bg-black/10 transition duration-300 flex items-center justify-center">
                                 <i data-lucide="maximize-2" class="text-white opacity-0 group-hover/img:opacity-100 w-5 h-5 drop-shadow transition duration-300"></i>
                             </div>
-                        </div>
+                        </button>
                     </div>
                 ` : '';
 
@@ -785,20 +776,25 @@
             });
 
             return `
-                <div class=" bg-gradient-to-br from-scottish-blue/30 to-scottish-light/40 rounded-2xl p-6 shadow-sm border border-slate-200/60">
-                    <h3 class="text-2xl font-black text-scottish-dark mb-2">
+                <article id="day-${idx + 1}"
+                    role="tabpanel"
+                    aria-labelledby="day-${idx + 1}-heading"
+                    tabindex="0"
+                    ${idx !== 0 ? 'hidden' : ''}
+                    class="bg-gradient-to-br from-scottish-blue/30 to-scottish-light/40 rounded-2xl p-6 shadow-sm border border-slate-200/60">
+                    <h3 id="day-${idx + 1}-heading" class="text-2xl font-black text-scottish-dark mb-2">
                         Day ${dayData.day}: ${dayData.title}
                     </h3>
                     <p class="text-sm text-base italic font-medium mb-6 border-b border-slate-100 pb-4">${dayData.intro}</p>
                     <div class="space-y-6">${stopsHTML}</div>
-                </div>
+                </article>
             `;
         }
 
         function buildDashboard() {
             try {
                 const menuContainer = document.getElementById('tabMenu');
-                const panelsContainer = document.getElementById('tabPanels');
+                panelsContainer = document.getElementById('tabPanels');
                 if (!menuContainer || !panelsContainer) return;
 
                 menuContainer.innerHTML = '';
@@ -806,37 +802,79 @@
                 itineraryData.forEach((dayData, idx) => {
                     const btn = document.createElement('button');
                     btn.id = `tab-btn-${idx}`;
+                    btn.type = 'button';
+                    btn.setAttribute('role', 'tab');
+                    btn.setAttribute('aria-controls', `day-${idx + 1}`);
+                    btn.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+                    btn.setAttribute('tabindex', idx === 0 ? '0' : '-1');
                     btn.className = `w-full text-left px-4 py-3 rounded-xl font-medium text-sm transition flex items-center justify-between ${idx === 0 ? 'bg-scottish-blue text-white shadow-md font-bold' : 'text-base hover:bg-gray-100 hover:text-scottish-dark'}`;
                     btn.innerHTML = `<span>${dayData.label}</span> <i data-lucide="chevron-right" class="w-4 h-4 opacity-70"></i>`;
                     btn.onclick = () => switchTab(idx);
+                    btn.onkeydown = (event) => {
+                        if (event.key === 'ArrowDown' || event.key === 'ArrowRight') {
+                            event.preventDefault();
+                            const nextIndex = (idx + 1) % itineraryData.length;
+                            switchTab(nextIndex);
+                            document.getElementById(`tab-btn-${nextIndex}`)?.focus();
+                        }
+
+                        if (event.key === 'ArrowUp' || event.key === 'ArrowLeft') {
+                            event.preventDefault();
+                            const previousIndex = (idx - 1 + itineraryData.length) % itineraryData.length;
+                            switchTab(previousIndex);
+                            document.getElementById(`tab-btn-${previousIndex}`)?.focus();
+                        }
+
+                        if (event.key === 'Home') {
+                            event.preventDefault();
+                            switchTab(0);
+                            document.getElementById('tab-btn-0')?.focus();
+                        }
+
+                        if (event.key === 'End') {
+                            event.preventDefault();
+                            const lastIndex = itineraryData.length - 1;
+                            switchTab(lastIndex);
+                            document.getElementById(`tab-btn-${lastIndex}`)?.focus();
+                        }
+                    };
                     menuContainer.appendChild(btn);
                 });
 
-                panelsContainer.innerHTML = renderDayContent(0);
+                panelsContainer.innerHTML = itineraryData
+                    .map((_, idx) => renderDayContent(idx))
+                    .join('');
+
+                panelsContainer.querySelectorAll('[role="tabpanel"]').forEach((panel, idx) => {
+                    panel.hidden = idx !== 0;
+                });
 
                 if (window.lucide) lucide.createIcons();
             } catch(e) { console.error("Dashboard render error:", e); }
         }
 
         function switchTab(index) {
-            try {
-                if (currentActiveTab === index) return;
-                currentActiveTab = index;
+            const buttons = document.querySelectorAll('#tabMenu button');
 
-                const buttons = document.querySelectorAll('#tabMenu button');
-                buttons.forEach((btn, idx) => {
-                    btn.className = idx === index 
-                        ? "w-full text-left px-4 py-3 rounded-xl font-bold text-sm transition flex items-center justify-between bg-scottish-blue text-white shadow-md"
-                        : "w-full text-left px-4 py-3 rounded-xl font-medium text-sm transition flex items-center justify-between text-base hover:bg-gray-100 hover:text-scottish-dark";
-                });
+            buttons.forEach((btn, idx) => {
+                const isActive = idx === index;
 
-                const panelsContainer = document.getElementById('tabPanels');
-                if (panelsContainer) {
-                    panelsContainer.innerHTML = renderDayContent(index);
-                }
+                btn.className = isActive
+                    ? "w-full text-left px-4 py-3 rounded-xl font-bold text-sm transition flex items-center justify-between bg-scottish-blue text-white shadow-md"
+                    : "w-full text-left px-4 py-3 rounded-xl font-medium text-sm transition flex items-center justify-between text-base hover:bg-gray-100 hover:text-scottish-dark";
 
-                if (window.lucide) lucide.createIcons();
-            } catch(e) { console.error("Tab switch error:", e); }
+                btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                btn.setAttribute('tabindex', isActive ? '0' : '-1');
+            });
+
+            panelsContainer.querySelectorAll('[role="tabpanel"]').forEach((panel, idx) => {
+                panel.hidden = idx !== index;
+            });
+
+            const activePanel = document.getElementById(`day-${index + 1}`);
+            if (activePanel) {
+                activePanel.hidden = false;
+            }
         }
 
         function openImageModal(imageSrc) {
