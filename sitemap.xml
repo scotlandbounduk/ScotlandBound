@@ -19,51 +19,33 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://scotlandbound.co.uk/success.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
+    <loc>https://scotlandbound.co.uk/faq.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://scotlandbound.co.uk/emailsuccess.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://scotlandbound.co.uk/holding.html</loc>
-    <lastmod>2026-07-10</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.1</priority>
-  </url>
-<url>
-  <loc>https://scotlandbound.co.uk/faq.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
-<url>
   <loc>https://scotlandbound.co.uk/do-you-need-a-4x4-scotland.html</loc>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
-</url>
-<url>
-  <loc>https://scotlandbound.co.uk/7-days-vs-13-days-scotland.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>https://scotlandbound.co.uk/what-to-pack-scotland-road-trip.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>https://scotlandbound.co.uk/best-time-to-visit-scotland.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
-<url>
-  <loc>https://scotlandbound.co.uk/nc500-clockwise-or-anticlockwise.html</loc>
-  <changefreq>monthly</changefreq>
-  <priority>0.7</priority>
-</url>
+  </url>
+  <url>
+    <loc>https://scotlandbound.co.uk/7-days-vs-13-days-scotland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scotlandbound.co.uk/what-to-pack-scotland-road-trip.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scotlandbound.co.uk/best-time-to-visit-scotland.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://scotlandbound.co.uk/nc500-clockwise-or-anticlockwise.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 </urlset>
