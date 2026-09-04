@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    
+
     <title>Payment Successful | ScotlandBound</title>
     
     <!-- Cache-Busted Favicon Link -->
@@ -79,7 +79,7 @@
             <div class="space-y-2">
                 <h1 class="text-3xl font-black text-scottish-dark tracking-tight">Thank You!</h1>
                 <p class="text-sm font-bold uppercase tracking-wider text-scottish-accent">Your Ultimate Pack is Ready</p>
-                <p class="text-base text-sm max-w-sm mx-auto leading-relaxed">
+                <p class="text-sm text-slate-700 max-w-sm mx-auto leading-relaxed">
                     Your payment was successfully processed. Download your custom routes and digital guide dashboard directly below.
                 </p>
             </div>
@@ -121,8 +121,8 @@
 
             <!-- Helpful Reminders Grid -->
             <div class="border-t border-slate-100 pt-5 text-left space-y-3">
-                <h4 class="text-sm font-bold text-base uppercase tracking-wider">Quick Setup Guide:</h4>
-                <div class="space-y-2.5 text-sm text-base">
+                <h4 class="text-sm font-bold text-scottish-dark uppercase tracking-wider">Quick Setup Guide:</h4>
+                <div class="space-y-2.5 text-sm text-slate-700">
                     <div class="flex items-start gap-2">
                         <i data-lucide="smartphone" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
                         <span><strong>Google Maps (KML):</strong> Open Google Maps on your desktop/mobile, head to 'Saved' &rarr; 'Maps', and import this file to permanently see all pins offline.</span>
@@ -144,13 +144,14 @@
     <!-- Footer matching site aesthetics -->
     <footer class="bg-scottish-dark text-white border-t border-blue-900 py-6">
         <div class="max-w-4xl mx-auto px-4 text-center text-sm text-blue-200/60 font-medium">
-            &copy; 2026 ScotlandBound. All rights reserved.
+            &copy; 2026 Scotland Bound. All rights reserved.
         </div>
     </footer>
 
     <script>
-        // Trigger lucide icon injections cleanly
-        lucide.createIcons();
+        document.addEventListener('DOMContentLoaded', function() {
+            if (window.lucide) lucide.createIcons();
+        });
     </script>
 </body>
 </html>
