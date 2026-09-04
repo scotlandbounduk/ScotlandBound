@@ -9,19 +9,25 @@
 
     <title>The Route Adjuster | Custom Scotland Itinerary Tweaks | Scotland Bound</title>
     <meta name="description" content="Get our 13-day Scotland itinerary compressed, slowed down, or extended to fit your exact trip length, pace, and group - from €125.">
-    <meta name="keywords" content="custom Scotland itinerary, shorten Scotland road trip, Scotland itinerary for families, Scotland trip planning service">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://scotlandbound.co.uk/adjuster.html">
-    <meta property="og:title" content="The Route Adjuster | Custom Scotland Itinerary Tweaks">
-    <meta property="og:description" content="Get our 13-day Scotland itinerary compressed, slowed down, or extended to fit your exact trip length, pace, and group.">
+    <meta property="og:title" content="The Route Adjuster | Custom Scotland Itinerary Tweaks | Scotland Bound">
+    <meta property="og:description" content="Get our 13-day Scotland itinerary compressed, slowed down, or extended to fit your exact trip length, pace, and group - from €125.">
     <meta property="og:image" content="https://scotlandbound.co.uk/GalleryImages/KyleskuBridge.jpg">
+    <meta property="og:site_name" content="Scotland Bound">
+    <meta property="og:locale" content="en_GB">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Route Adjuster | Custom Scotland Itinerary Tweaks | Scotland Bound">
+    <meta name="twitter:description" content="Get our 13-day Scotland itinerary compressed, slowed down, or extended to fit your exact trip length, pace, and group - from €125.">
+    <meta name="twitter:image" content="https://scotlandbound.co.uk/GalleryImages/KyleskuBridge.jpg">
     
     <!-- Cache-Busted Favicon Link -->
     <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     
     <script>
         tailwind.config = {
@@ -51,8 +57,10 @@
 <body class="topo-bg text-base font-sans antialiased selection:bg-blue-500 selection:text-white"> 
     
     <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
+        // Initialize Lucide Icons after the deferred library has loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+        });
 
         setTimeout(() => {
         const ga = document.createElement('script');
@@ -89,7 +97,7 @@
                 Love Our 13-Day Blueprint, <br class="hidden sm:inline">But Need It Tweaked?
             </h1>
             <p class="text-lg opacity-90 max-w-2xl mx-auto font-medium leading-relaxed">
-                Don’t waste hours trying to force a 13-day itinerary into a tighter vacation window or a slower family pace. Let us mathematically compress, expand, or structurally adapt our master layout to fit your group perfectly.
+                Our 13-day blueprint is designed as a strong starting point, but every trip has different constraints. We can compress the route for a shorter holiday, slow the pace for easier days, or extend it when you want to add more of Scotland without rebuilding the entire plan yourself.
             </p>
         </div>
     </section>
@@ -101,7 +109,7 @@
                 <i data-lucide="layers" class="text-scottish-blue w-5 h-5"></i>
                 <h3 class="text-base font-black text-scottish-dark">Select Your Required Adjustment Tier</h3>
             </div>
-            <p class="text-sm text-base mb-6 leading-relaxed">
+            <p class="text-sm text-slate-700 mb-6 leading-relaxed"><p class="text-sm text-slate-700 leading-relaxed">
                 Review the optimization options below. Once you submit your questionnaire parameters at the bottom of this page, your tier choice will frame how we redesign the driving blocks.
             </p>
             
@@ -111,21 +119,21 @@
                         <span class="font-bold text-sm text-scottish-dark">Time Compression</span>
                         <span class="text-sm font-extrabold text-scottish-blue bg-scottish-light px-2 py-0.5 rounded">€125</span>
                     </div>
-                    <p class="text-sm text-base leading-relaxed">Fitting the 13-day highlights beautifully into a clean 7 to 10-day timeline without burning out.</p>
+                    <p class="text-sm text-slate-700 leading-relaxed"><p class="text-sm text-slate-700 leading-relaxed">Fitting the 13-day highlights beautifully into a clean 7 to 10-day timeline without burning out.</p>
                 </div>
                 <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100 space-y-2">
                     <div class="flex justify-between items-center">
                         <span class="font-bold text-sm text-scottish-dark">Pace Customizer</span>
                         <span class="text-sm font-extrabold text-scottish-blue bg-scottish-light px-2 py-0.5 rounded">€165</span>
                     </div>
-                    <p class="text-sm text-base leading-relaxed">Keeping the 13 days but adapting for slower mornings, infant needs, or dedicated hotel bases.</p>
+                    <p class="text-sm text-slate-700 leading-relaxed">Keeping the 13 days but adapting for slower mornings, infant needs, or dedicated hotel bases.</p>
                 </div>
                 <div class="bg-slate-50/80 rounded-xl p-4 border border-slate-100 space-y-2">
                     <div class="flex justify-between items-center">
                         <span class="font-bold text-sm text-scottish-dark">Route Extension</span>
                         <span class="text-sm font-extrabold text-scottish-blue bg-scottish-light px-2 py-0.5 rounded">€200</span>
                     </div>
-                    <p class="text-sm text-base leading-relaxed">Expanding the layout up to 18 days to seamlessly weave in bonus loops like Orkney or Mull.</p>
+                    <p class="text-sm text-slate-700 leading-relaxed">Expanding the layout up to 18 days to seamlessly weave in bonus loops like Orkney or Mull.</p>
                 </div>
             </div>
         </div>
@@ -149,7 +157,7 @@
                 <i data-lucide="file-text" class="text-scottish-blue w-6 h-6"></i>
                 <div>
                     <h2 class="text-xl font-black text-scottish-dark">Your Route Requirements</h2>
-                    <p class="text-sm text-base">Provide your travel details below to submit your adjustment request.</p>
+                    <p class="text-sm text-slate-700">Tell us about your trip so we can understand exactly how you'd like the route adjusted.</p>
                 </div>
             </div>
 
@@ -165,12 +173,12 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="space-y-1.5">
-                        <label for="name" class="block text-sm font-bold text-base uppercase tracking-wider">Full Name</label>
+                        <label for="name" class="block text-sm font-bold text-scottish-dark uppercase tracking-wider">Full Name</label>
                         <input type="text" id="name" name="Client Name" required placeholder="John Doe" 
                             class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-scottish-blue focus:ring-2 focus:ring-blue-100 transition white/90">
                     </div>
                     <div class="space-y-1.5">
-                        <label for="email" class="block text-sm font-bold text-base uppercase tracking-wider">Email Address</label>
+                        <label for="email" class="block text-sm font-bold text-scottish-dark uppercase tracking-wider">Email Address</label>
                         <input type="email" id="email" name="Client Email" required placeholder="john@example.com" 
                             class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-scottish-blue focus:ring-2 focus:ring-blue-100 transition white/90">
                     </div>
@@ -180,12 +188,12 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="space-y-1.5">
-                        <label for="duration" class="block text-sm font-bold text-base uppercase tracking-wider">Desired Trip Length</label>
+                        <label for="duration" class="block text-sm font-bold text-scottish-dark uppercase tracking-wider">Desired Trip Length</label>
                         <input type="text" id="duration" name="Target Duration" required placeholder="e.g., 9 Days total" 
                             class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-scottish-blue focus:ring-2 focus:ring-blue-100 transition white/90">
                     </div>
                     <div class="space-y-1.5">
-                        <label for="dates" class="block text-sm font-bold text-base uppercase tracking-wider">Exact Calendar Dates <span class="text-base font-normal">(Optional)</span></label>
+                        <label for="dates" class="block text-sm font-bold text-scottish-dark uppercase tracking-wider">Exact Calendar Dates <span class="text-base font-normal">(Optional)</span></label>
                         <input type="text" id="dates" name="Trip Calendar Dates" placeholder="e.g., Sept 26 - Oct 5" 
                             class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-scottish-blue focus:ring-2 focus:ring-blue-100 transition white/90">
                     </div>
@@ -193,7 +201,7 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div class="space-y-1.5">
-                        <label for="pacing" class="block text-sm font-bold text-base uppercase tracking-wider">Preferred Routing Pace</label>
+                        <label for="pacing" class="block text-sm font-bold text-scottish-dark uppercase tracking-wider">Preferred Routing Pace</label>
                         <select id="pacing" name="Preferred Pacing" required 
                             class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-scottish-blue focus:ring-2 focus:ring-blue-100 transition white/90 text-base">
                             <option value="" disabled selected>Select pacing balance...</option>
@@ -203,7 +211,7 @@
                         </select>
                     </div>
                     <div class="space-y-1.5">
-                        <label for="group" class="block text-sm font-bold text-base uppercase tracking-wider">Group Dynamic</label>
+                        <label for="group" class="block text-sm font-bold text-scottish-dark uppercase tracking-wider">Group Dynamic</label>
                         <input type="text" id="group" name="Group Composition" required placeholder="e.g., 2 Adults + 1 Infant (8 months)" 
                             class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-scottish-blue focus:ring-2 focus:ring-blue-100 transition white/90">
                     </div>
@@ -212,7 +220,7 @@
                 <hr class="border-slate-100">
 
                 <div class="space-y-1.5">
-                    <label for="dealbreakers" class="block text-sm font-bold text-base uppercase tracking-wider">Route Customization & Dealbreakers</label>
+                    <label for="dealbreakers" class="block text-sm font-bold text-scottish-dark uppercase tracking-wider">Route Customization & Dealbreakers</label>
                     <textarea id="dealbreakers" name="Customization Notes" rows="4" required 
                         placeholder="Tell us what locations from our 13-day layout you absolutely must keep (e.g., Skye, Glencoe), what you want cut out, or any specific accommodation setups you require..." 
                         class="w-full text-sm px-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:border-scottish-blue focus:ring-2 focus:ring-blue-100 transition white/90 leading-relaxed"></textarea>
@@ -220,7 +228,7 @@
 
                 <div class="bg-slate-50/80 rounded-xl p-4 border border-blue-100/60 flex gap-3 items-start">
                     <i data-lucide="info" class="text-scottish-blue w-4 h-4 mt-0.5 flex-shrink-0"></i>
-                    <p class="text-sm text-base leading-relaxed">
+                    <p class="text-sm text-slate-700 leading-relaxed">
                         <strong>What happens next:</strong> Submitting this questionnaire routes your configuration requirements directly to our planning desk. Once processed, we'll send you over an email with any queries we might have, along with a confirmation summary of your requested adjustments. Please allow 1-2 business days for our team to review and respond.
                     </p>
                 </div>
@@ -243,7 +251,7 @@
             <a href="adjuster.html" class="hover:text-white transition">Route Adjuster</a>
             <a href="bespoke.html" class="hover:text-white transition">Bespoke Explorer</a>
             </div>
-            <div>© 2026 Scotland Travel Master Planner Dashboard. All rights reserved.</div>
+            <div>© 2026 Scotland Bound. All rights reserved.</div>
         </div>
     </footer>
 

@@ -17,20 +17,29 @@
 <!-- SEO Meta Tags -->
 <title>Scotland Road Trip FAQ | Driving, Timing, Cost & Packing Questions</title>
 <meta name="description" content="Answers to the most common Scotland road trip questions: how many days you need, do you need a 4x4, best time to visit, driving rules, costs, and what to pack.">
-<meta name="keywords" content="Scotland road trip FAQ, Scotland driving questions, NC500 questions, do I need a 4x4 Scotland, best time to visit Scotland, Scotland road trip cost">
 
 <!-- Open Graph Meta Tags -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://scotlandbound.co.uk/faq.html">
 <meta property="og:title" content="Scotland Road Trip FAQ | Driving, Timing, Cost & Packing Questions">
-<meta property="og:description" content="Straight answers to the questions every first-time Scotland road tripper asks, from a route we've driven 11 times.">
-<meta property="og:image" content="https://images.unsplash.com/photo-1612422499157-addd7df3526e?fm=jpg&q=60&w=1200&auto=format&fit=crop">
+<meta property="og:description" content="Answers to the most common Scotland road trip questions, including driving, timing, costs, the NC500, packing and rental cars.">
+<meta property="og:image" content="https://scotlandbound.co.uk/GalleryImages/Kelpies.jpg">
+<meta property="og:site_name" content="Scotland Bound">
+<meta property="og:locale" content="en_GB">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Scotland Road Trip FAQ | Driving, Timing, Cost & Packing Questions">
+<meta name="twitter:description" content="Answers to the most common Scotland road trip questions, including driving, timing, costs, the NC500, packing and rental cars.">
+<meta name="twitter:image" content="https://scotlandbound.co.uk/GalleryImages/Kelpies.jpg">
 
 <link rel="shortcut icon" type="image/png" href="https://scotlandbound.co.uk/images/ScottishFlagFavicon.png?v=1">
 
 <!-- Tailwind CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/lucide@latest" defer></script>
+<script>
+    lucide.createIcons();
+</script>
 <script>
 tailwind.config = {
   theme: {
@@ -65,7 +74,7 @@ details[open] summary .chevron { transform: rotate(90deg); }
                 <span>Scotland Bound</span>
             </a>
             <a href="index.html" class="text-sm font-bold bg-white/10 hover:bg-white/20 text-white py-2 px-4 rounded-lg border border-white/20 transition flex items-center gap-1.5">
-                <i data-lucide="arrow-left" class="w-3.5 h-3.5"></i> Back to Main Guide
+                <span aria-hidden="true" class="text-base leading-none">←</span> Back to Main Guide
             </a>
         </div>
     </header>
@@ -154,11 +163,134 @@ details[open] summary .chevron { transform: rotate(90deg); }
 
 <main class="max-w-4xl mx-auto px-4 py-12 relative z-10">
 
-  <div class="bg-gradient-to-br from-scottish-blue/30 to-scottish-light/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60 space-y-3" id="faq-list">
+  <div class="bg-gradient-to-br from-scottish-blue/30 to-scottish-light/40 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-slate-200/60 space-y-3">
 
-    <!-- FAQ items injected here for easy maintenance -->
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden" open>
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>How many days do you need for a Scotland road trip?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      13 days is our recommended baseline to comfortably cover the Lowlands, Western Highlands, Isle of Skye, and the North Coast 500 without rushing. If you only have 7-9 days, it's better to cut a region entirely rather than compress the same route, since Highland driving is slower than the map distances suggest.
+      <a href="7-days-vs-13-days-scotland.html" class="text-scottish-blue font-bold hover:underline">See exactly what to cut and what to keep →</a>
+    </div>
+  </details>
 
-  </div>
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>Do I need a 4x4 or SUV to drive the North Coast 500 or Scottish Highlands?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      No. A standard rental car handles the NC500 and Highland roads fine in normal conditions - it's mainly single-track width and tight bends you're managing, not off-road terrain. The one exception is the Bealach na Bà pass near Applecross, where a smaller, more manoeuvrable car is genuinely easier, and a bypass route exists if you'd rather skip it. In winter, snow tyres or a 4x4 become more relevant on higher passes.
+      <a href="do-you-need-a-4x4-scotland.html" class="text-scottish-blue font-bold hover:underline">Read our full breakdown →</a>
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>What is the best time of year for a Scotland road trip?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      Late spring (May-June) and early autumn (September) give you the best mix of decent weather, long daylight hours, and lighter tourist crowds than peak July-August. May-June is also before Highland midges become a serious nuisance, which typically peaks from July through August.
+      <a href="best-time-to-visit-scotland.html" class="text-scottish-blue font-bold hover:underline">See the full season-by-season breakdown →</a>
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>Which side of the road do you drive on in Scotland?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      Scotland drives on the left, same as the rest of the UK. If you're used to driving on the right, budget extra concentration for your first day, especially at roundabouts, and be extra cautious pulling out of quiet junctions where habit can default to the wrong side.
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>Do I need an International Driving Permit to drive in Scotland?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      Most visitors from the US, EU, Canada, and Australia can drive in Scotland on their standard home driving licence for short visits, without needing an International Driving Permit. Requirements vary by country of origin though, so check gov.uk's current guidance for your specific licence before you travel.
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>How much does a Scotland road trip cost?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      For two adults over roughly two weeks, budget for car rental and insurance, fuel, accommodation, food, and entry fees for castles and attractions. Fuel and accommodation in remote Highland areas tend to run higher than in cities, so it's worth budgeting a bit more for the northern legs of any route.
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>What's the rule for passing places on single-track roads in Scotland?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      On single-track roads, pull into a passing place on your left to let oncoming or faster traffic through - never stop opposite a passing place on the right. Watch for blind summits and bends, and if a vehicle behind you is closing in, it's polite to pull in and let them pass rather than holding them up.
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>Is it better to drive the NC500 clockwise or anticlockwise?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      There's no strong right answer - both directions see similar traffic. Anticlockwise, starting west via Applecross, tends to front-load the most dramatic scenery and single-track driving early, while clockwise, starting north via the east coast, eases you in more gently before the wilder western stretches.
+      <a href="nc500-clockwise-or-anticlockwise.html" class="text-scottish-blue font-bold hover:underline">See the full breakdown →</a>
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>Do I need to book accommodation in advance for a Scotland road trip?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      Yes, especially for June through September and around Edinburgh Festival season in August. Highland towns have limited B&B and guesthouse capacity, and popular spots can sell out weeks ahead in peak season. Booking 2-3 months in advance is a safe rule of thumb for summer travel.
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>What should I pack for a Scotland road trip?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      Layers and waterproofs are essential regardless of season - Scottish weather changes fast, sometimes within the same hour. Pack a proper waterproof jacket, sturdy walking shoes, and midge repellent for summer visits to the Highlands. A physical map or offline navigation is worth having too, since mobile signal drops out in many glens.
+      <a href="what-to-pack-scotland-road-trip.html" class="text-scottish-blue font-bold hover:underline">See the full seasonal packing list →</a>
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>Are there toll roads in Scotland?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      No, there are no toll roads in Scotland. All major roads, bridges, and the routes covered in a typical Highlands or NC500 itinerary are free to drive.
+    </div>
+  </details>
+
+  <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden">
+    <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
+      <span>Can I do a Scotland road trip without renting a car?</span>
+      <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
+    </summary>
+    <div class="px-4 pb-4 text-sm text-slate-700 leading-relaxed">
+      It's difficult. Public transport covers cities and some larger towns well, but most of the iconic Highland stops, castles, and viewpoints on a typical itinerary are only reachable by car. A rental car is effectively required if you want to follow a route like the NC500 or a Skye loop rather than sticking to a few fixed bases.
+    </div>
+  </details>
+
+</div>
 
   <div class="mt-10 bg-gradient-to-br from-scottish-dark to-scottish-blue text-white rounded-2xl p-6 md:p-8 shadow-md border border-white/10 text-center">
     <h2 class="text-xl font-black mb-2">Still have questions about your route?</h2>
@@ -177,43 +309,11 @@ details[open] summary .chevron { transform: rotate(90deg); }
 
 <footer class="bg-scottish-dark text-white border-t border-blue-900 py-10 px-6 relative z-10">
   <div class="max-w-6xl mx-auto text-center text-sm text-blue-200/60">
-    © 2026 Scotland Travel Master Planner Dashboard. All rights reserved.
+    © 2026 Scotland Bound. All rights reserved.
   </div>
 </footer>
 
 <script>
-const faqData = [
-  { q: "How many days do you need for a Scotland road trip?", a: "13 days is our recommended baseline to comfortably cover the Lowlands, Western Highlands, Isle of Skye, and the North Coast 500 without rushing. If you only have 7-9 days, it's better to cut a region entirely (skip the far north, for example) rather than compress the same route, since Highland driving is slower than the map distances suggest. <a href='7-days-vs-13-days-scotland.html' class='text-scottish-blue font-bold hover:underline'>See exactly what to cut and what to keep →</a>" },
-  { q: "Do I need a 4x4 or SUV to drive the North Coast 500 or Scottish Highlands?", a: "No. A standard rental car handles the NC500 and Highland roads fine in normal conditions - it's mainly single-track width and tight bends you're managing, not off-road terrain. The one exception is the Bealach na Ba pass near Applecross, where a smaller, more manoeuvrable car is genuinely easier, and a bypass route exists if you'd rather skip it. In winter, snow tyres or a 4x4 become more relevant on higher passes. <a href='do-you-need-a-4x4-scotland.html' class='text-scottish-blue font-bold hover:underline'>Read our full breakdown →</a>" },
-  { q: "What is the best time of year for a Scotland road trip?", a: "Late spring (May-June) and early autumn (September) give you the best mix of decent weather, long daylight hours, and lighter tourist crowds than peak July-August. May-June is also before Highland midges become a serious nuisance, which typically peaks from July through August. <a href='best-time-to-visit-scotland.html' class='text-scottish-blue font-bold hover:underline'>See the full season-by-season breakdown →</a>" },
-  { q: "Which side of the road do you drive on in Scotland?", a: "Scotland drives on the left, same as the rest of the UK. If you're used to driving on the right, budget extra concentration for your first day, especially at roundabouts, and be extra cautious pulling out of quiet junctions where habit can default to the wrong side." },
-  { q: "Do I need an International Driving Permit to drive in Scotland?", a: "Most visitors from the US, EU, Canada, and Australia can drive in Scotland on their standard home driving licence for short visits, without needing an International Driving Permit. Requirements vary by country of origin though, so check gov.uk's current guidance for your specific licence before you travel." },
-  { q: "How much does a Scotland road trip cost?", a: "For two adults over roughly two weeks, budget car rental and insurance, fuel, accommodation (B&Bs and self-catering are usually more cost-effective than hotels), food, and entry fees for castles and attractions. Fuel and accommodation in remote Highland areas tend to run higher than in cities, so it's worth budgeting a bit more for the northern legs of any route." },
-  { q: "What's the rule for passing places on single-track roads in Scotland?", a: "On single-track roads, pull into a passing place on your left to let oncoming or faster traffic through - never stop opposite a passing place on the right. Watch for blind summits and bends, and if a vehicle behind you is closing in, it's polite to pull in and let them pass rather than holding them up." },
-  { q: "Is it better to drive the NC500 clockwise or anticlockwise?", a: "There's no strong right answer - both directions see similar traffic. Anticlockwise (starting west via Applecross) tends to front-load the most dramatic scenery and single-track driving early, while clockwise (starting north via the east coast) eases you in more gently before the wilder western stretches. <a href='nc500-clockwise-or-anticlockwise.html' class='text-scottish-blue font-bold hover:underline'>See the full breakdown →</a>" },
-  { q: "Do I need to book accommodation in advance for a Scotland road trip?", a: "Yes, especially for June through September and around Edinburgh Festival season in August. Highland towns have limited B&B and guesthouse capacity, and popular spots can sell out weeks ahead in peak season. Booking 2-3 months in advance is a safe rule of thumb for summer travel." },
-  { q: "What should I pack for a Scotland road trip?", a: "Layers and waterproofs are essential regardless of season - Scottish weather changes fast, sometimes within the same hour. Pack a proper waterproof jacket, sturdy walking shoes, and midge repellent for summer visits to the Highlands. A physical map or offline navigation is worth having too, since mobile signal drops out in many glens. <a href='what-to-pack-scotland-road-trip.html' class='text-scottish-blue font-bold hover:underline'>See the full seasonal packing list →</a>" },
-  { q: "Are there toll roads in Scotland?", a: "No, there are no toll roads in Scotland. All major roads, bridges, and the routes covered in a typical Highlands or NC500 itinerary are free to drive." },
-  { q: "Can I do a Scotland road trip without renting a car?", a: "It's difficult. Public transport covers cities and some larger towns well, but most of the iconic Highland stops, castles, and viewpoints on a typical itinerary are only reachable by car. A rental car is effectively required if you want to follow a route like the NC500 or a Skye loop rather than sticking to a few fixed bases." }
-];
-
-function buildFAQ() {
-  const container = document.getElementById('faq-list');
-  container.innerHTML = faqData.map((item, i) => `
-    <details class="group bg-slate-50/80 rounded-xl border border-slate-100 overflow-hidden" ${i === 0 ? 'open' : ''}>
-      <summary class="cursor-pointer list-none flex items-center justify-between gap-3 p-4 font-bold text-scottish-dark hover:bg-slate-100/80 transition">
-        <span>${item.q}</span>
-        <i data-lucide="chevron-right" class="chevron w-4 h-4 flex-shrink-0 transition-transform"></i>
-      </summary>
-      <div class="px-4 pb-4 text-sm text-base leading-relaxed">${item.a}</div>
-    </details>
-  `).join('');
-  if (window.lucide) lucide.createIcons();
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-  buildFAQ();
-
   setTimeout(() => {
     const ga = document.createElement('script');
     ga.src = "https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0";
@@ -224,7 +324,6 @@ document.addEventListener('DOMContentLoaded', function() {
     gtag('js', new Date());
     gtag('config', 'G-9R8KD5FZD0');
   }, 2500);
-});
 </script>
 
 </body>
