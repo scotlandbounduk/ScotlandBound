@@ -94,7 +94,7 @@
                 </div>
                 
                 <p class="text-sm text-blue-100/90 leading-relaxed">
-                    Download your digital itinerary dashboard and offline map layers below:
+                    Download your digital itinerary dashboard, Google Maps layer, and Sygic Favourite database below:
                 </p>
 
                 <!-- Download Grid Split -->
@@ -108,33 +108,90 @@
                         <i data-lucide="download" class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity"></i>
                     </a>
 
-                    <!-- Asset 2: Combined Map Layers Zip -->
-                    <a href="ScotlandBound_Digital_Maps.zip" download="ScotlandBound_Digital_Maps.zip" class="w-full bg-white text-scottish-dark font-black py-2.5 px-4 rounded-xl text-sm shadow-sm hover:bg-blue-50 transition flex items-center justify-between group">
+                    <!-- Asset 2: Google Maps KML -->
+                    <a href="ScotlandBound_GoogleMaps.kml" download="ScotlandBound_GoogleMaps.kml" class="w-full bg-white text-scottish-dark font-black py-2.5 px-4 rounded-xl text-sm shadow-sm hover:bg-blue-50 transition flex items-center justify-between group">
                         <div class="flex items-center gap-2">
                             <i data-lucide="map" class="w-4 h-4 text-emerald-600"></i>
-                            <span>2. Offline Map Layers Pack (.KML & .GPX inside .ZIP)</span>
+                            <span>2. Google Maps Layer (.KML)</span>
+                        </div>
+                        <i data-lucide="download" class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+
+                    <!-- Asset 3: Sygic Favourite database -->
+                    <a href="places-database" download="places-database" class="w-full bg-white text-scottish-dark font-black py-2.5 px-4 rounded-xl text-sm shadow-sm hover:bg-blue-50 transition flex items-center justify-between group">
+                        <div class="flex items-center gap-2">
+                            <i data-lucide="navigation" class="w-4 h-4 text-emerald-600"></i>
+                            <span>3. Sygic Favourites (90 POIs)</span>
                         </div>
                         <i data-lucide="download" class="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 transition-opacity"></i>
                     </a>
                 </div>
             </div>
 
-            <!-- Helpful Reminders Grid -->
-            <div class="border-t border-slate-100 pt-5 text-left space-y-3">
-                <h4 class="text-sm font-bold text-scottish-dark uppercase tracking-wider">Quick Setup Guide:</h4>
-                <div class="space-y-2.5 text-sm text-slate-700">
-                    <div class="flex items-start gap-2">
-                        <i data-lucide="smartphone" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
-                        <span><strong>Google Maps (KML):</strong> Open Google Maps on your desktop/mobile, head to 'Saved' &rarr; 'Maps', and import this file to permanently see all pins offline.</span>
+            <!-- Customer Setup Guide -->
+            <div class="border-t border-slate-100 pt-6 mt-2 text-left space-y-6">
+                <div>
+                    <h4 class="text-base font-black text-scottish-dark uppercase tracking-wider">How to use your map files</h4>
+                    <p class="text-sm text-slate-600 mt-1 leading-relaxed">
+                        You do not need to edit the files. Download the files above first, then follow the guide for the navigation app you want to use.
+                    </p>
+                </div>
+
+                <!-- Google Maps / My Maps -->
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="map" class="w-5 h-5 text-emerald-600"></i>
+                        <h5 class="font-black text-scottish-dark">Google Maps — KML file</h5>
                     </div>
-                    <div class="flex items-start gap-2">
-                        <i data-lucide="car" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
-                        <span><strong>Offline Apps (GPX):</strong> Import directly into your standalone vehicle GPS unit or mobile companion apps like <strong>Sygic</strong> or <strong>OsmAnd</strong> for active offline routing.</span>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        The KML file contains the ScotlandBound locations as a map layer. Google requires KML files to be imported through <strong>Google My Maps</strong>; after importing, you can view the map through your Google account.
+                    </p>
+                    <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-700">
+                        <li><strong>Download</strong> <code>ScotlandBound_GoogleMaps.kml</code> using the button above.</li>
+                        <li>On a computer, open <strong>Google My Maps</strong> and sign in to your Google account.</li>
+                        <li>Choose <strong>Create a new map</strong> (or open an existing map you want to add the ScotlandBound layer to).</li>
+                        <li>In the map legend, click <strong>Add layer</strong>, then click <strong>Import</strong>.</li>
+                        <li>Upload the downloaded <code>.kml</code> file from your computer.</li>
+                        <li>Wait for the locations to load, then give the map a name such as <strong>ScotlandBound</strong>.</li>
+                        <li>Open the map later from <strong>Google My Maps</strong> or view your saved My Maps through Google Maps.</li>
+                    </ol>
+                    <div class="rounded-xl bg-white border border-slate-200 p-3 text-xs text-slate-600 leading-relaxed">
+                        <strong>Important:</strong> The KML is a map layer, not a turn-by-turn navigation route. Google My Maps is the place where you import the KML; the regular Google Maps app does not provide a direct KML-import button.
                     </div>
-                    <div class="flex items-start gap-2">
-                        <i data-lucide="mail" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
-                        <span>A secure payment receipt alongside a permanent backup copy of these links has been dispatched to your email inbox.</span>
+                </div>
+
+                <!-- Sygic -->
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-5 space-y-4">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="navigation" class="w-5 h-5 text-emerald-600"></i>
+                        <h5 class="font-black text-scottish-dark">Sygic — 90 Favourite destinations</h5>
                     </div>
+                    <p class="text-sm text-slate-600 leading-relaxed">
+                        The Sygic download is <strong>not a GPX route</strong>. It is a ready-made Sygic <code>places-database</code> containing all 90 ScotlandBound stops as individual Favourite destinations.
+                    </p>
+                    <ol class="list-decimal pl-5 space-y-2 text-sm text-slate-700">
+                        <li><strong>Install or update Sygic GPS Navigation</strong> on your phone and make sure the Scotland/UK map data you need is downloaded for offline use.</li>
+                        <li><strong>Download</strong> the <code>places-database</code> file using the button above.</li>
+                        <li>Open <strong>Dropbox</strong> on the device (or access the Dropbox account you use for Sygic backups).</li>
+                        <li>Open the Sygic backup area: <strong>Apps &rarr; Sygic &rarr; DVv20plus</strong>.</li>
+                        <li>Locate the existing <code>places-database</code> file. <strong>Keep a copy of the original first</strong> if you already have personal Sygic Favourites you do not want to lose.</li>
+                        <li>Replace the existing <code>places-database</code> with the ScotlandBound file you downloaded. Keep the filename exactly as <code>places-database</code>.</li>
+                        <li>Open Sygic and use its <strong>Dropbox Backup &amp; Restore</strong> function to restore the Sygic data from Dropbox.</li>
+                        <li>After the restore completes, open <strong>Menu &rarr; Favourites</strong>. The ScotlandBound stops should appear as individual Favourite destinations.</li>
+                    </ol>
+                    <div class="rounded-xl bg-white border border-slate-200 p-3 text-xs text-slate-600 leading-relaxed">
+                        <strong>Important:</strong> This database is intended for <strong>Sygic GPS Navigation</strong>, not Sygic Truck Navigation. If you already have your own Sygic Favourites, back up the existing <code>places-database</code> before replacing it. The exact Dropbox wording or menu labels may vary slightly between Sygic versions.
+                    </div>
+                </div>
+
+                <div class="rounded-xl bg-blue-50 border border-blue-100 p-4 text-sm text-slate-700 leading-relaxed">
+                    <strong class="text-scottish-dark">Which one should I use?</strong><br>
+                    Use <strong>Google Maps</strong> if you want the ScotlandBound locations displayed as a map layer. Use <strong>Sygic</strong> if you want the 90 locations available as individual Favourite destinations inside an offline navigation app. You can use both.
+                </div>
+
+                <div class="flex items-start gap-2 text-xs text-slate-500">
+                    <i data-lucide="mail" class="w-4 h-4 text-scottish-accent flex-shrink-0 mt-0.5"></i>
+                    <span>Your payment receipt and a permanent backup copy of these download links have also been sent to your email.</span>
                 </div>
             </div>
 
