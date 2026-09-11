@@ -56,23 +56,7 @@
 </head>
 <body class="topo-bg text-base font-sans antialiased selection:bg-blue-500 selection:text-white"> 
     
-    <script>
-        // Initialize Lucide Icons after the deferred library has loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            lucide.createIcons();
-        });
-
-        setTimeout(() => {
-        const ga = document.createElement('script');
-        ga.src = "https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0";
-        ga.async = true;
-        document.head.appendChild(ga);
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-9R8KD5FZD0');
-        }, 2500);
-    </script>
+    
 
     <!-- Top Navigation Header -->
     <header class="bg-scottish-dark text-white py-3 px-6 shadow-md">
@@ -254,6 +238,63 @@
             <div>© 2026 Scotland Bound. All rights reserved.</div>
         </div>
     </footer>
+
+    <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+    initWhatsAppButton();
+
+    function initWhatsAppButton() {
+    try {
+    function getTimezoneOffsetHours(timeZone) {
+    const now = new Date();
+    const utcDate = new Date(now.toLocaleString('en-US', { timeZone: 'UTC' }));
+    const tzDate = new Date(now.toLocaleString('en-US', { timeZone: timeZone }));
+    return (tzDate - utcDate) / (1000 * 60 * 60);
+    }
+
+    const maltaOffset = getTimezoneOffsetHours('Europe/Malta');
+    const visitorOffset = -new Date().getTimezoneOffset() / 60;
+    const diff = Math.abs(visitorOffset - maltaOffset);
+
+    if (diff > 3) return;
+
+    const maltaHourStr = new Date().toLocaleString('en-US', { timeZone: 'Europe/Malta', hour: '2-digit', hour12: false });
+    const maltaHour = parseInt(maltaHourStr, 10);
+    const isActive = maltaHour >= 8 && maltaHour < 20;
+
+    const phoneNumber = "35679561990";
+    const prefillText = encodeURIComponent("Hi! I'd love some help planning my Scotland road trip.");
+    const waLink = `https://wa.me/${phoneNumber}?text=${prefillText}`;
+
+    const labelText = isActive ? "Chat on WhatsApp" : "Back online at 8am";
+    const dotClass = isActive ? "bg-lime-300 animate-pulse" : "bg-slate-300";
+
+    const wrapper = document.createElement('div');
+    wrapper.className = "fixed bottom-5 right-5 z-40 group";
+    wrapper.innerHTML = `
+    <a href="${waLink}" target="_blank" rel="noopener" class="relative flex items-center bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full shadow-lg transition-all duration-300 h-14 w-14 hover:w-auto hover:px-5 overflow-hidden">
+    <span class="absolute top-0 right-0 w-3.5 h-3.5 rounded-full ${dotClass} border-2 border-white"></span>
+    <i data-lucide="message-circle" class="w-6 h-6 flex-shrink-0 mx-4"></i>
+    <span class="whitespace-nowrap font-bold text-sm max-w-0 group-hover:max-w-xs transition-all duration-300 opacity-0 group-hover:opacity-100">${labelText}</span>
+    </a>
+    `;
+    document.body.appendChild(wrapper);
+    if (window.lucide) lucide.createIcons();
+    } catch(e) { console.error("WhatsApp button init error:", e); }
+    }
+
+    setTimeout(() => {
+    const ga = document.createElement('script');
+    ga.src = "https://www.googletagmanager.com/gtag/js?id=G-9R8KD5FZD0";
+    ga.async = true;
+    document.head.appendChild(ga);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9R8KD5FZD0');
+    }, 2500);
+    </script>
 
 
 </body>
